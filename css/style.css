@@ -1305,7 +1305,10 @@ footer {
 
 .product-page {
 	padding-top: 50px;
+}
 
+.row-top {
+	
 }
 
 .product-card.main {
@@ -1440,6 +1443,117 @@ footer {
 	border-radius: 50%;
 }
 
-.product-accompanying-list {
+.product-accompanying-list .product-card {
+	flex-direction: row;
+	gap: 3px;
+	width: 245px;
+	padding: 8px;
+}
 
+.product-accompanying-list .product-card__img  {
+	flex:  1 0 auto;
+	width: 80px;
+	height: 80px;
+	border-radius: 8px;
+}
+
+.product-accompanying-list .product-card__info {
+	flex: auto;
+	align-items: flex-start;
+	text-align: left;
+}
+
+.product-accompanying-list .product-card__info__price {
+	display: flex;
+	gap: 2px;
+}
+
+.product-accompanying-list .product-card__info .row {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 5px;
+}
+
+.product-accompanying-list .row .btn {
+	justify-content: center;
+	width: 32px;
+	height: 32px;
+	font-size: 24px;
+	font-weight: 700;
+	margin: 0;
+	color: #fff;
+	background-color: var(--accent);
+	border-radius: 8px;
+}
+
+.product-accompanying-list .product-card__info__price .new-price {
+	color: var(--text-color);
+}
+
+.product-accordion {
+	background: #fff;
+}
+
+.product-accordion .accordion__title {
+    padding: 12px 40px 12px 12px;
+    font-size: 17px;
+    line-height: 23.8px;
+}
+
+.product-accordion .accordion__item {
+	border: none;
+}
+
+.product-accordion .review .btn-grd {
+	justify-content: center;
+}
+
+.product-accordion .accordion__item .accordion__title .accordion__arrow {
+    width: 32px;
+    height: 32px;
+	background-size: 17px;
+}
+
+.reviews-list {
+	overflow: hidden;
+	padding-left: 0;
+	flex-direction: column;
+	gap: 12px;
+	margin-top: 12px;
+}
+
+.review-item {
+	display: flex;
+	flex-direction: column;
+    gap: 8px;
+    padding: 12px;
+	border-radius: 12px;
+	font-size: 12px;
+	line-height: 16px;
+	background: var(--bg-light);
+}
+
+.reviews-list .review-name {
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 22.4px;
+	letter-spacing: -0.25px;
+}
+
+.reviews-list .review-date {
+	font-size: 12px;
+	line-height: 16px;
+	color:  #2A3A498A;
+}
+
+.reviews-list .product-card__info__reviews {
+	margin-bottom: 0;
+	justify-content: flex-start;
+}
+
+.reviews-list .reviews-satr {
+    width: 18px;
+    height: 18px;
 }

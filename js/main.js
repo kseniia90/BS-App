@@ -10,6 +10,14 @@
     document.body.classList.remove("loaded_hiding");
   }, 1500);
 
+	//   back to page
+  if (document.querySelector(".back_pg-btn") !== null) {
+	document.querySelector('.back_pg-btn').addEventListener("click", function (e) {
+	  e.preventDefault();
+	  window.history.back();
+	});
+  };
+
 $(function () {
 
 
