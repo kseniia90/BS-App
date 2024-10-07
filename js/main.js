@@ -18,6 +18,21 @@
 	});
   };
 
+  const messageEle = document.getElementById("message");
+  const counterEle = document.getElementById("counter");
+
+  messageEle.addEventListener("input", function (e) {
+    const target = e.target;
+
+    // Get the `maxlength` attribute
+    const maxLength = target.getAttribute("maxlength");
+
+    // Count the current number of characters
+    const currentLength = target.value.length;
+
+    counterEle.innerHTML = `${currentLength}` + " з " + `${maxLength}` + " символiв";
+  });
+
 $(function () {
 
 
@@ -160,6 +175,19 @@ $(function () {
 		$('.accordion__arrow',this).toggleClass('accordion__rotate');
 	});
 	// accordion END
+
+	$('.open-review-form').on("click", function(e) {
+		e.preventDefault();
+		$('.open-review-form').hide();
+		$('.add-review').slideToggle();
+	});
+
+	$('.add-review-close').on("click", function(e) {
+		e.preventDefault();
+		$('.open-review-form').show();
+		$('.add-review').slideToggle();
+	});
+
 });
 
 // countDown

@@ -665,6 +665,25 @@ footer {
 	color: #fff;
 }
 
+.fixed-menu-item.cart {
+	position: relative;
+}
+
+.fixed-menu-item .cart-count {
+	position: absolute;
+	top: 7px;
+	right: 7px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 15px;
+	height: 15px;
+	font-size: 9px;
+	font-weight: 600;
+	border-radius: 50%;
+	background: #CFDA6A;
+}
+
 .owl-stage {
 	display: flex;
 	justify-content: stretch;
@@ -1289,16 +1308,12 @@ footer {
 
 /* product-page */
 
-.product-page {
-	padding-top: 44px;
-}
-
 .row-top {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	gap: 20px;
-	padding: 12px;
+	padding: 56px 12px 12px;
 	color: var(--accent);
 	font-size: 24px;
 	background-color: white;
@@ -1511,6 +1526,7 @@ footer {
 .add-review {
 	display: flex;
 	flex-direction: column;
+	display: none;
 	gap: 12px;
 	margin-bottom: 24px;
 }
@@ -1519,6 +1535,89 @@ footer {
 	display: flex;
 	flex-direction: column;
 	gap: 12px;
+}
+
+.add-review form textarea,
+.add-review form input {
+	width: 100%;
+	padding: 10px 16px;
+	outline: none;
+	border: none;
+	background: var(--bg-light);
+	border-radius: 10px;
+}
+
+.add-review form textarea {
+	padding: 10px 16px 25px;
+}
+
+.add-review form textarea::placeholder,
+.add-review form input::placeholder {
+	font-family: 'Roboto';
+	font-size: 17px;
+	font-weight: 400;
+	line-height: 23.8px;
+	letter-spacing: -0.2px;
+}
+
+.add-review form input::placeholder {
+	color: var(--text-color);
+}
+
+.add-review .review-message {
+	position: relative;
+}
+
+.add-review  .buttons-block {
+	text-align: center;
+	background: #fff;
+}
+
+.add-review-close {
+	font-size: 17px;
+	font-weight: 600;
+	line-height: 23.8px;
+	color: var(--accent);
+	padding: 10px;
+}
+
+#counter {
+	position: absolute;
+	bottom: 15px;
+	left: 16px;
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 18.2px;
+	color: #2A3A498A;
+}
+
+.add-review form textarea::after {
+	content: '0 из 800 символов';
+	display: block;
+	position: absolute;
+	z-index: 2;
+	bottom: 10px;
+	left: 16px;
+	color: var(--text-color);
+}
+
+.add-review .review-file {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+	font-size: 17px;
+}
+
+.add-review .review-file-plus {
+	width: 32px;
+	height: 32px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 18px;
+	color: #fff;
+	background: var(--accent);
+	border-radius: 50%;
 }
 
 .add-review .product-card__info__reviews {
@@ -1568,4 +1667,12 @@ footer {
 	margin-bottom: 0;
 	justify-content: flex-start;
 	font-size: 18px;
+}
+
+.cart-page .row-top {
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 21.6px;
+	justify-content: center;
+	color: var(--text-color);
 }

@@ -218,13 +218,22 @@
                                         <span class="icon-ic_star"></span>
                                     </div>
                                     <form action="">
-                                        <textarea name="" id="" placeholder="Залиште відгук"></textarea>
+                                        <div class="review-message">
+                                            <textarea name="" id="message" rows="6" placeholder="Залиште відгук" maxlength="800"></textarea>
+                                            <p id="counter">0 з 800 символiв</p>
+                                        </div>
                                         <input type="text" name="review-name" placeholder="Вікторія">
                                         <input type="email" name="review-email" placeholder="example@gmail.com">
-                                        <input type="file" name="review-file">
+                                        <label class="review-file"><input type="file" hidden /><span class="review-file-plus">+</span> <span>Додати фото</span></label>
                                     </form>
+                                    <div class="buttons-block">
+                                        <div class="btn btn-big btn-grd">
+                                            <span>Залишити відгук</span>
+                                        </div>
+                                        <div class="add-review-close">Закрити</div>
+                                    </div>
                                 </div>
-                                <div class="btn btn-big btn-grd">
+                                <div class="btn btn-big btn-grd open-review-form">
                                     <span>Залишити відгук</span>
                                 </div>
                                 <ul class="block-list reviews-list">
@@ -692,7 +701,7 @@
                     <li class="fixed-menu-item active"><a href="index.html"><span class="icon-ic_home icon"></span></a>
                     </li>
                     <li class="fixed-menu-item"><a href=""><span class="icon-ic_catalog icon"></span></a></li>
-                    <li class="fixed-menu-item"><a href=""><span class="icon-ic_cart icon"></span></a></li>
+                    <li class="fixed-menu-item fixed-menu-item cart active"><a href="cart.html"><span class="icon-ic_cart icon"></span> <span class="cart-count">3</span></a></li>
                     <li class="fixed-menu-item"><a href=""><span class="icon-ic_heart icon"></span></a></li>
                     <li class="fixed-menu-item"><a href=""><span class="icon-ic_profile icon"></span></a></li>
                 </ul>
