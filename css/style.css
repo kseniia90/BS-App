@@ -1040,23 +1040,9 @@ footer {
 	align-items: center;
 	flex-direction: row;
 	gap: 2px;
-	margin-bottom: 16px;
-}
-
-.reviews-star {
-	width: 9px;
-	height: 9px;
-	background: url(../img/ic_star_fill.svg);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-.reviews-star.light-star {
-	background: url(../img/ic_star.svg);
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	margin-bottom: 16px; 
+	font-size: 9px;
+	color: var(--accent);
 }
 
 .reviews-count {
@@ -1409,11 +1395,7 @@ footer {
 
 .product-card.main .product-card__info__reviews {
 	margin-bottom: 0;
-}
-
-.product-card.main .reviews-star {
-	width: 18px;
-	height: 18px;
+	font-size: 18px;
 }
 
 .product-card.main .in-stock {
@@ -1539,9 +1521,9 @@ footer {
 	gap: 12px;
 }
 
-.add-review .reviews-star {
-	width: 36px;
-	height: 36px;
+.add-review .product-card__info__reviews {
+	justify-content: flex-start;
+	font-size: 36px;
 }
 
 .product-accordion .accordion__item .accordion__title .accordion__arrow {
@@ -1585,9 +1567,5 @@ footer {
 .reviews-list .product-card__info__reviews {
 	margin-bottom: 0;
 	justify-content: flex-start;
-}
-
-.reviews-list .reviews-star {
-    width: 18px;
-    height: 18px;
+	font-size: 18px;
 }
