@@ -18,7 +18,7 @@
 	});
   };
 
-  const messageEle = document.getElementById("message");
+  if (document.querySelector("#counter") !== null) {const messageEle = document.getElementById("message");
   const counterEle = document.getElementById("counter");
 
   messageEle.addEventListener("input", function (e) {
@@ -31,7 +31,7 @@
     const currentLength = target.value.length;
 
     counterEle.innerHTML = `${currentLength}` + " з " + `${maxLength}` + " символiв";
-  });
+  });}
 
 $(function () {
 
