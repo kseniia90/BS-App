@@ -386,12 +386,9 @@ body._lock {
 	display: none;
 }
 
-
-
-
-
-
-
+.light {
+	color: var(--accent-light);
+}
 
 .preloader {
 	position: fixed;
@@ -1680,6 +1677,7 @@ footer {
 .cart-list {
 	background: #fff;
 	padding: 0 12px;
+	margin-bottom: 8px;
 }
 
 .cart-item {
@@ -1696,24 +1694,20 @@ footer {
 	font-size: 13px;
 	font-weight: 400;
 	line-height: 18.2px;
-	border: 1px solid red;
 }
 
 .cart-item .product-card__img {
 	height: 72px;
 	width: 72px;
 	padding: 0;
-	border: 1px solid red;
 }
 
 .cart-item-top {
 	grid-area: 1/1/2/2;
-	border: 1px solid blue;
 }
 
 .cart-item-close {
 	grid-area: 1/2/2/3;
-	border: 1px solid red;
 }
 
 .cart-item-row {
@@ -1722,7 +1716,6 @@ footer {
 	justify-content: space-between;
 	align-items: center;
 	gap: 10px;
-	border: 1px solid red;
 }
 
 .cart-counter {
@@ -1736,11 +1729,11 @@ footer {
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	gap: 3px;
+	gap: 5px;
 	font-weight: 500;
 }
 
-.cart-item-row .product-card__info__price .new {
+.cart-item-row .product-card__info__price .new-price {
 	color: var(--text-color);
 }
 
@@ -1750,9 +1743,78 @@ footer {
 }
 
 .cart-item .product-card__info__name {
-	
+	font-size: 13px;
+	line-height: 18.2px;
 }
 
-.cart-item .product-card__info__description {
-	
+.cart-counter-mark {
+	width: 20px;
+	height: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 16px;
+	line-height: 20px;
+	color: white;
+	font-weight: 700;
+	background: var(--accent-light);
+	border-radius: 50%;
+}
+
+.cart-counter input {
+	font-size: 17px;
+	font-weight: 400;
+	line-height: 23.8px;
+	color: var(--text-color);
+	text-align: center;
+	border-radius: 40px;
+	background: transparent;
+	border: 1px solid #0506110F;
+}
+
+.cart-applications {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	padding: 0 12px;
+}
+
+.cart-applications-item {
+	padding: 8px 16px;
+	border-radius: 16px;
+	background: #fff;
+}
+
+.cart-applications-item.min-deliv p {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	color: var(--accent-light);
+}
+
+.cart-applications-item .icon-deliv {
+	font-size: 24px;
+}
+
+.cart-table {
+	font-size: 17px;
+	line-height: 23.8px;
+	background: #fff;
+}
+
+.cart-table-row {
+	padding: 10px 4px;
+	display: grid;
+	grid-template-columns: 1fr 30%;
+}
+
+.cart-table-row p:last-of-type {
+	text-align: right;
+}
+
+
+.cart-page .btn {
+	width: calc(100% - 32px);
+	justify-content: center;
+	margin: 16px auto;
 }
