@@ -2186,11 +2186,16 @@ footer {
 }
 
 .item_brand {
+	border-bottom: 0.5px solid #0506110F;
+}
+
+.item_brand a {
+	display: block;
+	width: 100%;
 	padding: 10px 0;
 	font-family: 'Poppins';
 	font-size: 17px;
 	font-weight: 400;
 	line-height: 23.8px;
-	border-bottom: 0.5px solid #0506110F;
 }
   
