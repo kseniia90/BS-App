@@ -132,6 +132,11 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
+
+  .icon-ic_heart_fill:before {
+    content: "\e90f";
+    color: #df2c77;
+  }
   
   .icon-ic_company:before {
     content: "\e90f";

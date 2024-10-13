@@ -283,52 +283,22 @@ function slideDown(el) {
 
 
 
-const mainMenu = document.querySelector('.main-menu');
-
-if (document.body.classList.contains('menu-open')) {
-	document.body.classList.remove('menu-open');
-	document.querySelectorAll('.main-menu .active').forEach((el) => {
-	el.classList.remove('active');
-	});
-} else {
-	// document.body.classList.add('menu-open');
-};
 
 document.querySelectorAll('.main-menu > ul > .menu-item-has-children > a').forEach((el) => {
 	el.addEventListener('click', (event) => {
 		event.preventDefault();
 		el.parentElement.classList.toggle('active');
-		el.nextElementSibling.style.background = "red";
-		setTimeout(() => {
-			el.nextElementSibling.scrollTo({top: 0, behavior: "smooth"});
-		}, 300);
+		document.body.classList.add('menu-open');
 	});
 });
   
 document.querySelectorAll('.main-menu .btn-back').forEach((el) => {
 	el.addEventListener('click', (event) => {
 		el.closest('.active').classList.remove('active');
+		document.body.classList.remove('menu-open');
 	});
 });
 
-// let menuHideTimeout;
-  
-// document.querySelectorAll('.main-menu > ul > .menu-item-has-children').forEach((el) => {
-// 	el.addEventListener('mouseenter', (event) => {
-// 		clearTimeout(menuHideTimeout);
-		
-// 		document.querySelectorAll('.main-menu .active').forEach((el) => {  
-// 			el.classList.remove('active');    
-// 		});
-
-// 		el.classList.add('active');
-// 		fadeIn(el.querySelectorAll('.mega-menu-item')[0], 'block');
-// 		// document.body.classList.add('menu-open');
-// 		setTimeout(() => {
-// 			document.querySelectorAll('.active .mega-menu-item').scrollTo({top: 0, behavior: "smooth"});
-// 		  }, 300);
-// 	});
-// });
 
 
 
