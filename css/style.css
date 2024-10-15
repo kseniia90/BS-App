@@ -416,47 +416,60 @@ body {
 	display: none;
   }
 
-  .loader{
-	margin: 50px auto 10px;
-	width: 300px;
-	height: 25px;
-	border-radius: 14px;
-	border-bottom: 1px solid #fff;
-	border-top: 1px solid #999;
-	background: #ccc;
+  .loader {
+	margin: 30px auto 10px;
+	width: 276px;
+	height: 6px;
+	border-radius: 3px;
+	background: #CCDC554D;
 	overflow: hidden;
 	position: relative;
   }
   
-  .loader.gray{
+  .loader.gray {
 	background: #999;
   }
   
-  .progress-bar{
-	height: inherit;
-	width: 0%;
-	border-radius: inherit;
-	position: relative;
+  .progress-bar {
+	height: 6px;
+	width: 100%;
+	background-color: #CCDC55;
+	border-radius: 3px;
 	overflow: hidden;
+	position: relative;
   }
   
-  .progress-stripes{
-	width: inherit;
-	height: inherit;
-	font-size: 180px;
-	font-weight: bold;
-	margin-top: -50px;
-	letter-spacing: -14px;
+  * + .progress-bar {
+	margin-top: 2rem;
   }
   
-  .percentage{
-	position: absolute;
-	top: 4px;
-	right: 5px;
-	font-weight: bold;
-	font-size: 16px;
+  .bar {
+	width: 0;
+	height: 100%;
+	border-radius: 3px;
+	background-color: #CCDC55;  
+	background-size: 30px 30px;
+	animation: move 2s linear infinite;
+	box-shadow: 2px 0 10px inset rgba(0,0,0,0.2);
+	transition: width 2s ease-out;
   }
-
+  
+  @keyframes move {
+	0% {
+	  background-position: 0 0;
+	}
+	100% {
+	  background-position: 30px 30px;
+	}
+  }
+  
+  .perc {
+	font-family: 'Roboto';
+	font-size: 10px;
+	font-weight: 500;
+	line-height: 11.72px;
+	color: #CCDC55;
+  }
 
 
 
