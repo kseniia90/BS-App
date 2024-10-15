@@ -1,15 +1,12 @@
 "use strict";
 
-// preload home page
-// window.setTimeout(function () {
-//   document.body.classList.add("loaded_hiding");
-// }, 1400);
-// window.setTimeout(function () {
-//   document.body.classList.add("loaded");
-//   document.body.classList.remove("loaded_hiding");
-// }, 1500);
+ // preload
+window.addEventListener('load',function(){
+  document.querySelector('body').classList.add("loaded");
+  loading();  
+});
 
-// function loading() {
+function loading() {
   document.querySelectorAll(".bar").forEach(function (current) {
     let startWidth = 0;
     const endWidth = current.dataset.size;
@@ -21,16 +18,11 @@
       } else {
         startWidth++;
         current.style.width = `${endWidth}%`;
-        current.firstElementChild.innerText = `${startWidth}%`;
+        document.getElementById('percentage').innerText = `${startWidth}%`;
       }
     }
   });
-// }
-
-// setTimeout(loading, 1000);
-
-
-
+}
 
 //   back to page
 if (document.querySelector(".back_pg-btn") !== null) {
