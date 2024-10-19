@@ -248,6 +248,7 @@ body {
 .wrapper {
 	margin: 0 auto;
 	overflow: hidden;
+	overflow: clip;
 	min-height: 100%;
 	width: 100%;
 	background: var(--bg-light);
@@ -481,7 +482,7 @@ body {
 .header {
 	width: 100%;
 	position: fixed;
-	z-index: 100;
+	z-index: 50;
 	top: 0;
 	display: flex;
 	flex-direction: column;
@@ -1291,6 +1292,9 @@ footer {
 /* product-page */
 
 .head-row {
+	position: sticky;
+	top: 0;
+	z-index: 20;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -1654,6 +1658,29 @@ footer {
 	margin-bottom: 0;
 	justify-content: flex-start;
 	font-size: 18px;
+}
+
+.cart-page {
+	position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 90;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #fff;
+    min-height: 100vh;
+    width: 100%;
+    padding-bottom: 120px;
+    display: none;
+    flex-direction: column;
+    transform: translateY(100%);
+    transition: transform .3s;
+}
+
+.cart-page.open{
+	display: flex;
+    transform: translateY(0);
 }
 
 .cart-page .head-row {
@@ -2138,6 +2165,29 @@ footer {
 	height: 70px;
 }
 
+.order-info {
+	position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 120;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #fff;
+    min-height: 100vh;
+    width: 100%;
+    padding-bottom: 20px;
+    display: none;
+    flex-direction: column;
+    transform: translateX(100%);
+    transition: transform .3s;
+}
+
+.order-item-info.active .order-info {
+	display: flex;
+    transform: translateX(0);
+}
+
 .order-item-info .cart-table {
 	font-size: 13px;
 	line-height: 18.2px;
@@ -2148,6 +2198,11 @@ footer {
 	padding: 2px 0;
 	grid-template-columns: 1fr 40%;
 	margin-bottom: 5px;
+}
+
+.order-item-info .cart-table-row .light,
+.order-info-table .light {
+	color: #2A3A498A;
 }
 
 .order-item-info .cart-table-row p:last-of-type {
@@ -2162,10 +2217,12 @@ footer {
 	display: grid;
 	grid-template-columns: 1fr;
 	padding: 0;
+	padding: 12px 0;
 }
 
 .account-page .product-row-list .product-card {
 	width: 100%;
+	padding: 0;
 }
 
 .account-page .product-row-list .product-card__img {
@@ -2173,17 +2230,129 @@ footer {
 	width: 106px;
 	height: 106px;
 	padding: 5px;
-	border: 1px solid red;
 }
 
 .account-page .product-row-list .product-card__info {
 	justify-content: flex-start;
+	gap: 6px;
 	align-items: flex-start;
+	border-bottom: 0.5px solid #0506110F;
 }
 
 .account-page .product-row-list .product-card__info__content {
-	align-items: flex-start;
+	flex-direction: row;
+	align-items: center;
 }
+.account-page .product-row-list .product-card .icon-heart {
+	position: static;
+	font-size: 20px;
+}
+
+.account-page .product-row-list .product-card__info .row {
+	justify-content: flex-start;
+	font-size: 17px;
+	font-weight: 500;
+	line-height: 23.8px;
+}
+
+.order-info-content {
+	padding: 0 16px;
+}
+
+.order-info-title {
+	display: block;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 21.6px;
+	padding: 13px 0;
+}
+
+a.order-info-title {
+	background: var(--arrow-icon) no-repeat right;
+    background-position: calc(100% - 2px);
+	border-bottom: 0.5px solid #0506110F;
+}
+
+.order-info-list {
+	padding-left: 35px;
+	font-size: 17px;
+	font-weight: 400;
+	line-height: 23.8px;
+}
+
+.order-info-list li {
+	position: relative;
+	padding: 20px 0;
+	display: flex;
+	flex-direction: column;
+	border-bottom: 0.5px solid #0506110F;
+}
+
+.order-info-list li .light {
+	font-size: 12px;
+	line-height: 16px;
+}
+
+.order-info-list li::before {
+	content: '';
+	display: block;
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: var(--accent);
+	position: absolute;
+	top: 50%;
+	left: -26px;
+	transform: translateY(-50%);
+}
+
+.order-info-row {
+	padding: 10px 0;
+	font-size: 17px;
+	line-height: 23.8px;
+	border-bottom: 0.5px solid #0506110F;
+}
+
+.order-info-row .light {
+	font-size: 12px;
+	line-height: 16px;
+}
+
+.order-info .green {
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 19.6px;
+	text-align: left;
+	color: #57AE00;
+}
+
+.order-info .product-card__info__name {
+	font-size: 13px;
+	line-height: 18.2px;
+}
+
+.order-info .cart-table {
+	font-size: 17px;
+	line-height: 23.8px;
+}
+
+.order-info .cart-table-row {
+	padding: 10px 0;
+	margin: 0;
+}
+
+.order-info .cart-table-row p:last-child {
+	font-size: 13px;
+	line-height: 18.2px;
+}
+
+.order-info .btn-big {
+	justify-content: center;
+	margin: 0 auto;
+	width: calc(100% - 24px);
+}
+
+
 
 
 

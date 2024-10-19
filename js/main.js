@@ -108,6 +108,38 @@ function fadeOut(el, display = "flex") {
   }, 300);
 }
 
+
+// open cart
+document.querySelectorAll(".fixed-menu-item.cart").forEach((el) => {
+  el.addEventListener("click", (event) => {
+    event.preventDefault();
+    document.querySelectorAll(".fixed-menu-item").forEach((el) => {
+      el.classList.remove("active");
+    });
+    document.querySelector(".fixed-menu-item.cart").classList.toggle("active");
+    document.querySelector('.cart-page').classList.toggle("open");
+    
+  });
+});
+
+
+// open order
+document.querySelectorAll(".order-item-info .btn").forEach((el) => {
+  el.addEventListener("click", (event) => {
+    event.preventDefault();
+    el.parentElement.classList.toggle("active");
+    // document.body.classList.add("menu-open");
+  });
+});
+
+document.querySelectorAll(".order-info .back-block").forEach((el) => {
+el.addEventListener("click", (event) => {
+  el.closest(".active").classList.remove("active");
+  // document.body.classList.remove("menu-open");
+});
+});
+
+
 // Counter in textarea
 if (document.querySelector("#counter") !== null) {
   const messageEle = document.getElementById("message");
