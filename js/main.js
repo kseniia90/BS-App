@@ -34,11 +34,57 @@ if (document.querySelector(".back_pg-btn") !== null) {
     });
 }
 
+// open catalog
+document.querySelectorAll(".fixed-menu-item.catalog").forEach((el) => {
+  el.addEventListener("click", (event) => {
+    event.preventDefault();
+    document.querySelectorAll(".fixed-menu-item").forEach((el) => {
+      el.classList.remove("active");
+    });
+    document.querySelector(".fixed-menu-item.catalog").classList.toggle("active");
+    document.querySelector('.catalog-nav').classList.toggle("open");
+    if (document.querySelector(".menu-item-has-children.active") !== null) {
+      document.querySelector(".menu-item-has-children.active").classList.remove("active");
+    }
+  });
+});
+
+// open cart
+document.querySelectorAll(".fixed-menu-item.cart").forEach((el) => {
+  el.addEventListener("click", (event) => {
+    event.preventDefault();
+    document.querySelectorAll(".fixed-menu-item").forEach((el) => {
+      el.classList.remove("active");
+    });
+    document.querySelector(".fixed-menu-item.cart").classList.toggle("active");
+    document.querySelector('.cart-page').classList.toggle("open");
+    
+  });
+});
+
+
+// open order
+document.querySelectorAll(".order-item-info .btn").forEach((el) => {
+  el.addEventListener("click", (event) => {
+    event.preventDefault();
+    el.parentElement.classList.toggle("active");
+    // document.body.classList.add("menu-open");
+  });
+});
+
+document.querySelectorAll(".order-info .back-block").forEach((el) => {
+el.addEventListener("click", (event) => {
+  el.closest(".active").classList.remove("active");
+  // document.body.classList.remove("menu-open");
+});
+});
+
 // menu catalog
 document.querySelectorAll(".main-menu > ul > .menu-item-has-children > a").forEach((el) => {
     el.addEventListener("click", (event) => {
       event.preventDefault();
       el.parentElement.classList.toggle("active");
+      document.querySelector('.catalog-nav').scrollTo({top: 0, behavior: "smooth"});
       document.body.classList.add("menu-open");
     });
   });
@@ -107,38 +153,6 @@ function fadeOut(el, display = "flex") {
     el.style.transition = null;
   }, 300);
 }
-
-
-// open cart
-document.querySelectorAll(".fixed-menu-item.cart").forEach((el) => {
-  el.addEventListener("click", (event) => {
-    event.preventDefault();
-    document.querySelectorAll(".fixed-menu-item").forEach((el) => {
-      el.classList.remove("active");
-    });
-    document.querySelector(".fixed-menu-item.cart").classList.toggle("active");
-    document.querySelector('.cart-page').classList.toggle("open");
-    
-  });
-});
-
-
-// open order
-document.querySelectorAll(".order-item-info .btn").forEach((el) => {
-  el.addEventListener("click", (event) => {
-    event.preventDefault();
-    el.parentElement.classList.toggle("active");
-    // document.body.classList.add("menu-open");
-  });
-});
-
-document.querySelectorAll(".order-info .back-block").forEach((el) => {
-el.addEventListener("click", (event) => {
-  el.closest(".active").classList.remove("active");
-  // document.body.classList.remove("menu-open");
-});
-});
-
 
 // Counter in textarea
 if (document.querySelector("#counter") !== null) {
