@@ -64,7 +64,7 @@ document.querySelectorAll(".fixed-menu-item.cart").forEach((el) => {
 
 
 // open order
-document.querySelectorAll(".order-item-info .btn").forEach((el) => {
+document.querySelectorAll(".vertical-list-item-info .btn").forEach((el) => {
   el.addEventListener("click", (event) => {
     event.preventDefault();
     el.parentElement.classList.toggle("active");
