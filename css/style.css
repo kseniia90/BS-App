@@ -2510,3 +2510,12 @@ a.order-info-title {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.consultant-block {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 19.6px;
+}

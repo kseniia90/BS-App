@@ -133,22 +133,21 @@
     -moz-osx-font-smoothing: grayscale;
   }
 
-  .icon-ic_heart_fill:before {
-    content: "\e90f";
-    color: #df2c77;
-  }
-  
-  .icon-ic_company:before {
-    content: "\e90f";
-  }
-  .icon-ic_comment:before {
+  .icon-ic_schedule:before {
     content: "\e910";
   }
   .icon-ic_gift:before {
     content: "\e911";
   }
-  .icon-ic_schedule:before {
+  .icon-ic_company:before {
     content: "\e912";
+  }
+  .icon-ic_comment:before {
+    content: "\e913";
+  }
+  .icon-ic_heart_fill:before {
+    content: "\e90f";
+    color: #df2c77;
   }
   .icon-ic_search:before {
     content: "\e900";
