@@ -222,6 +222,15 @@ $(function () {
     margin: 5,
   });
 
+   //  posts carousel
+   $(".posts-carousel").owlCarousel({
+    dots: true,
+    nav: false,
+    loop: true,
+    autoWidth: true,
+    margin: 8,
+  });
+
   // accordion BEGIN
   $(".accordion__title").on("click", function (e) {
     e.preventDefault();

@@ -2141,7 +2141,8 @@ footer {
   .wishlist-page .head-row-left,
   .account-page .head-row-left,
   .brands-page .head-row-left,
-  .blog-page .head-row-left {
+  .blog-page .head-row-left,
+  .contacts-page .head-row-left {
 	width: 100%;
 	padding-right: 30px;
   }
@@ -2149,7 +2150,8 @@ footer {
   .wishlist-page .head-row-left>span,
   .account-page .head-row-left>span,
   .brands-page .head-row-left>span,
-  .blog-page .head-row-left>span {
+  .blog-page .head-row-left>span,
+  .contacts-page .head-row-left>span {
 	width: 100%;
 	text-align: center;
 	font-size: 18px;
@@ -2438,6 +2440,10 @@ a.order-info-title {
 }
 
 /* blog page */
+
+.blog-page {
+	padding-bottom: 45px;
+}
   
 .blog-list {
 	padding-top: 7px;
@@ -2518,4 +2524,104 @@ a.order-info-title {
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 19.6px;
+}
+
+/* post page */
+
+.post-content {
+	padding-top: 11px;
+	padding-bottom: 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 23.76px;
+	background: #fff;
+}
+
+.post-content h2 {
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 25.4px;
+	padding: 4px 0;
+}
+
+.post-content .blog-item-theme {
+	justify-content: flex-start;
+}
+
+.post-content>p> .light {
+	margin-left: 8px;
+}
+
+.post-content>div>p:not(:last-of-type) {
+	margin-bottom: 30px;
+}
+
+.share-block {
+	display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.share-block-row {
+	display: flex;
+	align-items: center;
+	gap: 16px;
+}
+
+.share-block-row a {
+	width: 30px;
+	height: 30px;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	background: var(--accent);
+}
+
+.share-block-row a svg path {
+	fill: #fff;
+}
+
+.slider-posts {
+	margin: 24px 0;
+	padding-left: 12px;
+}
+
+.slider-posts .owl-item {
+	max-width: 304px;
+}
+
+.slider-posts .blog-item-row {
+	font-size: 11px;
+	font-weight: 600;
+	line-height: 15.95px;
+}
+
+.slider-posts .blog-item-theme>span {
+    padding: 4px 7px;
+	color: #fff;
+    background: #000;
+    border-radius: 10px;
+	font-size: 12px;
+	font-weight: 400;
+	line-height: 14.06px;
+}
+
+.slider-posts .owl-dots {
+	text-align: center !important;
+}
+
+/* contacts-page */
+
+.contacts-page .contacts-icon {
+    width: 27px;
+    height: 27px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: var(--accent);
 }
