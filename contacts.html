@@ -176,11 +176,19 @@
                         <a href="contacts.html">Контакти</span>
                         </a>
                     </li>
+                    <li class="menu-item">
+                        <a href="payment.html">Оплата частинами WayForPay</span>
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="about-us.html">Про нас</span>
+                        </a>
+                    </li>
                 </ul>         
             </nav>
         </header>
         <main class="main">
-            <div class="contacts-page">
+            <div class="contacts-page page-row">
                 <div class="head-row">
                     <a href="#" class="back_pg-btn"><span class="icon-ic_l_left"></span></a>
                     <div class="head-row-left">
@@ -252,21 +260,21 @@
                             <h2>Комментар до замовленя</h2>
                             <div class="contacts-input-block">
                                 <p class="contacts-lable">Ім’я</p>
-                                <input type="text" name="user-name">
+                                <input type="text" name="user-name" placeholder="Вікторія">
                             </div>
                             <div class="contacts-input-block">
                                 <p class="contacts-lable">Номер телефону</p>
-                                <input type="phone" name="user-phone" maxlength="13">
+                                <input type="phone" name="user-phone" maxlength="13" placeholder="+380 63 123 45 67">
                             </div>
                             <div class="contacts-input-block">
                                 <p class="contacts-lable">E-mail</p>
-                                <input type="email" name="user-email">
+                                <input type="email" name="user-email" placeholder="example@gmail.com">
                             </div>
-                            <div class="contacts-input-block">
-                                <p class="contacts-lable">Ваше повідомлення</p>
-                                <textarea name="user-message"></textarea>
+                            <div class="message">
+                                <textarea name="" id="message" rows="6" placeholder="Ваше повідомлення" maxlength="800"></textarea>
+                                <p id="counter">0 з 800 символiв</p>
                             </div>
-                            <button id="send-mail-contacts" class="btn">Зв’язатись з нами</button>
+                            <button id="send-mail-contacts" class="btn btn-big btn-grd not-active">Зв’язатись з нами</button>
                         </form>
                     </li>
                 </ul>
