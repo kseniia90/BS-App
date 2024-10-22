@@ -191,7 +191,7 @@
                 <ul class="vertical-list">
                     <li class="vertical-list-item">
                         <h2>Напишіть нам</h2>
-                        <ul>
+                        <ul class="contacts-list">
                             <li>
                                 <a href="#">
                                     <span class="contacts-icon">
@@ -235,7 +235,7 @@
                     </li>
 
                     <li class="vertical-list-item">
-                        <a href="tel:#">
+                        <a href="tel:+380731938393" class="contacts-item">
                             <span>
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -245,7 +245,29 @@
                 
                             </span>
                             <span>380731938393</span>
-                        </a>                        
+                        </a>                     
+                    </li>
+                    <li class="vertical-list-item">
+                        <form action="">
+                            <h2>Комментар до замовленя</h2>
+                            <div class="contacts-input-block">
+                                <p class="contacts-lable">Ім’я</p>
+                                <input type="text" name="user-name">
+                            </div>
+                            <div class="contacts-input-block">
+                                <p class="contacts-lable">Номер телефону</p>
+                                <input type="phone" name="user-phone" maxlength="13">
+                            </div>
+                            <div class="contacts-input-block">
+                                <p class="contacts-lable">E-mail</p>
+                                <input type="email" name="user-email">
+                            </div>
+                            <div class="contacts-input-block">
+                                <p class="contacts-lable">Ваше повідомлення</p>
+                                <textarea name="user-message"></textarea>
+                            </div>
+                            <button id="send-mail-contacts" class="btn">Зв’язатись з нами</button>
+                        </form>
                     </li>
                 </ul>
             </div>

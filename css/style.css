@@ -2616,6 +2616,21 @@ a.order-info-title {
 
 /* contacts-page */
 
+.contacts-page .vertical-list {
+	gap: 12px;
+}
+
+.contacts-page .vertical-list-item {
+    padding: 10px 16px;
+}
+
+.contacts-page h2 {
+	padding: 13px 0;
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 21.6px;
+}
+
 .contacts-page .contacts-icon {
     width: 27px;
     height: 27px;
@@ -2624,4 +2639,21 @@ a.order-info-title {
     align-items: center;
     border-radius: 50%;
     background: var(--accent);
+}
+
+.contacts-page .contacts-list {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.contacts-page .contacts-list li a,
+.contacts-item {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	padding: 3px 0;
+	font-size: 17px;
+	line-height: 23.8px;
+
 }
