@@ -231,6 +231,15 @@ $(function () {
     margin: 8,
   });
 
+   //  cards carousel
+   $(".cards-carousel").owlCarousel({
+    dots: true,
+    nav: false,
+    loop: true,
+    items:1,
+    margin: 5,
+  });
+
   // accordion BEGIN
   $(".accordion__title").on("click", function (e) {
     e.preventDefault();

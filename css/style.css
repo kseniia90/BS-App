@@ -2606,7 +2606,8 @@ a.order-info-title {
 	line-height: 14.06px;
 }
 
-.slider-posts .owl-dots {
+.slider-posts .owl-dots,
+.slider-loyalty .owl-dots {
 	text-align: center !important;
 }
 
@@ -2874,6 +2875,18 @@ a.order-info-title {
 	transform: translateY(-50%);
 }
 
+ol.light-list {
+	padding-left: 25px;
+}
+
+ol.light-list li {
+	padding-left: 0px;
+}
+
+ol.light-list li::before {
+	display: none;
+}
+
 .grd-list {
 	padding-left: 12px;
 	border-left: 1px solid var(--accent);
@@ -2937,4 +2950,81 @@ a.order-info-title {
 
 .grd-list li:not(:last-child) {
 	margin-bottom: 4px;
+}
+
+.title-row {
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	margin: 14px 0;
+}
+
+.title-row .title {
+	font-size: 34px;
+	font-weight: 700;
+	line-height: 40px;
+}
+
+.cards-carousel .item {
+	width: 100%;
+}
+
+.loyalty__card {
+	width: 100%;
+	padding: 15px 12px 2px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 40px;
+	color: #fff;
+	border-radius: 22px;
+	background: url('../img/cards-bg.svg') no-repeat;
+	background-size: cover;
+	border: 1px solid;
+	border-image-source: radial-gradient(81.8% 31.87% at 50% 50%, #FFFFFF 0%, rgba(17, 70, 6, 0) 100%);
+}
+
+.loyalty__card p,
+.loyalty__card img {
+	margin: 0;
+}
+
+.loyalty__card-name {
+	flex: 1 0 auto;
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 25.4px;
+
+}
+
+.loyalty__card img {
+	max-width: 70px;
+}
+.loyalty__card-body {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 12px;
+	text-align: center;
+}
+
+.loyalty__card-row {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.loyalty__card-sum {
+	font-size: 22px;
+	font-weight: 700;
+	line-height: 26.4px;
+}
+
+.loyalty__card-proc {
+	font-size: 32px;
+	font-weight: 700;
+	line-height: 40.64px;
 }
