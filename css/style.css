@@ -2786,12 +2786,6 @@ a.order-info-title {
 	line-height: 25.4px;
 }
 
-.loyalty-hw-item p {
-	font-size: 15px;
-	line-height: 19.5px;
-	color:  #2A3A498A;
-}
-
 .loyalty-hw-item::before,
 .loyalty-hw-item::after {
 	position: absolute;
@@ -2847,12 +2841,6 @@ a.order-info-title {
 	max-width: 100%;
 }
 
-.light-list {
-	font-size: 15px;
-	line-height: 19.5px;
-	color:  #2A3A498A;
-}
-
 .light-list li {
 	position: relative;
 	padding-left: 26px;
@@ -2877,6 +2865,7 @@ a.order-info-title {
 
 ol.light-list {
 	padding-left: 25px;
+	margin-bottom: 20px;
 }
 
 ol.light-list li {
@@ -2997,12 +2986,12 @@ ol.light-list li::before {
 	font-size: 20px;
 	font-weight: 700;
 	line-height: 25.4px;
-
 }
 
 .loyalty__card img {
 	max-width: 70px;
 }
+
 .loyalty__card-body {
 	display: flex;
 	flex-direction: column;
@@ -3027,4 +3016,30 @@ ol.light-list li::before {
 	font-size: 32px;
 	font-weight: 700;
 	line-height: 40.64px;
+}
+
+.light-text {
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 19.5px;
+	color: #2A3A498A;
+}
+
+.light-list.light-list-text li {
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
+.light-list.light-list-text li:before {
+	display: none;
+}
+
+.loyalty-page .faq-block {
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.loyalty-page .faq-block p {
+	margin-bottom: 0;
+	font-weight: 500;
 }
