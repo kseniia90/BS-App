@@ -3137,8 +3137,38 @@ ol.light-list li::before {
 	outline: none;
 }
 
+.tabcontent form {
+	min-height: 100vh;
+}
+
 form .btn {
 	width: 100%;
 	justify-content: center;
 }
 
+.sign-in-text {
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 18.2px;
+	text-align: center;
+	color:#2A3A498A;
+	margin: 10px 0;
+}
+
+.phone-block,
+.email-block {
+	display: none;
+}
+
+.phone-block.open,
+.email-block.open {
+	display: flex;
+}
+
+.sign-in-btn {
+	font-size: 17px;
+	font-weight: 500;
+	line-height: 23.8px;
+	text-align: center;
+	padding: 10px;
+}

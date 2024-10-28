@@ -291,6 +291,15 @@ $(function () {
     $(".header-row").slideUp();
     $(".search-filter").slideDown();
   });
+
+  // sing in email/phone
+
+  $(".sign-in-btn").on("click", function (e) {
+    e.preventDefault();
+    $(".email-block").toggleClass("open");
+    $(".phone-block").toggleClass("open");
+  });
+
 });
 
 
