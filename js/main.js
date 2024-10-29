@@ -62,7 +62,6 @@ document.querySelectorAll(".fixed-menu-item.cart").forEach((el) => {
   });
 });
 
-
 // open order
 document.querySelectorAll(".vertical-list-item-info .btn").forEach((el) => {
   el.addEventListener("click", (event) => {
