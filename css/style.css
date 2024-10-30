@@ -3038,17 +3038,26 @@ form .btn {
 	padding: 10px;
 }
 
-.account-page-menu .main-menu {
+.account-page-menu .main-menu.main-menu-account {
 	padding: 16px;
 }
 
-.account-page-menu .main-menu>ul {
+.account-page-menu .main-menu.main-menu-account>ul {
 	background-color: #fff;
 	border-radius: 16px;
 	margin-bottom: 14px;
 }
 
+a.back_pg-btn {
+	white-space: normal !important;
+	background: none !important;
+	font-size: 24px !important;
+}
 
+.order-info-content ul a {
+	white-space: normal !important;
+	background: none !important;
+}
 .account-page .product-row-list {
 	display: grid;
 	grid-template-columns: 1fr;

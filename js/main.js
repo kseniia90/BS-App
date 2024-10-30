@@ -26,9 +26,7 @@ function loading() {
 
 //   back to page
 if (document.querySelector(".back_pg-btn") !== null) {
-  document
-    .querySelector(".back_pg-btn")
-    .addEventListener("click", function (e) {
+  document.querySelector(".back_pg-btn").addEventListener("click", function (e) {
       e.preventDefault();
       window.history.back();
     });
