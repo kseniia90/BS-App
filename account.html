@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="./lib/owlcarousel/styles/owl.carousel.min.css">
     <link rel="stylesheet" href="./lib/owlcarousel/styles/owl.theme.default.min.css">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Мої замовлення</title>
+    <title>Мій аккаунт</title>
 </head>
 
 <body>
@@ -287,7 +287,6 @@
                 </div>
                 <div class="account-page-menu">
                     <div class="head-row">
-                        <a href="#" class="back_pg-btn"><span class="icon-ic_l_left"></span></a>
                         <div class="head-row-left">
                             <span>Мій аккаунт</span>
                         </div>
@@ -295,29 +294,49 @@
                     <nav class="main-menu main-menu-account">
                         <ul>                           
                            
-                            <li class="menu-item menu-item-has-children">
+                            <li class="menu-item account-item menu-item-has-children">
+                                <span>Мій профіль</span>
                                 <a href="#">Вікторія Ткач</a>
+                                <span>+38 063 123 45 67</span>
                                 <div class="mega-menu-item">
-                                    <div class="back-block">
+                                    <div class="head-row back-block">
                                         <p class="btn-back">
                                             <span class="icon-ic_l_left"></span>
                                         </p>
-                                        <span>Обличяя</span>
+                                        <span>Твої данні</span>
                                     </div>
-                                    <ul class="sub-menu">
-                                        <li class="menu-item"><a href="category.html">Стайлінг</a></li>
-                                        <li class="menu-item"><a href="category.html">Спеціальний догляд</a></li>
-                                        <li class="menu-item"><a href="category.html">Тревел засоби</a></li>
-                                    </ul>
+                                    <form action="" class="account-data container">
+                                        <div class="contacts-input-block">
+                                            <p class="contacts-lable">Ім’я</p>
+                                            <input type="text" name="user-name" value="Вікторія" placeholder="Ім’я">
+                                        </div>
+                                        <div class="contacts-input-block">
+                                            <p class="contacts-lable">Прізвище</p>
+                                            <input type="text" name="user-last-name"  placeholder="Прізвище">
+                                        </div>
+                                        <div class="contacts-input-block">
+                                            <p class="contacts-lable">Номер телефону</p>
+                                            <input type="phone" name="user-phone" maxlength="13"  value="+380 63 123 45 67">
+                                        </div>
+                                        <div class="contacts-input-block">
+                                            <p class="contacts-lable">E-mail</p>
+                                            <input type="email" name="user-email" placeholder="example@gmail.com" value="example@gmail.com">
+                                        </div>
+                                        <div class="contacts-input-block">
+                                            <p class="contacts-lable">Дата рародження</p>
+                                            <input type="date" name="user-date" placeholder="Оберіть дату народження">
+                                        </div>
+                                        <button id="account-data-save" class="btn btn-big btn-grd not-active">Зберегти</button>
+                                    </form>
                                 </div>
                             </li>
                         </ul>
 
                         <ul>                           
-                            <li class="menu-item menu-item-has-children">
+                            <li class="menu-item account-item menu-item-has-children">
                                 <a href="#">Мої замовлення</a>
-                                <div class="mega-menu-item">
-                                    <div class="back-block">
+                                <div class="mega-menu-item account-item-list">
+                                    <div class="head-row back-block">
                                         <p class="btn-back">
                                             <span class="icon-ic_l_left"></span>
                                         </p>
@@ -562,8 +581,11 @@
                                                         <span>Про замовлення</span>
                                                     </div>
                                                     <div class="order-info">
-                                                        <div class="back-block head-row">
-                                                            <span class="icon-ic_l_left"></span>
+                                                        <div class="head-row">
+                                                            <a href="#" class="back_pg-btn"><span class="icon-ic_l_left"></span></a>
+                                                            <div class="head-row-left">
+                                                                <span>Про замовлення</span>
+                                                            </div>
                                                         </div>
                                                        
                                                         <div class="order-info-content">
@@ -667,20 +689,82 @@
                                     </ul>
                                 </div>
                             </li>
-                            <li class="menu-item menu-item-has-children">
+                            <li class="menu-item account-item menu-item-has-children">
                                 <a href="#">Кешбек</a>
-                                <div class="mega-menu-item">
+                                <div class="mega-menu-item account-item-list">
                                     <div class="back-block">
                                         <p class="btn-back">
                                             <span class="icon-ic_l_left"></span>
                                         </p>
                                         <span>Кешбек</span>
                                     </div>
-                                    <ul class="sub-menu">
-                                        <li class="menu-item"><a href="category.html">Стайлінг</a></li>
-                                        <li class="menu-item"><a href="category.html">Спеціальний догляд</a></li>
-                                        <li class="menu-item"><a href="category.html">Тревел засоби</a></li>
-                                    </ul>
+                                    <div class="sub-menu loyalty__item">
+                                        <div class="loyalty__container">
+                                            <div class="loyalty__card">
+                                                <p class="loyalty__card-name">
+                                                    <img src="img/card-logo.svg" alt="" width="70" height="31">
+                                                    <span>START</span>
+                                                </p>
+                                                <div class="loyalty__card-body">
+                                                    <p class="loyalty__card-row">
+                                                        <span class="loyalty__card-sum">Баланс б’ютиків</span>
+                                                    </p>
+                                                    <p class="loyalty__card-row">
+                                                        <span class="loyalty__card-proc"><img src="img/loyalty_3.svg" alt="logo" width="24" height="26">10</span>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <ul class="vertical-list">
+                                            <li class="vertical-list-item">
+                                                    <p>Рівень кешбеку <b>3%</b></p>  
+                                                    <div></div>  
+                                                    <p>10 бʼютиків згорають 22.08.2024</p>                                    
+                                            </li>
+                                            <li class="vertical-list-item">
+                                                <!-- <div class="row">
+                                                    <h2>Історія</h2><p>1 Б’ютік = 1 гривня</p>
+                                                </div> -->
+                                                <ul>
+                                                    <li>
+                                                        <div class="row">
+                                                            <h2>Історія</h2><p>1 Б’ютік = 1 гривня</p>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="row">
+                                                            <div class="column">
+                                                                <span class="light date">13 серпня 2024</span>
+                                                                <p>5 739 ₴ </p>
+                                                            </div>
+                                                            <p class="light">нараховано 51 бʼютік</p>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="row">
+                                                            <div class="column">
+                                                                <span class="light date">3 серпня 2024</span>
+                                                                <p>2 850 ₴  </p>
+                                                            </div>
+                                                            <p class="light">нараховано 21 бʼютік</p>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="row">
+                                                            <div class="column">
+                                                                <span class="light date">13 серпня 2024</span>
+                                                                <p>5 739 ₴ </p>
+                                                            </div>
+                                                            <p class="light">нараховано 51 бʼютік</p>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                                                                    
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+                                   
                                 </div>
                             </li>
                         </ul>                

@@ -65,14 +65,17 @@ document.querySelectorAll(".vertical-list-item-info .btn").forEach((el) => {
   el.addEventListener("click", (event) => {
     event.preventDefault();
     el.parentElement.classList.toggle("active");
-    // document.body.classList.add("menu-open");
+    document.querySelector('.menu-item.active .mega-menu-item').scrollTo({top: 0, behavior: "smooth"});
+    document.querySelector('.vertical-list-item-info.active .order-info').scrollTo({top: 0, behavior: "smooth"});
+    document.querySelector('.menu-item.active .mega-menu-item').style.overflow = 'hidden';
   });
 });
 
-document.querySelectorAll(".order-info .back-block").forEach((el) => {
+document.querySelectorAll(".order-info .back_pg-btn").forEach((el) => {
 el.addEventListener("click", (event) => {
+  event.stopPropagation();
+  event.preventDefault();
   el.closest(".active").classList.remove("active");
-  // document.body.classList.remove("menu-open");
 });
 });
 
@@ -164,35 +167,37 @@ if (document.querySelector("#counter") !== null) {
   });
 }
 
-// countDown on banner
-if (document.querySelector(".coutndown-block") !== null) {
-	let days = document.getElementById("days"),
-	  hours = document.getElementById("hours"),
-	  minutes = document.getElementById("minutes"),
-	  seconds = document.getElementById("seconds");
-	const second = 1000,
-	  minute = second * 60,
-	  hour = minute * 60,
-	  day = hour * 24;
-	let countDown = new Date("october 29, 2024 00:00:00").getTime(),
-	  x = setInterval(function () {
-		let now = new Date().getTime(),
-		  distance = countDown - now;
-		days = Math.floor(distance / day);
-		days = days < 10 ? "0" + days : days;
-		(document.getElementById("days").innerText = days),
-		  (hours = Math.floor((distance % day) / hour));
-		hours = hours < 10 ? "0" + hours : hours;
-		(document.getElementById("hours").innerText = hours),
-		  (minutes = Math.floor((distance % hour) / minute)),
-		  (minutes = minutes < 10 ? "0" + minutes : minutes);
-		(document.getElementById("minutes").innerText = minutes),
-		  (seconds = Math.floor((distance % minute) / second)),
-		  (seconds = seconds < 10 ? "0" + seconds : seconds);
-		document.getElementById("seconds").innerText = seconds;
-		var sec = Math.floor((distance % minute) / second);
-	  }, second);
-  };
+  // countDown on banner
+if (document.querySelector(".coutndown") !== null) {
+  let days = document.getElementById("days"),
+    hours = document.getElementById("hours"),
+    minutes = document.getElementById("minutes"),
+    seconds = document.getElementById("seconds");
+  const second = 1000,
+    minute = second * 60,
+    hour = minute * 60,
+    day = hour * 24;
+
+  let timeleft = JSON.parse(document.querySelector(".coutndown").getAttribute("data-timeleft")),
+    distance = timeleft.days * day + timeleft.hours * hour + timeleft.minutes * minute + timeleft.seconds * second,
+    x = setInterval(function () {
+        
+      days = Math.floor(distance / day);
+      days = days < 10 ? "0" + days : days;
+      (document.getElementById("days").innerText = days),
+        (hours = Math.floor((distance % day) / hour));
+      hours = hours < 10 ? "0" + hours : hours;
+      (document.getElementById("hours").innerText = hours),
+        (minutes = Math.floor((distance % hour) / minute)),
+        (minutes = minutes < 10 ? "0" + minutes : minutes);
+      (document.getElementById("minutes").innerText = minutes),
+        (seconds = Math.floor((distance % minute) / second)),
+        (seconds = seconds < 10 ? "0" + seconds : seconds);
+      document.getElementById("seconds").innerText = seconds;
+      var sec = Math.floor((distance % minute) / second);
+      distance = distance - second;
+    }, second);
+}
 
   // tab START
 
@@ -285,7 +290,7 @@ $(function () {
 
   $(".header-search-form input").on("focus", function () {
     $(".header").addClass("search-open");
-    $(".header-row").slideUp();
+    $(".header-row").slideUp(250);
     $(".search-filter").slideDown();
   });
 
@@ -295,6 +300,14 @@ $(function () {
     e.preventDefault();
     $(".email-block").toggleClass("open");
     $(".phone-block").toggleClass("open");
+  });
+
+  // change account data
+
+  $(".account-data input").on("click", function (e) {
+    console.log(e.target.value);
+    e.target.value = "";
+    $(".account-data .btn").removeClass("not-active");
   });
 
 });

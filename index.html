@@ -206,9 +206,11 @@
         </header>
         <main class="main">
             <div class="header">
-                <div class="header-row container">
-                    <img src="./img/logo_green.svg" alt="logo" width="32" height="32">
-                    <p>При замовленнi на 1000 грн, доставка безкоштовна</p>
+                <div class="header-row">
+                    <div class="header-row-content container">
+                        <img src="./img/logo_green.png" alt="logo" width="32" height="32">
+                        <p>При замовленнi на 1000 грн, доставка безкоштовна</p>
+                    </div>
                 </div>
                 <div class="header-search container">
                     <form action="#" class="header-search-form">
@@ -219,19 +221,19 @@
                     </form>
                     <ul class="search-filter">
                         <li class="search-filter-item active">
-                            <a href="">New</a>
+                            <a href="#">New</a>
                         </li>
                         <li class="search-filter-item">
-                            <a href="">Жінкам</a>
+                            <a href="#">Жінкам</a>
                         </li>
                         <li class="search-filter-item">
-                            <a href="">Дітям</a>
+                            <a href="#">Дітям</a>
                         </li>
                         <li class="search-filter-item">
-                            <a href="">Чоловікам</a>
+                            <a href="#">Чоловікам</a>
                         </li>
                         <li class="search-filter-item">
-                            <a href="">New</a>
+                            <a href="#">New</a>
                         </li>
                     </ul>
                 </div>
@@ -698,17 +700,17 @@
                         <img class="banner__img" src="./img/banner_1.png" alt="img">
                     </a>
                 </div>
-                <div class="coutndown-block container">
+                <div class="coutndown-block">
                     <p class="subtitle">До кінця акції залишилось:</p>
-                    <div class="coutndown">
+                    <div class="coutndown" data-timeleft='{"days":1, "hours":2,"minutes":15,"seconds":30}'>
                         <ul>
-                            <li><span id="days">24</span></li>
+                            <li><span id="days"></span></li>
                             <span>:</span>
-                            <li><span id="hours">10</span></li>
+                            <li><span id="hours"></span></li>
                             <span>:</span>
-                            <li><span id="minutes">05</span></li>
+                            <li><span id="minutes"></span></li>
                             <span>:</span>
-                            <li><span id="seconds">45</span></li>
+                            <li><span id="seconds"></span></li>
                         </ul>
                     </div>
                 </div>
