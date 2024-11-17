@@ -3278,3 +3278,73 @@ a.order-info-title {
 	color: #2A3A498A;
 	font-weight: 400;
 }
+
+.loyalty__item>.vertical-list .light {
+	font-size: 12px;
+}
+
+.loyalty__item>.vertical-list .column p {
+	font-size: 17px;
+	line-height: 23.8px;
+	font-weight: 400;
+}
+
+.loyalty__item>.vertical-list li:last-child {
+	border: none;
+	padding-bottom: 5px;
+}
+
+.loyalty__progress-bar-wrap {
+	padding: 40px 0 5px;
+}
+.loyalty__progress {
+	position: relative;
+	height: 3px;
+	width: 100%;
+	background: var(--bg-gradient);
+	border-radius: 3px;
+}
+
+.loyalty__progress-value {
+	position: absolute;
+	left: 35%;
+	top: -25px;
+	margin-left: -5px;
+	color: var(--accent);
+	font-size: 11px;
+	line-height: 16px;
+}
+
+.loyalty__progress-thumb {
+	position: absolute;
+	width: 11px;
+	height: 11px;
+	left: 35%;
+	top: 50%;
+	transform: translate(0, -50%);
+	border-radius: 50%;
+	background-color: var(--accent);
+}
+
+  
+  .loyalty__marks {
+	position: relative;
+	width: 96%;
+	margin: 0 auto 20px;
+	height: 40px;
+  }
+  
+  .mark {
+	position: absolute;
+	transform: translateX(-50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-size: 17px;
+	font-weight: 400;
+	line-height: 23.8px;
+
+  }
+  
+  
