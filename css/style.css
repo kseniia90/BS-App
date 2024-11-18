@@ -3283,7 +3283,8 @@ a.order-info-title {
 	font-size: 12px;
 }
 
-.loyalty__item>.vertical-list .column p {
+.loyalty__item>.vertical-list .column p,
+.loyalty__item>.vertical-list>li p:first-of-type {
 	font-size: 17px;
 	line-height: 23.8px;
 	font-weight: 400;
