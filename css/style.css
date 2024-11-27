@@ -331,12 +331,11 @@ body {
 	background: var(--accent-light);
 	border-radius: 22px;
 	text-align: center;
-	transition: all .2s ease-in-out;
+	transition: all .3s ease-in-out;
 }
 
 .btn:active {
-	transform: scale(1.05);
-	transition: .1s;
+	background: var(--accent);
 }
 
 form .btn {
