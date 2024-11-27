@@ -2151,6 +2151,10 @@ footer {
 	padding-right: 30px;
   }
 
+  .page-row .head-row-left.title-only {
+	padding-right: 0;
+  }
+
   .page-row .head-row-left>span {
 	width: 100%;
 	text-align: center;
