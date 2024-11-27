@@ -331,6 +331,12 @@ body {
 	background: var(--accent-light);
 	border-radius: 22px;
 	text-align: center;
+	transition: all .2s ease-in-out;
+}
+
+.btn:active {
+	transform: scale(1.05);
+	transition: .1s;
 }
 
 form .btn {
@@ -730,12 +736,14 @@ footer {
 	margin-top: 56px;
 }
 
-.slider-banner .banner-carousel {
+.slider-banner .banner-carousel,
+.akcia-carousel {
 	margin: 0px auto;
 	height: auto;
 }
 
-.slider-banner .banner-carousel .item {
+.slider-banner .banner-carousel .item,
+.akcia-carousel .item {
 	height: 100%;
 	display: flex;
 	justify-content: center;
@@ -743,14 +751,18 @@ footer {
 	max-height: 400px;
 }
 
-.slider-banner .banner-carousel .item img {
+.slider-banner .banner-carousel .item img,
+.akcia-carousel .item img {
 	width: 100%;
 	object-fit: cover;
 }
 
 .slider-banner .banner-carousel .owl-stage,
 .slider-banner .banner-carousel .owl-stage-outer,
-.slider-banner .banner-carousel .owl-item {
+.slider-banner .banner-carousel .owl-item,
+.slider-banner .akcia-carousel .owl-stage,
+.slider-banner .akcia-carousel .owl-stage-outer,
+.slider-banner .akcia-carousel .owl-item {
 	height: 100%;
 }
 
@@ -829,11 +841,19 @@ footer {
 	padding: 0 12px; 
 }
 
-.banner-akcia .banner-carousel .item {
+.akcia-carousel .item {
+	flex-direction: column;
+	gap: 10px;
+}
+
+.akcia-carousel .item>a {
+	display: block;
+	height: 100%;
 	max-height: 350px;
 }
 
-.banner-akcia .banner-carousel .item img {
+.akcia-carousel .item img {
+	height: 100%;
 	border-radius: 8px;
 }
 
@@ -1102,6 +1122,7 @@ footer {
 	justify-content: space-between;
 	align-items: center;
 	gap: 20px;
+	padding: 0 5px;
 }
 
 .coutndown {

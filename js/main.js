@@ -21,7 +21,6 @@ function loading() {
         current.style.width = `${endWidth}%`;
         document.getElementById("percentage").innerText = `${startWidth}%`;
       }
-      console.log(startWidth);
     }
   });
 }
@@ -187,17 +186,15 @@ if (document.querySelector("#counter") !== null) {
 
 // countDown on banner
 if (document.querySelector(".coutndown") !== null) {
-  let days = document.getElementById("days"),
-    hours = document.getElementById("hours"),
-    minutes = document.getElementById("minutes"),
-    seconds = document.getElementById("seconds");
+  document.querySelectorAll(".coutndown").forEach((countDownElement)=>{
+  
   const second = 1000,
     minute = second * 60,
     hour = minute * 60,
     day = hour * 24;
 
   let timeleft = JSON.parse(
-      document.querySelector(".coutndown").getAttribute("data-timeleft")
+    countDownElement.getAttribute("data-timeleft")
     ),
     distance =
       timeleft.days * day +
@@ -205,21 +202,27 @@ if (document.querySelector(".coutndown") !== null) {
       timeleft.minutes * minute +
       timeleft.seconds * second,
     x = setInterval(function () {
+      let days,
+      hours,
+      minutes,
+      seconds;
       days = Math.floor(distance / day);
       days = days < 10 ? "0" + days : days;
-      (document.getElementById("days").innerText = days),
+      (countDownElement.querySelector(".days").innerText = days),
         (hours = Math.floor((distance % day) / hour));
       hours = hours < 10 ? "0" + hours : hours;
-      (document.getElementById("hours").innerText = hours),
+      (countDownElement.querySelector(".hours").innerText = hours),
         (minutes = Math.floor((distance % hour) / minute)),
         (minutes = minutes < 10 ? "0" + minutes : minutes);
-      (document.getElementById("minutes").innerText = minutes),
+      (countDownElement.querySelector(".minutes").innerText = minutes),
         (seconds = Math.floor((distance % minute) / second)),
         (seconds = seconds < 10 ? "0" + seconds : seconds);
-      document.getElementById("seconds").innerText = seconds;
+        countDownElement.querySelector(".seconds").innerText = seconds;
       var sec = Math.floor((distance % minute) / second);
       distance = distance - second;
     }, second);
+
+  })
 }
 
 // tab START
@@ -245,6 +248,19 @@ $(function () {
     dots: true,
     nav: true,
     loop: true,
+    items: 1,
+    margin: 5,
+    autoplay: true,
+    slideTransition: "linear",
+    autoplaySpeed: 3000,
+    autoplayTimeout: 5000,
+    autoplayHoverPause: true,
+  });
+
+  $(".akcia-carousel").owlCarousel({
+    dots: true,
+    nav: true,
+    loop: false,
     items: 1,
     margin: 5,
     autoplay: true,
@@ -335,7 +351,6 @@ $(function () {
   // change account data
 
   $(".account-data input").on("click", function (e) {
-    console.log(e.target.value);
     e.target.value = "";
     $(".account-data .btn").removeClass("not-active");
   });
