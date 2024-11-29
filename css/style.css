@@ -1066,7 +1066,8 @@ footer {
 	align-items: center;
 	flex-direction: row;
 	gap: 2px;
-	margin-bottom: 16px; 
+	margin: 8px auto;
+	/* margin-bottom: 16px;  */
 	font-size: 9px;
 	color: var(--accent);
 }
@@ -1226,6 +1227,7 @@ footer {
 .advantage-list {
 	padding-left: 0;
 	gap: 0;
+	justify-content: center;
 }
 
 .advantage-list li p {
@@ -1239,7 +1241,6 @@ footer {
 	font-weight: 400;
 	line-height: 16.5px;
 	text-align: center;
-
 }
 .advantage-list .icon {
 	display: flex;
