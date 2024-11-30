@@ -1137,6 +1137,10 @@ footer {
 	background-position: calc(100% - 12px) 40%;
 }
 
+.select2-hidden-accessible {
+	display: none;
+}
+
 .select2-container {
     white-space: nowrap;
     text-overflow: ellipsis;
