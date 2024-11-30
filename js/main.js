@@ -243,6 +243,9 @@ function openOption(evt, optionName) {
 // tab END
 
 $(function () {
+  //select2
+  $('.js-example-basic-single').select2();
+  
   // slider banner
   $(".banner-carousel").owlCarousel({
     dots: true,

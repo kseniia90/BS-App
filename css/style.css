@@ -987,6 +987,31 @@ footer {
 	background: radial-gradient(80.15% 69.17% at 49.86% 50%, rgba(250, 251, 235, 0.64) 51%, rgba(237, 246, 158, 0.8) 75%, rgba(237, 246, 158, 0.8) 100%);
 }
 
+.product-card__lable.popular {
+	background: #4B6D74A6;
+	color: white;
+}
+
+.product-card__lable.favorite {
+	background: #9FA9DEA6;
+}
+
+.product-card__lable.waiting {
+	background: #A1A1A1A6;
+}
+
+.product-card__lable.gift {
+	background: #DEE891;
+	vertical-align: middle;
+}
+
+.product-card__lable.discount-one-plus-one {
+	background: #65a0db;
+	color: white;
+}
+
+
+
 .product-card .icon-heart {
 	position: absolute;
 	right: 6px;
@@ -1092,9 +1117,9 @@ footer {
 	text-decoration: line-through;
 }
 
-.product-card__info__price .new-price {
+/* .product-card__info__price .new-price {
 	color: #FF0D00;
-}
+} */
 
 .product__card__info__variants {
 	position: relative;
@@ -1110,6 +1135,26 @@ footer {
     width: 100%;
 	background: var(--dropdown-icon) no-repeat right;
 	background-position: calc(100% - 12px) 40%;
+}
+
+.select2-container {
+	position: relative;
+    padding: 4px 25px 4px 10px;
+    outline: none;
+	appearance: none;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: center;
+	color: var(--accent-light);
+    background-color: transparent;
+	border: none;
+    width: 100%;
+	background: var(--dropdown-icon) no-repeat right;
+	background-position: calc(100% - 12px) 40%;
+}
+
+.select2-container--default .select2-selection--single {
+	border: none;
 }
 
 .product-card__info .btn {
