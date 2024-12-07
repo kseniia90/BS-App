@@ -1281,6 +1281,10 @@ footer {
 	right: 0;
 }
 
+.baners-list {
+	align-items: flex-start;
+}
+
 .baners-list li {
 	width: 100%;
 	align-items: stretch;
@@ -1525,6 +1529,7 @@ footer {
 	font-size: 20px;
 	line-height: 24px;
 	letter-spacing: 0.4px;
+	height: auto;
 }
 
 .product-card.main .product-card__info__description .akcia-name {
@@ -1610,6 +1615,11 @@ footer {
 
 .product-accordion .review .btn-grd {
 	justify-content: center;
+}
+
+.product-accordion iframe {
+	width: 100% !important;
+	margin: 5px auto;
 }
 
 .add-review {
