@@ -36,35 +36,87 @@ if (document.querySelector(".back_pg-btn") !== null) {
 }
 
 // open catalog
+
 document.querySelectorAll(".fixed-menu-item.catalog").forEach((el) => {
   el.addEventListener("click", (event) => {
     event.preventDefault();
-    document.querySelectorAll(".fixed-menu-item").forEach((el) => {
-      el.classList.remove("active");
-    });
-    document.querySelector(".fixed-menu-item.catalog").classList.toggle("active");
-    document.querySelectorAll(".popup.cart-page").forEach((el) => {
-      el.classList.remove("open");
-    });
-    document.querySelector(".catalog-nav").classList.toggle("open");
-    if (document.querySelector(".menu-item-has-children.active") !== null) {
-      document.querySelector(".menu-item-has-children.active").classList.remove("active");
-    }
+
+    if(document.querySelector(".catalog-nav").classList.contains("open")){
+      document.querySelector(".fixed-menu-item.catalog").classList.remove("active");
+      document.querySelector(".catalog-nav").classList.remove("open");
+      document.querySelector("body").classList.remove("lock");
+      if (document.querySelector(".menu-item-has-children.active") !== null) {
+        document.querySelector(".menu-item-has-children.active").classList.remove("active");
+      }
+    } else {
+      document.querySelectorAll(".fixed-menu-item").forEach((el) => {
+        el.classList.remove("active");
+      });
+      document.querySelectorAll(".popup.cart-page").forEach((el) => {
+        el.classList.remove("open");
+      });
+      document.querySelectorAll(".authorization-popup").forEach((el) => {
+        el.classList.remove("open");
+      });
+      document.querySelector(".fixed-menu-item.catalog").classList.add("active");
+      document.querySelector(".catalog-nav").classList.add("open");
+      document.querySelector("body").classList.add("lock");
+    }    
   });
 });
 
 // open cart
+
 document.querySelectorAll(".fixed-menu-item.cart").forEach((el) => {
   el.addEventListener("click", (event) => {
     event.preventDefault();
-    document.querySelectorAll(".fixed-menu-item").forEach((el) => {
-      el.classList.remove("active");
-    });
-    document.querySelector(".fixed-menu-item.cart").classList.toggle("active");
-    document.querySelectorAll(".popup.catalog-nav").forEach((el) => {
-      el.classList.remove("open");
-    });
-    document.querySelector(".cart-page").classList.toggle("open");
+
+    if(document.querySelector(".popup.cart-page").classList.contains("open")){
+      document.querySelector(".fixed-menu-item.cart").classList.remove("active");
+      document.querySelector(".popup.cart-page").classList.remove("open");
+      document.querySelector("body").classList.remove("lock");
+     
+    } else {
+      document.querySelectorAll(".fixed-menu-item").forEach((el) => {
+        el.classList.remove("active");
+      });
+      document.querySelectorAll(".popup.catalog-nav").forEach((el) => {
+        el.classList.remove("open");
+      });
+      document.querySelectorAll(".authorization-popup").forEach((el) => {
+        el.classList.remove("open");
+      });
+      document.querySelector(".fixed-menu-item.cart").classList.add("active");
+      document.querySelector(".popup.cart-page").classList.add("open");
+      document.querySelector("body").classList.add("lock");
+    }    
+  });
+});
+
+// open authorization-popup
+document.querySelectorAll(".fixed-menu-item.account").forEach((el) => {
+  el.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    if(document.querySelector(".authorization-popup").classList.contains("open")){
+      document.querySelector(".fixed-menu-item.account").classList.remove("active");
+      document.querySelector(".authorization-popup").classList.remove("open");
+      document.querySelector("body").classList.remove("lock");
+     
+    } else {
+      document.querySelectorAll(".fixed-menu-item").forEach((el) => {
+        el.classList.remove("active");
+      });
+      document.querySelectorAll(".popup.catalog-nav").forEach((el) => {
+        el.classList.remove("open");
+      });
+      document.querySelectorAll(".popup.cart-page").forEach((el) => {
+        el.classList.remove("open");
+      });
+      document.querySelector(".fixed-menu-item.account").classList.add("active");
+      document.querySelector(".authorization-popup").classList.add("open");
+      document.querySelector("body").classList.add("lock");
+    }    
   });
 });
 
@@ -244,7 +296,9 @@ function openOption(evt, optionName) {
 
 $(function () {
   //select2
-  $('.js-example-basic-single').select2();
+  $('.js-example-basic-single').select2({
+    minimumResultsForSearch: Infinity 
+  });
   
   // slider banner
   $(".banner-carousel").owlCarousel({
