@@ -52,7 +52,7 @@ document.querySelectorAll(".fixed-menu-item.catalog").forEach((el) => {
       document.querySelectorAll(".fixed-menu-item").forEach((el) => {
         el.classList.remove("active");
       });
-      document.querySelectorAll(".popup.cart-page").forEach((el) => {
+      document.querySelectorAll(".cart-page").forEach((el) => {
         el.classList.remove("open");
       });
       document.querySelectorAll(".authorization-popup").forEach((el) => {
@@ -71,23 +71,23 @@ document.querySelectorAll(".fixed-menu-item.cart").forEach((el) => {
   el.addEventListener("click", (event) => {
     event.preventDefault();
 
-    if(document.querySelector(".popup.cart-page").classList.contains("open")){
+    if(document.querySelector(".cart-page").classList.contains("open")){
       document.querySelector(".fixed-menu-item.cart").classList.remove("active");
-      document.querySelector(".popup.cart-page").classList.remove("open");
+      document.querySelector(".cart-page").classList.remove("open");
       document.querySelector("body").classList.remove("lock");
      
     } else {
       document.querySelectorAll(".fixed-menu-item").forEach((el) => {
         el.classList.remove("active");
       });
-      document.querySelectorAll(".popup.catalog-nav").forEach((el) => {
+      document.querySelectorAll(".catalog-nav").forEach((el) => {
         el.classList.remove("open");
       });
       document.querySelectorAll(".authorization-popup").forEach((el) => {
         el.classList.remove("open");
       });
       document.querySelector(".fixed-menu-item.cart").classList.add("active");
-      document.querySelector(".popup.cart-page").classList.add("open");
+      document.querySelector(".cart-page").classList.add("open");
       document.querySelector("body").classList.add("lock");
     }    
   });
@@ -107,10 +107,10 @@ document.querySelectorAll(".fixed-menu-item.account").forEach((el) => {
       document.querySelectorAll(".fixed-menu-item").forEach((el) => {
         el.classList.remove("active");
       });
-      document.querySelectorAll(".popup.catalog-nav").forEach((el) => {
+      document.querySelectorAll(".catalog-nav").forEach((el) => {
         el.classList.remove("open");
       });
-      document.querySelectorAll(".popup.cart-page").forEach((el) => {
+      document.querySelectorAll(".cart-page").forEach((el) => {
         el.classList.remove("open");
       });
       document.querySelector(".fixed-menu-item.account").classList.add("active");
