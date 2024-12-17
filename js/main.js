@@ -401,8 +401,8 @@ $(function () {
 
   $(".sign-in-btn").on("click", function (e) {
     e.preventDefault();
-    $(".email-block").toggleClass("open");
-    $(".phone-block").toggleClass("open");
+    $(".email-block, .phone-block").toggleClass("open");
+        
   });
 
   // change account data
