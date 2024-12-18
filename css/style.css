@@ -2671,7 +2671,8 @@ footer {
 	line-height: 23.8px;
 }
 
-.contacts-input-block {
+.contacts-input-block,
+.email-block-row {
 	display: flex;
 	flex-direction: column;
 	gap: 2px;
@@ -2679,6 +2680,10 @@ footer {
 	font-size: 15px;
 	font-weight: 400;
 	line-height: 19.5px;
+}
+
+.email-block-row.pass {
+	display: none;
 }
 
 .contacts-lable {
@@ -3204,6 +3209,10 @@ form .btn {
 	margin: 10px 0;
 }
 
+.sign-in-text a {
+	text-decoration: underline;
+}
+
 .phone-block,
 .email-block {
 	display: none;
@@ -3222,6 +3231,89 @@ form .btn {
 	line-height: 23.8px;
 	text-align: center;
 	padding: 10px;
+}
+
+.sign-in__phone-code {
+	/* display: flex; */
+	display: none;
+	flex-direction: column;
+	text-align: center;
+}
+
+.sign-in__phone-code .popup-title {
+	margin-bottom: 12px;
+}
+
+.sign-in__phone-code .light {
+	max-width: 330px;
+	margin: 0 auto 24px;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 20.8px;
+	color: #2A3A498A;
+}
+
+.sign-in__phone-code form {
+	display: flex !important;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+	min-height: auto;
+	margin-bottom: 40px;
+}
+
+.sign-in__phone-code form .inputs {
+	display: flex !important;
+	justify-content: center;
+	align-items: center;
+	gap: 16px;
+}
+
+.sign-in__phone-code form input {
+	width: 48px;
+	height: 52px;
+	padding: 10px;
+    outline: none;
+    border: none;
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 21.6px;
+	text-align: center;
+    background: var(--bg-light);
+	border-radius: 20px;
+}
+
+.sign-in__phone-code .row-bottom {
+	font-family: "Roboto";
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 18.2px;
+	color: #2A3A498A;
+}
+
+.sign-in__phone-code .row-bottom button {
+	font-family: 'Montserrat';
+	font-size: 17px;
+	font-weight: 600;
+	line-height: 23.8px;
+	padding: 10px;
+}
+
+form.error input {
+	border: 1px solid #FF0D00;
+}
+
+form .error-text {
+	display: none;
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 18.2px;
+	color: #FF0D00;
+}
+
+form.error .error-text {
+	display: block;
 }
 
 .account-page-menu>.head-row>.head-row-left {

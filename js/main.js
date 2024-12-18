@@ -165,7 +165,41 @@ function openLoginPopup(){
   }
 }
 
+// show sms verify 
+function showSmsVerify(){
+       
+  if (document.querySelector(".sign-in__phone-code") !== null) {
+    
+    document.querySelector(".sign-in__content>form").style.display = "none";
+    document.querySelector(".sign-in__phone-code").style.display = "flex";
 
+    window.addEventListener("click", function (e) {
+  
+      if (!e.target.closest(".sign-in__phone-code")) {
+        document.querySelector(".sign-in__content>form").style.display = "block";
+        document.querySelector(".sign-in__phone-code").style.display = "none";
+      }
+    });
+  }
+}
+
+// show email verify 
+function showEmailVerify(){
+       
+  if (document.querySelector(".contacts-input-block.email-block") !== null) {
+    
+    document.querySelector(".email-block-row.email").style.display = "none";
+    document.querySelector(".email-block-row.pass").style.display = "flex";
+
+    window.addEventListener("click", function (e) {
+  
+      if (!e.target.closest(".email-block-row.pass")) {
+        document.querySelector(".email-block-row.email").style.display = "flex";
+    document.querySelector(".email-block-row.pass").style.display = "none";
+      }
+    });
+  }
+}
 
 
 // menu catalog

@@ -1419,15 +1419,21 @@
                 <!-- Tab content -->
                 <div id="sign-in" class="tabcontent" style="display: block;">
                     <div class="sign-in__content">
-                        <form action="">
+                        <form action="" class="sign-in__form">
                             <div class="contacts-input-block phone-block open">
                                 <p class="contacts-lable">Номер телефону</p>
                                 <input type="phone" name="user-phone" maxlength="13" value="+380">
                             </div>
                             
                             <div class="contacts-input-block email-block">
-                                <p class="contacts-lable">E-mail</p>
-                                <input type="email" name="user-email" placeholder="Введіть E-mail">
+                                <div class="email-block-row email">
+                                    <p class="contacts-lable">E-mail</p>
+                                    <input type="email" name="user-email" placeholder="Введіть E-mail">
+                                </div>
+                                <div class="email-block-row pass">
+                                    <p class="contacts-lable">Пароль</p>
+                                    <input type="password" name="user-pass" placeholder="Введіть пароль">
+                                </div>
                             </div>
 
                             <p class="sign-in-text">Відправляючи форму для авторизації/реєстрації ви приймаєте умови <a href="#">Угоди користувача</a></p>
@@ -1435,6 +1441,25 @@
                             <p class="sign-in-btn email-block">Увiйти по номеру телефону</p>                               
                             <button class="btn btn-big btn-grd not-active">Зв’язатись з нами</button>
                         </form>
+                        <div class="sign-in__phone-code">
+                            <p class="popup-title">+38 063 123 45 67</p>
+                            <p class="light">Будь ласка, введіть 4-значний код, надісланий на ваш номер.</p>
+                            <!-- add to form class error -->
+                            <form action="" name="verify-SMS">
+                                <div class="inputs">
+                                    <input type="text" maxlength="1">
+                                    <input type="text" maxlength="1">
+                                    <input type="text" maxlength="1">
+                                    <input type="text" maxlength="1">
+                                </div>
+                                <p class="error-text">Код не підходить, спробуйте ще раз</p>
+                            </form>
+                            <div class="row-bottom">
+                                <p>Код повинен бути в бізнес чаті Viber або SMS</p>
+                                <button class="repeat-code-btn">Не отримали код?</button>
+                            </div>
+
+                        </div>
                     </div>
                         <!-- Відновлення паролю -->
                     <div class="remind-password__content">
