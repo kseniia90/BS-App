@@ -28,8 +28,7 @@ function loading() {
 //   back to page
 if (document.querySelector(".back_pg-btn") !== null) {
   document
-    .querySelector(".back_pg-btn")
-    .addEventListener("click", function (e) {
+    .querySelector(".back_pg-btn").addEventListener("click", function (e) {
       e.preventDefault();
       window.history.back();
     });
@@ -125,12 +124,8 @@ document.querySelectorAll(".vertical-list-item-info .btn").forEach((el) => {
   el.addEventListener("click", (event) => {
     event.preventDefault();
     el.parentElement.classList.toggle("active");
-    document
-      .querySelector(".menu-item.active .mega-menu-item")
-      .scrollTo({ top: 0, behavior: "smooth" });
-    document
-      .querySelector(".vertical-list-item-info.active .order-info")
-      .scrollTo({ top: 0, behavior: "smooth" });
+    document.querySelector(".menu-item.active .mega-menu-item").scrollTo({ top: 0, behavior: "smooth" });
+    document.querySelector(".vertical-list-item-info.active .order-info").scrollTo({ top: 0, behavior: "smooth" });
     document.querySelector(".menu-item.active .mega-menu-item").style.overflow =
       "hidden";
   });
@@ -143,6 +138,35 @@ document.querySelectorAll(".order-info .back_pg-btn").forEach((el) => {
     el.closest(".active").classList.remove("active");
   });
 });
+
+// login popup
+function openLoginPopup(){
+       
+  if (document.querySelector(".login-popup") !== null) {
+
+    document.body.style.overflow = "hidden";
+    document.querySelector(".login-popup").classList.add("open");
+
+    window.addEventListener("click", function (e) {
+  
+      if ( document.querySelector(".login-popup.open") &&
+        !e.target.closest(".popup-content")
+      ) {
+        document.querySelector(".login-popup").classList.remove("open");
+        document.body.style.overflow = "auto";
+      }
+  
+      if (e.target.closest(".login-popup .close-popup")) {
+        e.preventDefault();
+        document.querySelector(".login-popup").classList.remove("open");
+        document.body.style.overflow = "auto";
+      }
+    });
+  }
+}
+
+
+
 
 // menu catalog
 document
