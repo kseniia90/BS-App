@@ -93,6 +93,33 @@ document.querySelectorAll(".fixed-menu-item.cart").forEach((el) => {
 });
 
 // open authorization-popup
+
+document.querySelectorAll(".fixed-menu-item.account").forEach((el) => {
+  el.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    if(document.querySelector(".authorization-popup").classList.contains("open")){
+      document.querySelector(".fixed-menu-item.account").classList.remove("active");
+      document.querySelector(".authorization-popup").classList.remove("open");
+      document.querySelector("body").classList.remove("lock");
+     
+    } else {
+      document.querySelectorAll(".fixed-menu-item").forEach((el) => {
+        el.classList.remove("active");
+      });
+      document.querySelectorAll(".catalog-nav").forEach((el) => {
+        el.classList.remove("open");
+      });
+      document.querySelectorAll(".cart-page").forEach((el) => {
+        el.classList.remove("open");
+      });
+      document.querySelector(".fixed-menu-item.account").classList.add("active");
+      document.querySelector(".authorization-popup").classList.add("open");
+      document.querySelector("body").classList.add("lock");
+    }    
+  });
+});
+
 document.querySelectorAll(".login-popup .btn-big").forEach((el) => {
   el.addEventListener("click", (event) => {
     event.preventDefault();

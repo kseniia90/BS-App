@@ -3195,13 +3195,14 @@ ol.light-list li::before {
 }
 
 .tabcontent form {
-	min-height: 100vh;
+	/* min-height: 100vh; */
 }
 
 form .btn {
 	width: 100%;
 	justify-content: center;
 }
+
 
 .sign-in-text {
 	font-size: 13px;
