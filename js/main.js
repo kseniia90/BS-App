@@ -93,7 +93,7 @@ document.querySelectorAll(".fixed-menu-item.cart").forEach((el) => {
 });
 
 // open authorization-popup
-document.querySelectorAll(".fixed-menu-item.account").forEach((el) => {
+document.querySelectorAll(".login-popup .btn-big").forEach((el) => {
   el.addEventListener("click", (event) => {
     event.preventDefault();
 
@@ -106,6 +106,8 @@ document.querySelectorAll(".fixed-menu-item.account").forEach((el) => {
       document.querySelectorAll(".fixed-menu-item").forEach((el) => {
         el.classList.remove("active");
       });
+
+      document.querySelector(".login-popup").classList.remove("open");
       document.querySelectorAll(".catalog-nav").forEach((el) => {
         el.classList.remove("open");
       });
@@ -149,14 +151,7 @@ function openLoginPopup(){
 
     window.addEventListener("click", function (e) {
   
-      if ( document.querySelector(".login-popup.open") &&
-        !e.target.closest(".popup-content")
-      ) {
-        document.querySelector(".login-popup").classList.remove("open");
-        document.body.style.overflow = "auto";
-      }
-  
-      if (e.target.closest(".login-popup .close-popup")) {
+      if (e.target.closest(".login-popup .close-popup") || e.target.closest(".login-popup .blue-btn")) {
         e.preventDefault();
         document.querySelector(".login-popup").classList.remove("open");
         document.body.style.overflow = "auto";
