@@ -27,8 +27,7 @@ function loading() {
 
 //   back to page
 if (document.querySelector(".back_pg-btn") !== null) {
-  document
-    .querySelector(".back_pg-btn").addEventListener("click", function (e) {
+  document.querySelector(".back_pg-btn").addEventListener("click", function (e) {
       e.preventDefault();
       window.history.back();
     });
@@ -203,7 +202,74 @@ function showSmsVerify(){
       }
     });
   }
+  countdownSmsVerify();
 }
+
+function countdownSmsVerify() {
+  document.getElementById("timer-counter").style.display= "block"
+  document.querySelector(".timer-block .repeat-code-btn").style.display= "none"
+  var seconds = 59;
+  function tick() {
+    var counter = document.getElementById("timer-counter");
+    seconds--;
+    counter.innerHTML =
+      "0:" + (seconds < 10 ? "0" : "") + String(seconds);
+    if (seconds > 0) {
+      setTimeout(tick, 1000);
+    } else {
+      document.querySelector(".timer-block .repeat-code-btn").style.display= "block"
+      document.getElementById("timer-counter").style.display= "none"
+    }
+  }
+  tick();
+}
+
+if (document.querySelector(".timer-block .repeat-code-btn") !== null) {
+  document.querySelector(".timer-block .repeat-code-btn").addEventListener("click", function (e) {
+    e.preventDefault();
+    countdownSmsVerify();
+  });
+}
+
+// choice popup
+function openChoicePopup(){
+       
+  if (document.querySelector(".sign-in__choice") !== null) {
+
+    document.body.style.overflow = "hidden";
+    document.querySelector(".sign-in__choice").classList.add("open");
+  }
+}
+
+if (document.querySelector(".sign-in__choice") !== null) {
+  document.querySelector(".sign-in__choice-email").addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(".sign-in__choice").classList.remove("open");
+    document.querySelector(".sign-in__content>form").style.display = "block";
+    document.querySelector(".sign-in__phone-code").style.display = "none";
+    document.querySelector(".contacts-input-block.phone-block").classList.remove("open");
+    document.querySelector(".contacts-input-block.email-block").classList.add("open");
+  });
+}
+
+if (document.querySelector(".sign-in__choice") !== null) {
+  document.querySelector(".sign-in__choice-phone").addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(".sign-in__choice").classList.remove("open");
+    document.querySelector(".sign-in__content>form").style.display = "block";
+    document.querySelector(".sign-in__phone-code").style.display = "none";
+  });
+}
+
+if (document.querySelector(".sign-in__choice") !== null) {
+  document.querySelector(".sign-in__choice-cancel").addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(".sign-in__choice").classList.remove("open");
+    document.querySelector(".authorization-popup").classList.remove("open");
+    document.body.style.overflow = "auto";
+  });
+}
+
 
 // show email verify 
 function showEmailVerify(){
@@ -225,9 +291,7 @@ function showEmailVerify(){
 
 
 // menu catalog
-document
-  .querySelectorAll(".main-menu > ul > .menu-item-has-children > a")
-  .forEach((el) => {
+document.querySelectorAll(".main-menu > ul > .menu-item-has-children > a").forEach((el) => {
     el.addEventListener("click", (event) => {
       event.preventDefault();
       el.parentElement.classList.toggle("active");
