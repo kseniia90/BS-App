@@ -26,12 +26,12 @@ function loading() {
 }
 
 //   back to page
-if (document.querySelector(".back_pg-btn") !== null) {
-  document.querySelector(".back_pg-btn").addEventListener("click", function (e) {
-      e.preventDefault();
-      window.history.back();
-    });
-}
+// if (document.querySelector(".back_pg-btn") !== null) {
+//   document.querySelector(".back_pg-btn").addEventListener("click", function (e) {
+//       e.preventDefault();
+//       window.history.back();
+//     });
+// }
 
 // open catalog
 
@@ -91,6 +91,17 @@ document.querySelectorAll(".fixed-menu-item.cart").forEach((el) => {
   });
 });
 
+if (document.querySelector(".empty-cart .btn") !== null) {
+  document.querySelector(".empty-cart .btn").addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(".fixed-menu-item.cart").classList.remove("active");
+    document.querySelector(".cart-page").classList.remove("open");
+    document.querySelector("body").classList.remove("lock");
+  });
+}
+
+
+
 // open authorization-popup
 
 document.querySelectorAll(".fixed-menu-item.account").forEach((el) => {
@@ -148,16 +159,22 @@ document.querySelectorAll(".login-popup .btn-big").forEach((el) => {
 });
 
 // open order
-document.querySelectorAll(".vertical-list-item-info .btn").forEach((el) => {
-  el.addEventListener("click", (event) => {
-    event.preventDefault();
-    el.parentElement.classList.toggle("active");
-    document.querySelector(".menu-item.active .mega-menu-item").scrollTo({ top: 0, behavior: "smooth" });
-    document.querySelector(".vertical-list-item-info.active .order-info").scrollTo({ top: 0, behavior: "smooth" });
-    document.querySelector(".menu-item.active .mega-menu-item").style.overflow =
-      "hidden";
+function addListenerOrderInfo() {
+  document.querySelectorAll(".vertical-list-item-info .btn").forEach((el) => {
+    if(!el.classList.contains("order-info-click")) {
+      el.classList.add("order-info-click");
+    el.addEventListener("click", (event) => {
+      event.preventDefault();
+      el.parentElement.classList.toggle("active");
+      document.querySelector(".menu-item.active .mega-menu-item").scrollTo({ top: 0, behavior: "smooth" });
+      document.querySelector(".vertical-list-item-info.active .order-info").scrollTo({ top: 0, behavior: "smooth" });
+      document.querySelector(".menu-item.active .mega-menu-item").style.overflow ="hidden";
+    });
+  }
   });
-});
+}
+
+addListenerOrderInfo();
 
 document.querySelectorAll(".order-info .back_pg-btn").forEach((el) => {
   el.addEventListener("click", (event) => {

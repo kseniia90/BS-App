@@ -3381,6 +3381,12 @@ form.error .error-text {
 	border: none;
 }
 
+.account-page-menu .main-menu .menu-item-has-children.active>.mega-menu-item .sub-menu {
+	height: auto;
+	/* min-height: 100%; */
+	padding-bottom: 30px;
+}
+
 .account-page-menu .mega-menu-item {
 	bottom: 0;
 	padding-bottom: 0;
@@ -3394,6 +3400,13 @@ form.error .error-text {
 
 .account-page-menu .head-row {
 	color: var(--dark);
+}
+
+#load_more_order {
+	padding: 10px;
+	font-weight: 700;
+	color: var(--accent);
+	text-transform: uppercase;
 }
 
 .account-item {
@@ -3448,6 +3461,10 @@ a.back_pg-btn {
 	flex-direction: row;
 	align-items: center;
 }
+
+.account-page .product-row-list .product-card__info__content>div {
+	width: 100%;
+}
 .account-page .product-row-list .product-card .icon-heart {
 	position: static;
 	font-size: 20px;
@@ -3463,6 +3480,7 @@ a.back_pg-btn {
 .order-info-content {
 	padding: 0 16px;
 	text-align: left;
+	white-space: normal;
 }
 
 .order-info-title {
@@ -3598,11 +3616,22 @@ a.order-info-title {
 	font-size: 12px;
 }
 
-.loyalty__item>.vertical-list .column p,
+.loyalty__item>.vertical-list .count_bonus,
 .loyalty__item>.vertical-list>li p:first-of-type {
 	font-size: 17px;
 	line-height: 23.8px;
 	font-weight: 400;
+}
+
+.loyalty__item>.vertical-list .column .light {
+	white-space: normal;
+}
+
+.loyalty__item>.vertical-list .row {
+    display: grid;
+    grid-template-columns: 35% 1fr;
+    gap: 20px;
+	align-items: flex-start;
 }
 
 .loyalty__item>.vertical-list li:last-child {
