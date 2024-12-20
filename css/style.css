@@ -1540,6 +1540,7 @@ footer {
 
 .product-card.main .product-card__info__reviews {
 	margin-bottom: 0;
+	margin-left: 0;
 	font-size: 18px;
 }
 
@@ -1863,6 +1864,7 @@ footer {
 }
 
 .cart-item-info {
+	width: 100%;
 	display: grid;
 	grid-template-columns: 1fr 24px;
 	gap: 6px;
@@ -1872,6 +1874,8 @@ footer {
 }
 
 .cart-item .product-card__img {
+	flex: 1 0 auto;
+	max-width: 72px;
 	height: 72px;
 	width: 72px;
 	padding: 0;
@@ -1937,6 +1941,7 @@ footer {
 }
 
 .cart-counter input {
+	width: 35px;
 	font-size: 17px;
 	font-weight: 400;
 	line-height: 23.8px;
@@ -3402,7 +3407,8 @@ form.error .error-text {
 	color: var(--dark);
 }
 
-#load_more_order {
+#load_more_order,
+#exit_account {
 	padding: 10px;
 	font-weight: 700;
 	color: var(--accent);
@@ -3723,7 +3729,8 @@ a.order-info-title {
 }
 
 .login-popup.open .layout,
-.sign-in__choice.open .layout {
+.sign-in__choice.open .layout,
+.language-popup.open .layout {
 	display: block;
 }
 
@@ -3780,11 +3787,7 @@ a.order-info-title {
 }
 
 /* choice popup */
-
-.sign-in__choice {
-
-}
-  
+ 
 .sign-in__choice-body {
 	padding: 0 16px 120px;
 	position: fixed;
@@ -3830,6 +3833,64 @@ a.order-info-title {
 }
 
 .sign-in__choice-body>button{
+	background: #fff;
+	border-radius: 14px;
+}
+
+/* language popup */
+ 
+.language-popup-body {
+	padding: 0 16px 120px;
+	position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 110;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: transparent;
+    min-height: max-content;
+    width: 100%;
+	display: flex;
+	justify-content: center;
+    flex-direction: column;
+	gap: 10px;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 24px;
+	text-align: center;
+	border-radius: 24px 24px 0 0;
+    transform: translateY(100%);
+    transition: transform .3s;
+}
+
+.language-popup.open .language-popup-body {
+	transform: translate(0);
+}
+
+.language-popup-body>div {
+	display: flex;
+	justify-content: center;
+    flex-direction: column;
+	background: #fff;
+	border-radius: 14px;
+}
+
+.language-popup-body>div .light {
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 18.2px;
+}
+
+.language-popup-body p,
+.language-popup-body button {
+	padding: 16px;
+}
+
+.language-popup-body>div p:not(:last-of-type) {
+	border-bottom: 1px solid #05061129;
+}
+
+.language-popup-body>button {
 	background: #fff;
 	border-radius: 14px;
 }

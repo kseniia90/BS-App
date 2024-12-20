@@ -287,6 +287,23 @@ if (document.querySelector(".sign-in__choice") !== null) {
   });
 }
 
+// language popup
+function openLanguagePopup(){
+       
+  if (document.querySelector(".language-popup") !== null) {
+
+    document.body.style.overflow = "hidden";
+    document.querySelector(".language-popup").classList.add("open");
+
+    document.querySelector(".language-popup-cancel").addEventListener("click", function (e) {
+      e.preventDefault();
+      document.body.style.overflow = "auto";
+      document.querySelector(".language-popup").classList.remove("open");
+    });
+
+  }
+}
+
 
 // show email verify 
 function showEmailVerify(){
