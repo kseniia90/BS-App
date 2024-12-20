@@ -244,7 +244,7 @@ function countdownSmsVerify() {
 if (document.querySelector(".timer-block .repeat-code-btn") !== null) {
   document.querySelector(".timer-block .repeat-code-btn").addEventListener("click", function (e) {
     e.preventDefault();
-    countdownSmsVerify();
+    openChoicePopup()
   });
 }
 
@@ -276,16 +276,23 @@ if (document.querySelector(".sign-in__choice") !== null) {
     document.querySelector(".sign-in__content>form").style.display = "block";
     document.querySelector(".sign-in__phone-code").style.display = "none";
   });
-}
 
-if (document.querySelector(".sign-in__choice") !== null) {
+  document.querySelector(".sign-in__choice-repeat").addEventListener("click", function (e) {
+    e.preventDefault();
+    document.querySelector(".sign-in__choice").classList.remove("open");
+    showSmsVerify();
+  });
+
+
   document.querySelector(".sign-in__choice-cancel").addEventListener("click", function (e) {
     e.preventDefault();
     document.querySelector(".sign-in__choice").classList.remove("open");
     document.querySelector(".authorization-popup").classList.remove("open");
     document.body.style.overflow = "auto";
   });
+
 }
+
 
 // language popup
 function openLanguagePopup(){
