@@ -160,7 +160,7 @@ document.querySelectorAll(".login-popup .btn-big").forEach((el) => {
 
 // open order
 function addListenerOrderInfo() {
-  document.querySelectorAll(".vertical-list-item-info .btn").forEach((el) => {
+  document.querySelectorAll(".vertical-list-item-info>.btn").forEach((el) => {
     if(!el.classList.contains("order-info-click")) {
       el.classList.add("order-info-click");
     el.addEventListener("click", (event) => {
@@ -181,6 +181,7 @@ document.querySelectorAll(".order-info .back_pg-btn").forEach((el) => {
     event.stopPropagation();
     event.preventDefault();
     el.closest(".active").classList.remove("active");
+    document.querySelector(".menu-item.active .mega-menu-item").style.overflow ="auto";
   });
 });
 

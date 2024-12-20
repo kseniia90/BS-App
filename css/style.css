@@ -2277,6 +2277,7 @@ footer {
 	padding: 8px;
 	font-size: 24px;
 	color: var(--accent);
+	cursor: pointer;
   }
 
   .mega-menu-item .back-block>span {
@@ -2368,7 +2369,10 @@ footer {
 	padding: 0;
 	width: 71px;
 	height: 70px;
+	background: transparent;
 }
+
+
 
 .order-info {
 	position: fixed;
@@ -3388,7 +3392,7 @@ form.error .error-text {
 
 .account-page-menu .main-menu .menu-item-has-children.active>.mega-menu-item .sub-menu {
 	height: auto;
-	/* min-height: 100%; */
+	min-height: 100%;
 	padding-bottom: 30px;
 }
 
