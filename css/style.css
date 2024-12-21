@@ -2344,7 +2344,7 @@ footer {
 	display: flex;
 	flex-direction: column;
 	gap: 8px;
-	padding: 8px 12px;
+	padding: 12px;
 }
 
 .vertical-list-item {
@@ -3898,3 +3898,116 @@ a.order-info-title {
 	background: #fff;
 	border-radius: 14px;
 }
+
+/* sale page */
+
+.sale-list .vertical-list-item {
+	border: 1px solid #0506110F;
+} 
+
+.sale-list .vertical-list-item img {
+	aspect-ratio: 350/180;
+}
+
+.sale-card-content .title {
+	font-family: 'Roboto';
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 18px;
+	letter-spacing: 0.25px;
+	margin-bottom: 10px;
+}
+
+.sale-card-row {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 15px;
+}
+
+.sale-card-data {
+	padding: 5px 8px;
+	font-family: 'Roboto';
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 18px;
+	letter-spacing: 0.25px;
+	color:#2A3A498A;
+	border-radius: 60px;
+	background: rgba(63, 78, 93, 0.06);
+}
+
+.sale-card-data .sale-data {
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 16px;
+	letter-spacing: 0.25px;
+	color:#000;
+}
+
+.sale-card-content .btn {
+	font-family: 'Montserrat';
+	font-size: 16px;
+	font-weight: 600;
+	line-height: 22.4px;
+	letter-spacing: -0.25px;
+}
+
+.sale-timer-block {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	padding-bottom: 16px;
+	border-bottom: 1px solid rgba(255, 255, 255, 1);
+}
+
+.sale-page .banner__img {
+	width: 100%;
+	aspect-ratio: 350/132;
+	object-fit: cover;
+}
+
+.sale-timer-block .title {
+	font-family: 'Poppins';
+	font-size: 18px;
+	font-weight: 400;
+	line-height: 21.6px;
+	margin-bottom: 0;
+}
+ 
+.sale-timer-block .light {
+	font-size: 16px;
+	line-height: 20.8px;
+	margin-bottom: 10px;
+}
+
+.sale-timer-block .light-data {
+	font-size: 13px;
+	line-height: 18.2px;
+	color: #2A3A49A3;
+}
+
+.sale-timer-block .showmore-button {
+	font-size: 18px;
+}
+
+.sale-coutndown {
+	justify-self: flex-end;
+}
+.sale-coutndown.coutndown ul li {
+	width: 38px;
+	height: 36px;
+	font-family: 'Poppins';
+	font-size: 20px;
+	font-weight: 500;
+	line-height: 28px;
+	background: var(--accent);
+}
+
+.sale-coutndown.coutndown ul>span {
+	font-size: 18px;
+	color: var(--accent);
+}
+
+/* filters start */
+
