@@ -464,7 +464,7 @@ if (document.querySelector(".coutndown") !== null) {
 
 // filters open
 
-if (document.querySelector(".back_pg-btn") !== null) {
+if (document.querySelector(".filters-row-item") !== null) {
   document.querySelectorAll(".filters-row-item>span").forEach((el) => {
     el.addEventListener("click", (event) => {
       document.querySelectorAll(".filters-row-item").forEach((item) => {

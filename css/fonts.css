@@ -185,7 +185,7 @@
   .icon-deliv:before {
     content: "\e90b";
   }
-  .icon-ic_edit:before {
+  .icon-ic_edit::before {
     content: "\e90c";
   }
   .icon-ic_sort:before {
