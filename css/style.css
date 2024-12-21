@@ -487,13 +487,6 @@ form .btn {
 	color: #CCDC55;
   }
 
-
-
-
-
-
-
-
 .header {
 	width: 100%;
 	position: fixed;
@@ -2054,6 +2047,7 @@ footer {
 	min-width: 50%;
 	display: flex;
 	gap: 16px;
+	position: relative;
 }
 
 .filters-row .sorting {
@@ -3734,7 +3728,8 @@ a.order-info-title {
 
 .login-popup.open .layout,
 .sign-in__choice.open .layout,
-.language-popup.open .layout {
+.language-popup.open .layout,
+.filters-row-item.open .layout {
 	display: block;
 }
 
@@ -4010,4 +4005,191 @@ a.order-info-title {
 }
 
 /* filters start */
+
+.filters-row-item>.widget-area {
+	position: fixed;
+    left: 0;
+    top: 20px;
+    bottom: 0;
+    z-index: 110;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #FFFFFF;
+    min-height: 95vh;
+    width: 100%;
+    padding-bottom: 120px;
+	padding-left: 16px;
+	padding-right: 16px;
+    flex-direction: column;
+	border-radius: 16px;
+    transform: translateY(100%);
+    transition: transform .3s;
+}
+
+.filters-row-item.open>.widget-area {
+    transform: translateY(0);
+}
+
+.filters-heder {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 20px;
+	padding: 12px 0;
+}
+
+.filters-heder .title {
+	font-family: 'Montserrat';
+	font-size: 18px;
+	font-weight: 700;
+	line-height: 21.6px;
+	transform: translateX(30%);
+	margin-bottom: 0;
+}
+
+.filters-heder .light {
+	/* font-family: 'Poppins'; */
+	font-size: 17px;
+	font-weight: 500;
+	line-height: 23.8px;
+}
+
+.filter__title {
+	/* font-family: 'Poppins'; */
+	font-size: 17px;
+	font-weight: 400;
+	line-height: 23.8px;
+}
+
+.filter__slider-control-group .filter__slider-control {
+	text-align: left;
+	padding: 8px 16px;
+	background: #fff;
+	border-radius: 23px;
+	border: 2px solid rgba(5, 6, 17, 0.06)
+}
+
+.filter__item {
+	margin: 0;
+	border-top: 1px solid rgba(33, 50, 53, 0.1);
+	border-bottom: 1px solid rgba(33, 50, 53, 0.1);
+	margin-bottom: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.filter__properties-item {
+	padding: 13px 0;
+}
+
+.filter__checkgroup-title {
+	padding-left: 12px;
+}
+
+.filter__checkgroup-count {
+	color: var(--accent-light);
+}
+
+.filter__item:first-child,
+.filter__item:last-child {
+	border: none;
+}
+
+.pc-range-slider__wrapper {
+	height: 38px !important;
+	padding: 10px 0;
+	/* border: 1px solid red; */
+}
+
+.button-filter-submit {
+	width: 100%;
+	cursor: pointer !important;
+	padding: 10px 25px !important;
+	border-radius: 22px !important;
+	color: white !important;
+    background: var(--bg-gradient) !important;
+}
+
+.pc-range-slider__control {
+	border: none;
+}
+
+.pc-range-slider__control .ui-slider-range {
+	width: 98%;
+	left: 1%;
+	background: var(--accent-light);
+	height: 3px !important;
+}
+
+.pc-range-slider__control .ui-slider-handle {
+	background: white;
+	width: 28px !important;
+	height: 28px !important;
+	border-radius: 50%;
+	border: none;
+	box-shadow: 0px 3px 2px 0px rgba(16, 28, 65, 0.06), 0px 3px 8px 0px rgba(16, 28, 65, 0.15);
+	/* transform: translateY(-50%); */
+}
+
+.pc-range-slider__control .ui-slider-handle:last-of-type {
+	margin-left: -28px !important;
+}
+
+.filter__slider-control-group {
+	margin: 10px -15px 5px -15px;
+}
+
+.filter__slider-control {
+	background-color: transparent;
+	border: none;
+	outline: none;
+}
+
+.filters-row-item.open>.widget-area input::-webkit-outer-spin-button,
+.filters-row-item.open>.widget-area input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+.filters-row-item.open>.widget-area .filter__item input[type="checkbox"] {
+	display: inline-block;
+	width: 22px;
+	height: 22px;
+	border-radius: 6px;
+	border: 1.5px solid rgba(5, 6, 17, 0.16);
+	padding: 0;
+	outline: none;
+	accent-color: white;
+	appearance: none;   
+}  
+
+.filter__item input[type="checkbox"]:checked {
+	position: relative;
+	outline: none;
+}
+
+.filter__item input[type="checkbox"]:checked::before {
+	content: "";
+	display: block;
+	width: 22px;
+	height: 22px;
+	border-radius: 6px;
+	background: url(../img/Checkbox.svg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.filter__inner--scroll::-webkit-scrollbar {
+	width: 4px;
+}
+
+.filters-row-item.open>.widget-area .filter__inner--scroll::-webkit-scrollbar-thumb {
+	background: #C8C8C8;
+	border-radius: 4px;
+}
+
 

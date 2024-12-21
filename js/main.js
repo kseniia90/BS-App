@@ -331,7 +331,6 @@ function showEmailVerify(){
   }
 }
 
-
 // menu catalog
 document.querySelectorAll(".main-menu > ul > .menu-item-has-children > a").forEach((el) => {
     el.addEventListener("click", (event) => {
@@ -461,6 +460,28 @@ if (document.querySelector(".coutndown") !== null) {
     }, second);
 
   })
+}
+
+// filters open
+
+if (document.querySelector(".back_pg-btn") !== null) {
+  document.querySelectorAll(".filters-row-item>span").forEach((el) => {
+    el.addEventListener("click", (event) => {
+      document.querySelectorAll(".filters-row-item").forEach((item) => {
+        item.classList.remove("open");
+      });
+      document.body.style.overflow = "hidden";
+      el.closest(".filters-row-item").classList.add("open");
+    });
+  });
+
+  document.querySelector(".filters-heder .close").addEventListener("click", function (e) {
+      e.preventDefault();
+      document.body.style.overflow = "auto";
+      document.querySelectorAll(".filters-row-item").forEach((item) => {
+        item.classList.remove("open");
+      });
+    });
 }
 
 // tab START
