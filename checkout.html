@@ -62,7 +62,7 @@
                                         <div>
                                             <p class="product-card__info__description">Rated Green</p>
                                             <a href="product-page.html" class="product-card__info__name">Протизапальна
-                                                </a>
+                                            </a>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -102,9 +102,16 @@
                         <input type="text" placeholder="Ваш код">
                         <button class="btn btn-grd not-active">Ok</button>
                     </form>
-                    <p>
-                        <span>Використати мої бютікі</span><span>500 ₴</span>
-                    </p>
+                    <div class="beautic-cupon">
+                        <span>Використати мої бютікі</span>
+                        <div>
+                            <span>500 ₴</span>
+                            <div class="toggle">
+                                <input type="checkbox" id="cupon-toggle" class="toggle__input">
+                                <label for="cupon-toggle" class="toggle__label"></label>
+                            </div>
+                        </div>
+                    </div>
                     <form action="" class="add-promo-form">
                         <input type="text" placeholder="Введіть кількість бютіків">
                         <button class="btn btn-grd not-active">Ok</button>
@@ -128,35 +135,107 @@
                         </div>
                         <div class="contacts-input-block">
                             <p class="contacts-lable">E-mail</p>
-                            <input type="email" name="user-email" placeholder="example@gmail.com" value="example@gmail.com">
+                            <input type="email" name="user-email" placeholder="example@gmail.com"
+                                value="example@gmail.com">
                         </div>
                     </form>
+                    <div class="account-data-result">
+                        <p>Вікторія Ткач</p>
+                        <p>+38(063)-123-45-67</p>
+                        <p>example@gmail.com</p>
+                        <button class="btn btn-big">Змінити</button>
+                    </div>
                 </div>
 
                 <div class="checkout-item mb">
                     <p class="title">2.Спосіб доставки</p>
                     <p>У відділення / За адресою / Поштомат</p>
+                    <form action="" class="delivery-form">
+                        <select>
+                            <option value="Відділення" selected>Відділення</option>
+                            <option value="Відділення1" selected>Відділення1</option>
+                            <option value="Відділення2" selected>Відділення2</option>
+                        </select>
+
+                        <select>
+                            <option value="Місто" selected>Місто</option>
+                            <option value="Місто1" selected>Місто1</option>
+                            <option value="Місто2" selected>Місто2</option>
+                        </select>
+
+                        <select>
+                            <option value="Відділення" selected>Відділення</option>
+                            <option value="Відділення1" selected>Відділення1</option>
+                            <option value="Відділення2" selected>Відділення2</option>
+                        </select>
+                    </form>
                 </div>
 
-                <div class="checkout-item mb">
+                <div class="checkout-item checkout-payment mb">
                     <p class="title">3.Спосіб оплати</p>
-                    <p>Під час отримання/На рахунок Приват банку /Онлайн оплата на сайті / Оплата частинами</p>
+                    <p class="payment-info">Під час отримання/На рахунок Приват банку /Онлайн оплата на сайті / Оплата частинами</p>
+                    <div class="payment-select">
+                        <div class="row">
+                            <input type="radio" id="payment-1">
+                            <label for="payment-1">Оплата під час отримання на Новій Пошті</label>
+                        </div>
+                        <div class="row">
+                            <input type="radio" id="payment-2">
+                            <label for="payment-2">Оплата на рахунок Приват банку</label>
+                        </div>
+                        <div class="row">
+                            <input type="radio" id="payment-3">
+                            <label for="payment-3">Онлайн оплата на сайті / Оплата частинами</label>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="checkout-item mb">
                     <p class="title">Комментар до замовленя</p>
                     <form action="">
                         <div class="message">
-                            <textarea name="" id="message" rows="4" placeholder="Залиште коментар" maxlength="800"></textarea>
+                            <textarea name="" id="message" rows="4" placeholder="Залиште коментар"
+                                maxlength="800"></textarea>
                             <p id="counter">0 з 800 символiв</p>
                         </div>
                     </form>
                 </div>
 
-                <div class="checkout-item mb">
-                    <p class="title"></p>
+                <div class="checkout-personal-data checkout-item mb">
+                    <p>Ваші особисті дані будуть використовуватися для обробки ваших замовлень, спрощення вашої роботи з
+                        сайтом та інших цілей, описаних в нашій політика конфіденційності.</p>
+                    <div class="row">
+                        <input type="checkbox" id="checkbox-personal-data">
+                        <label for="checkbox-personal-data">Я прочитав(ла) і погоджуюсь 
+                            <a href="">(докладніше правила та умови)<span style="color: red;">*</span></a>
+                        </label>
+                    </div>
                 </div>
-               
+
+                <div class="checkout-item order-info-content mb">
+                    <div class="cart-table mb">
+                        <div class="cart-table-row">
+                            <p class="light">Всього</p>
+                            <p>1475 ₴</p>
+                        </div>
+                        <div class="cart-table-row">
+                            <p class="light">Заощаджено</p>
+                            <p>175 ₴ </p>
+                        </div>
+                        <div class="cart-table-row">
+                            <p class="light">Кешбек</p>
+                            <p>20 ₴</p>
+                        </div>
+                        <div class="cart-table-row">
+                            <p>До сплати</p>
+                            <p>1300 ₴ </p>
+                        </div>
+                    </div>
+                    <div class="btn btn-big btn-grd not-active">
+                        <span>Оформити замовлення</span>
+                    </div>
+                </div>
+
             </div>
         </main>
         <div class="popup cart-page">
@@ -173,21 +252,24 @@
                         <div class="cart-item-info">
                             <div class="cart-item-top">
                                 <p class="product-card__info__description">Rated Green</p>
-                                <a href="product-page.html" class="product-card__info__name">Відновлюючий шампунь з аргановим маслом RATED GREEN Real Argan Repairing Shampoo, 400</a>
+                                <a href="product-page.html" class="product-card__info__name">Відновлюючий шампунь з
+                                    аргановим маслом RATED GREEN Real Argan Repairing Shampoo, 400</a>
                             </div>
                             <div class="cart-item-row">
                                 <div class="cart-counter">
                                     <span class="cart-counter-mark minus_q">-</span>
-                                    <input type="number" disabled="" name="product_quantity" value="1" min="1" max="10" inputmode="numeric" style="-moz-appearance: textfield; -webkit-inner-spin-button: initial;">
+                                    <input type="number" disabled="" name="product_quantity" value="1" min="1" max="10"
+                                        inputmode="numeric"
+                                        style="-moz-appearance: textfield; -webkit-inner-spin-button: initial;">
                                     <span class="cart-counter-mark plus_q">+</span>
                                 </div>
                                 <div class="product-card__info__price container">
                                     <p class="old-price">3 199 ₴</p>
-                                    <p class="new-price">3 199 ₴</p> 
+                                    <p class="new-price">3 199 ₴</p>
                                 </div>
                             </div>
                             <div class="cart-item-close">
-                                <img src="img/ic_close_circle.svg" alt="img" width="24" height="24" >
+                                <img src="img/ic_close_circle.svg" alt="img" width="24" height="24">
                             </div>
                         </div>
                     </li>
@@ -198,21 +280,24 @@
                         <div class="cart-item-info">
                             <div class="cart-item-top">
                                 <p class="product-card__info__description">Rated Green</p>
-                                <a href="product-page.html" class="product-card__info__name">Відновлюючий шампунь з аргановим маслом RATED GREEN Real Argan Repairing Shampoo, 400</a>
+                                <a href="product-page.html" class="product-card__info__name">Відновлюючий шампунь з
+                                    аргановим маслом RATED GREEN Real Argan Repairing Shampoo, 400</a>
                             </div>
                             <div class="cart-item-row">
                                 <div class="cart-counter">
                                     <span class="cart-counter-mark minus_q">-</span>
-                                    <input type="number" disabled="" name="product_quantity" value="1" min="1" max="10" inputmode="numeric" style="-moz-appearance: textfield; -webkit-inner-spin-button: initial;">
+                                    <input type="number" disabled="" name="product_quantity" value="1" min="1" max="10"
+                                        inputmode="numeric"
+                                        style="-moz-appearance: textfield; -webkit-inner-spin-button: initial;">
                                     <span class="cart-counter-mark plus_q">+</span>
                                 </div>
                                 <div class="product-card__info__price container">
                                     <p class="old-price">3 199 ₴</p>
-                                    <p class="new-price">3 199 ₴</p> 
+                                    <p class="new-price">3 199 ₴</p>
                                 </div>
                             </div>
                             <div class="cart-item-close">
-                                <img src="img/ic_close_circle.svg" alt="img" width="24" height="24" >
+                                <img src="img/ic_close_circle.svg" alt="img" width="24" height="24">
                             </div>
                         </div>
                     </li>
@@ -223,12 +308,13 @@
                         <h3>Мінімальне замовлення від 600 грн</h3>
                         <p>
                             <span class="icon-deliv"></span>
-                            <span>Дадай ще на 200 ₴  та отримай безкоштовну доставку</span>
+                            <span>Дадай ще на 200 ₴ та отримай безкоштовну доставку</span>
                         </p>
                     </div>
 
-                    <div class="cart-applications-item free-deliv">                        <p>
-                           <p>Доставка замовлення за наш рахунок</p>
+                    <div class="cart-applications-item free-deliv">
+                        <p>
+                        <p>Доставка замовлення за наш рахунок</p>
                     </div>
 
                     <div class="block mb">
@@ -318,7 +404,9 @@
                                 <div class="product-card__info">
                                     <div class="product-card__info__content">
                                         <p class="product-card__info__description">Needly</p>
-                                        <a href="product-page.html" class="product-card__info__name">Протизапальна освітлювальна сироватка з бурштиновою освітлювальна сироватка з бурштиновою</a>                                        
+                                        <a href="product-page.html" class="product-card__info__name">Протизапальна
+                                            освітлювальна сироватка з бурштиновою освітлювальна сироватка з
+                                            бурштиновою</a>
                                     </div>
                                     <div class="product-card__info__price">
                                         <p>1 ₴</p>
@@ -337,7 +425,9 @@
                                 <div class="product-card__info">
                                     <div class="product-card__info__content">
                                         <p class="product-card__info__description">Needly</p>
-                                        <a href="product-page.html" class="product-card__info__name">Протизапальна освітлювальна сироватка з бурштиновою освітлювальна сироватка з бурштиновою</a>                                        
+                                        <a href="product-page.html" class="product-card__info__name">Протизапальна
+                                            освітлювальна сироватка з бурштиновою освітлювальна сироватка з
+                                            бурштиновою</a>
                                     </div>
                                     <div class="product-card__info__price">
                                         <p>1 ₴</p>
@@ -347,7 +437,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </li>     
+                        </li>
                         <li>
                             <div class="product-card">
                                 <a class="product-card__img" href="product-page.html">
@@ -356,7 +446,9 @@
                                 <div class="product-card__info">
                                     <div class="product-card__info__content">
                                         <p class="product-card__info__description">Needly</p>
-                                        <a href="product-page.html" class="product-card__info__name">Протизапальна освітлювальна сироватка з бурштиновою освітлювальна сироватка з бурштиновою</a>                                        
+                                        <a href="product-page.html" class="product-card__info__name">Протизапальна
+                                            освітлювальна сироватка з бурштиновою освітлювальна сироватка з
+                                            бурштиновою</a>
                                     </div>
                                     <div class="product-card__info__price">
                                         <p>1 ₴</p>
@@ -366,7 +458,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </li>   
+                        </li>
                         <li>
                             <div class="product-card">
                                 <a class="product-card__img" href="product-page.html">
@@ -375,7 +467,9 @@
                                 <div class="product-card__info">
                                     <div class="product-card__info__content">
                                         <p class="product-card__info__description">Needly</p>
-                                        <a href="product-page.html" class="product-card__info__name">Протизапальна освітлювальна сироватка з бурштиновою освітлювальна сироватка з бурштиновою</a>                                        
+                                        <a href="product-page.html" class="product-card__info__name">Протизапальна
+                                            освітлювальна сироватка з бурштиновою освітлювальна сироватка з
+                                            бурштиновою</a>
                                     </div>
                                     <div class="product-card__info__price">
                                         <p>1 ₴</p>
@@ -394,7 +488,9 @@
                                 <div class="product-card__info">
                                     <div class="product-card__info__content">
                                         <p class="product-card__info__description">Needly</p>
-                                        <a href="product-page.html" class="product-card__info__name">Протизапальна освітлювальна сироватка з бурштиновою освітлювальна сироватка з бурштиновою</a>                                        
+                                        <a href="product-page.html" class="product-card__info__name">Протизапальна
+                                            освітлювальна сироватка з бурштиновою освітлювальна сироватка з
+                                            бурштиновою</a>
                                     </div>
                                     <div class="product-card__info__price">
                                         <p>1 ₴</p>
@@ -404,7 +500,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </li>     
+                        </li>
                         <li>
                             <div class="product-card">
                                 <a class="product-card__img" href="product-page.html">
@@ -413,7 +509,9 @@
                                 <div class="product-card__info">
                                     <div class="product-card__info__content">
                                         <p class="product-card__info__description">Needly</p>
-                                        <a href="product-page.html" class="product-card__info__name">Протизапальна освітлювальна сироватка з бурштиновою освітлювальна сироватка з бурштиновою</a>                                        
+                                        <a href="product-page.html" class="product-card__info__name">Протизапальна
+                                            освітлювальна сироватка з бурштиновою освітлювальна сироватка з
+                                            бурштиновою</a>
                                     </div>
                                     <div class="product-card__info__price">
                                         <p>1 ₴</p>
@@ -423,10 +521,10 @@
                                     </div>
                                 </div>
                             </div>
-                        </li>   
+                        </li>
                     </ul>
                 </div>
-          
+
                 <div class="cart-table container">
                     <div class="cart-table-row">
                         <p class="light">Всього</p>
@@ -637,7 +735,7 @@
                         <a href="loyalty.html">Програма лояльності</span>
                         </a>
                     </li>
-                </ul>         
+                </ul>
             </nav>
         </div>
         <footer>
@@ -645,9 +743,12 @@
                 <ul>
                     <li class="fixed-menu-item"><a href="index.html"><span class="icon-ic_home icon"></span></a></li>
                     <li class="fixed-menu-item catalog"><a href="#"><span class="icon-ic_catalog icon"></span></a></li>
-                    <li class="fixed-menu-item cart"><a href="#"><span class="icon-ic_cart icon"></span><span class="count cart-count">3</span></a></li>
-                    <li class="fixed-menu-item"><a href="wishlist.html"><span class="icon-ic_heart icon"></span></a></li>
-                    <li class="fixed-menu-item active"><a href="account.html"><span class="icon-ic_profile icon"></span></a></li>
+                    <li class="fixed-menu-item cart"><a href="#"><span class="icon-ic_cart icon"></span><span
+                                class="count cart-count">3</span></a></li>
+                    <li class="fixed-menu-item"><a href="wishlist.html"><span class="icon-ic_heart icon"></span></a>
+                    </li>
+                    <li class="fixed-menu-item active"><a href="account.html"><span
+                                class="icon-ic_profile icon"></span></a></li>
                 </ul>
             </div>
             <div class="fixed-progress-bar">

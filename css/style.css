@@ -4120,6 +4120,41 @@ a.order-info-title {
 	border: none;
 }
 
+.filter input[type="checkbox"]+label {
+	margin: 0;
+}
+
+.checkout-personal-data input[type="checkbox"],
+.filters-row-item.open>.widget-area .filter__item input[type="checkbox"] {
+	display: inline-block;
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    border: 1.5px solid rgba(5, 6, 17, 0.16);
+    padding: 0;
+    outline: none;
+    accent-color: white;
+    appearance: none;
+	position: relative;
+}
+
+.filter__item input[type="checkbox"]:checked::before,
+.checkout-personal-data input[type="checkbox"]:checked::before {
+	content: "";
+    display: block;
+    width: 22px;
+    height: 22px;
+    border-radius: 6px;
+    background: url(../img/Checkbox.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
 .pc-range-slider__wrapper {
 	height: 38px !important;
 	padding: 10px 0;
@@ -4249,6 +4284,12 @@ a.order-info-title {
 	padding: 11px 0;
 }
 
+.checkout-item {
+	/* font-family: 'Poppins'; */
+	font-size: 17px;
+	line-height: 23.8px;
+}
+
 .checkout .title {
 	/* font-family: 'Poppins'; */
 	font-size: 18px;
@@ -4270,6 +4311,20 @@ a.order-info-title {
 
 .checkout .order-info-content .btn {
 	justify-content: center;
+}
+
+.account-data-result {
+	font-size: 15px;
+	line-height: 19.5px;
+}
+
+.account-data-result .btn-big {
+	width: 100%;
+	font-family: 'Montserrat';
+	padding: 8px 20px;
+	margin: 20px 0 0;
+	color: #000;
+	background: #B2B2B224;
 }
 
 .add-promo-form {
@@ -4299,7 +4354,7 @@ a.order-info-title {
 	line-height: 23.8px;
 }
 
-.add-promo>p {
+.add-promo>div {
 	margin: 16px 0 8px;
 	display: flex;
 	justify-content: space-between;
@@ -4310,9 +4365,99 @@ a.order-info-title {
 	line-height: 19.6px;
 }
 
+.add-promo>div>div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 8px;
+}
+
+.toggle {
+    position: relative;
+    display: inline-block;
+}
+
+.toggle__input {
+    display: none;
+}
+
+.toggle__label {
+    display: block;
+    width: 51px;
+    height: 30px;
+    background-color:  #496D730F;
+	border-radius: 99px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.beautic-cupon-active .toggle__label {
+    background-color: var(--accent-light);
+}
+
+.toggle__input:checked + .toggle__label::after {
+    left: 24px;
+}
+
+.toggle__label::after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 28px;
+    height: 28px;
+    background-color: #ffffff;
+    border-radius: 50%;
+	box-shadow: 0px 3px 2px 0px #101C410F, 0px 3px 8px 0px #101C4126;
+
+    transition: left 0.3s ease;
+}
+
 .checkout-item .account-data {
 	padding-top: 0;
 	padding-bottom: 0;
 }
 
+.delivery-form,
+.payment-select {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+	margin-top: 16px;
+}
+
+.delivery-form select {
+	width: 100%;
+    padding: 10px 20px 10px 16px;
+    outline: none;
+    border: none;
+    appearance: none;
+    background: var(--bg-light);
+    border-radius: 10px;
+	background: var(--bg-light) var(--arrow-icon) no-repeat right;
+    background-position: calc(100% - 12px);
+}
+
+.checkout-personal-data {
+	color: var(--light);
+}
+
+.checkout-personal-data .row,
+.payment-select .row {
+	display: flex;
+	align-items: center;
+	gap: 13px;
+}
+
+.payment-select input[type=radio] {
+	accent-color: var(--accent);
+	width: 22px;
+	height: 22px;
+}
+
+.checkout-personal-data .row input,
+.payment-select input[type=radio] {
+	flex: 1 0 auto;
+	max-width: 22px;
+}
 
