@@ -481,8 +481,15 @@ if (document.querySelector(".filters-row-item") !== null) {
       document.querySelectorAll(".filters-row-item").forEach((item) => {
         item.classList.remove("open");
       });
-    });
+  });
+
+  
+
+
+
 }
+
+
 
 // checkout page beautic-cupon active
 if (document.querySelector(".beautic-cupon") !== null) {

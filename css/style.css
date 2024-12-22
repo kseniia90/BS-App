@@ -4252,6 +4252,18 @@ a.order-info-title {
 	border-radius: 4px;
 }
 
+.filter__item {
+	border-top: none !important;
+}
+
+/* .filter__inner {
+	display: none;
+} */
+
+/* .filter__item--type-slider .filter__inner,
+.filter__item--type-slider + .filter__item--type-checkbox .filter__inner {
+	display: block;
+} */
 
 /* filters end */
 
