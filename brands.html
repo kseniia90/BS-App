@@ -104,6 +104,7 @@
             <div class="head-row">
                 <p>Кошик</p>
             </div>
+
             <div>
                 <ul class="cart-list">
                     <li class="cart-item">
@@ -133,7 +134,7 @@
                     </li>
                     <li class="cart-item">
                         <a class="product-card__img" href="product-page.html">
-                            <img src="./img/prod_1.jpg" alt="img">
+                            <img src="./img/blog_1.jpg" alt="img">
                         </a>
                         <div class="cart-item-info">
                             <div class="cart-item-top">
@@ -580,10 +581,154 @@
                 </ul>         
             </nav>
         </div>
+        <div class="authorization-popup">
+            <img src="img/logo_full.svg" alt="logo" class="popup-logo">
+            <div class="authorization-popup-body">
+    
+                    <!-- Tab links -->
+                <div class="tab">
+                    <button class="tablinks active" onclick="openOption(event, 'sign-in')">Вхід</button>
+                    <button class="tablinks" onclick="openOption(event, 'sign-up')">Реєстрація</button>
+                </div>
+    
+                <!-- Tab content -->
+                <div id="sign-in" class="tabcontent" style="display: block;">
+                    <div class="sign-in__content">
+                        <form action="" class="sign-in__form">
+                            <div class="contacts-input-block phone-block open">
+                                <p class="contacts-lable">Номер телефону</p>
+                                <input type="phone" name="user-phone" maxlength="13" value="+380">
+                            </div>
+                            
+                            <div class="contacts-input-block email-block">
+                                <div class="email-block-row email">
+                                    <p class="contacts-lable">E-mail</p>
+                                    <input type="email" name="user-email" placeholder="Введіть E-mail">
+                                </div>
+                                <div class="email-block-row pass">
+                                    <p class="contacts-lable">Пароль</p>
+                                    <input type="password" name="user-pass" placeholder="Введіть пароль">
+                                </div>
+                            </div>
+
+                            <p class="sign-in-text">Відправляючи форму для авторизації/реєстрації ви приймаєте умови <a href="#">Угоди користувача</a></p>
+                            <p class="sign-in-btn phone-block open">Увiйти через E-mail</p>  
+                            <p class="sign-in-btn email-block">Увiйти по номеру телефону</p>                               
+                            <button class="btn btn-big btn-grd not-active">Далі</button>
+                        </form>
+                        
+                        <div class="sign-in__phone-code">
+                            <p class="popup-title">+38 063 123 45 67</p>
+                            <p class="light">Будь ласка, введіть 4-значний код, надісланий на ваш номер.</p>
+                            <!-- add to form class error -->
+                            <form action="" name="verify-SMS">
+                                <div class="inputs">
+                                    <input type="text" maxlength="1">
+                                    <input type="text" maxlength="1">
+                                    <input type="text" maxlength="1">
+                                    <input type="text" maxlength="1">
+                                </div>
+                                <p class="error-text">Код не підходить, спробуйте ще раз</p>
+                            </form>
+                            <div class="row-bottom">
+                                <p>Код повинен бути в бізнес чаті Viber або SMS</p>
+                                <div class="timer-block">
+                                    <span class="timer">
+                                        <span id="timer-counter"></span>
+                                      </span>
+                                    <button class="repeat-code-btn">Не отримали код?</button>
+                                </div>
+                                <button class="btn btn-big btn-grd not-active">Далі</button>
+                            </div>
+                            <div class="sign-in__choice">
+                                <div class="layout"></div>
+                                <div class="sign-in__choice-body">
+                                    <div>
+                                        <button class="sign-in__choice-email">Ввійти за допомогою E-mail</button>
+                                        <button class="sign-in__choice-repeat">Відправити код ще раз</button>
+                                        <button class="sign-in__choice-phone">Ввести інший номер</button>
+                                    </div>
+                                    <button class="sign-in__choice-cancel">Скасувати</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                        <!-- Відновлення паролю -->
+                    <div class="remind-password__content">
+                        <h3>Відновлення паролю</h3>
+                        <form action="">
+                            <div class="contacts-input-block">
+                                <p class="contacts-lable">E-mail</p>
+                                <input type="email" name="user-email" placeholder="example@gmail.com">
+                            </div>
+                            <button class="btn btn-big btn-grd not-active">Далі</button>
+                        </form>
+                    </div>
+                </div>
+    
+                <div id="sign-up" class="tabcontent">
+                    <form action="">
+                        <div class="contacts-input-block">
+                            <p class="contacts-lable">Ім’я</p>
+                            <input type="text" name="user-name" placeholder="Введіть Ім’я">
+                        </div>
+                        <div class="contacts-input-block">
+                            <p class="contacts-lable">Номер телефону</p>
+                            <input type="phone" name="user-phone" maxlength="13" placeholder="Введіть номер телефону">
+                        </div>
+                        <div class="contacts-input-block">
+                            <p class="contacts-lable">E-mail</p>
+                            <input type="email" name="user-email" placeholder="Введіть E-mail">
+                        </div>
+                        <div class="contacts-input-block">
+                            <p class="contacts-lable">Дата рародження</p>
+                            <input type="date" name="user-date" placeholder=" Оберіть дату">
+                        </div>
+                        <div class="contacts-input-block">
+                            <p class="contacts-lable">Пароль</p>
+                            <input type="password" name="user-pass" placeholder="Введіть пароль">
+                        </div>
+                        <div class="contacts-input-block">
+                            <p class="contacts-lable">Пароль</p>
+                            <input type="password" name="user-pass-repeat" placeholder="Повторіть пароль">
+                        </div>
+                        <label class="contacts__form__checkbox">
+                            <input id="polise_checkbox" type="checkbox">
+                            <p>Натискаючи Ви погоджуєтесь з правилами нашої <a href="#" target="_blank">політики конфіденційності</a></p>
+                        </label>
+                       
+                        <button class="btn btn-big btn-grd not-active">Далі</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="login-popup">
+            <div class="layout"></div>
+            <div class="login-popup-body">
+                <div class="close-popup"><span class="close-btn"></span></div>
+                <div class="popup-content">
+                    <h2 class="popup-title">Авторизуватись аби купувати товари зі знижками</h2>
+                    <button class="btn btn-big btn-grd">Ввійдіть у свій профіль</button>
+                    <button class="blue-btn">Пропустити</button>
+                </div>
+            </div>
+        </div>
+        <div class="language-popup">
+            <div class="layout"></div>
+            <div class="language-popup-body">
+                <div>
+                    <p class="light">Мова інтерфейсу</p>
+                    <p><a href="#">Русский</a></p>
+                    <p><a href="#">Українська</a></p>                    
+                </div>
+                <button class="language-popup-cancel">Скасувати</button>
+            </div>
+        </div>
         <footer>
             <div class="fixed-menu">
                 <ul>
-                    <li class="fixed-menu-item active"><a href="index.html"><span class="icon-ic_home icon"></span></a></li>
+                    <li class="fixed-menu-item home active"><a href="index.html"><span class="icon-ic_home icon"></span></a></li>
                     <li class="fixed-menu-item catalog"><a href="#"><span class="icon-ic_catalog icon"></span></a></li>
                     <li class="fixed-menu-item cart"><a href="#"><span class="icon-ic_cart icon"></span><span class="count cart-count">3</span></a></li>
                     <li class="fixed-menu-item"><a href="wishlist.html"><span class="icon-ic_heart icon"></span></a></li>

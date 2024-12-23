@@ -158,6 +158,17 @@ document.querySelectorAll(".login-popup .btn-big").forEach((el) => {
   });
 });
 
+document.querySelector(".fixed-menu-item.home").addEventListener("click", function (e) {
+  document.querySelectorAll(".fixed-menu-item").forEach((el) => {
+    el.classList.remove("active");
+  });
+  document.querySelector(".cart-page").classList.remove("open");
+  document.querySelector(".catalog-nav").classList.remove("open");
+  document.querySelector(".authorization-popup").classList.remove("open");
+  document.querySelector("body").classList.remove("lock");
+  document.querySelector(".fixed-menu-item.home").classList.add("active");
+});
+
 // open order
 function addListenerOrderInfo() {
   document.querySelectorAll(".vertical-list-item-info>.btn").forEach((el) => {
@@ -294,7 +305,6 @@ if (document.querySelector(".sign-in__choice") !== null) {
 
 }
 
-
 // language popup
 function openLanguagePopup(){
        
@@ -309,7 +319,21 @@ function openLanguagePopup(){
       document.querySelector(".language-popup").classList.remove("open");
     });
 
+    document.querySelectorAll(".language-popup-body p a").forEach((el) => {
+      el.addEventListener("click", () => {
+        document.body.style.overflow = "auto";
+        document.querySelector(".language-popup").classList.remove("open");
+      });
+    });
+
   }
+}
+
+if (document.querySelector(".select-lang") !== null) {
+  document.querySelector(".select-lang").addEventListener("click", function (e) {
+    e.preventDefault();
+    openLanguagePopup();
+  });
 }
 
 
@@ -336,9 +360,7 @@ document.querySelectorAll(".main-menu > ul > .menu-item-has-children > a").forEa
     el.addEventListener("click", (event) => {
       event.preventDefault();
       el.parentElement.classList.toggle("active");
-      document
-        .querySelector(".catalog-nav")
-        .scrollTo({ top: 0, behavior: "smooth" });
+      document.querySelector(".catalog-nav").scrollTo({ top: 0, behavior: "smooth" });
       document.body.classList.add("menu-open");
     });
   });
@@ -482,14 +504,7 @@ if (document.querySelector(".filters-row-item") !== null) {
         item.classList.remove("open");
       });
   });
-
-  
-
-
-
 }
-
-
 
 // checkout page beautic-cupon active
 if (document.querySelector(".beautic-cupon") !== null) {
@@ -624,17 +639,13 @@ $(function () {
   });
 
   // sing in email/phone
-
   $(".sign-in-btn").on("click", function (e) {
     e.preventDefault();
     $(".email-block, .phone-block").toggleClass("open");
-        
   });
 
   // change account data
-
   $(".account-data input").on("click", function (e) {
-    e.target.value = "";
     $(".account-data .btn").removeClass("not-active");
   });
 });
