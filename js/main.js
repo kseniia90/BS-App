@@ -572,7 +572,7 @@ $(function () {
   $(".product-carousel").owlCarousel({
     dots: true,
     nav: false,
-    loop: true,
+    loop: false,
     items: 1,
     margin: 5,
   });
