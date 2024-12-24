@@ -3832,6 +3832,14 @@ a.order-info-title {
 }
 
 /* choice popup */
+
+.sign-in__choice {
+	display: none;
+}
+
+.sign-in__choice.open {
+	display: block;
+}
  
 .sign-in__choice-body {
 	padding: 0 16px 120px;

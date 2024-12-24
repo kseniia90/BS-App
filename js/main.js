@@ -181,20 +181,19 @@ function addListenerOrderInfo() {
       document.querySelector(".vertical-list-item-info.active .order-info").scrollTo({ top: 0, behavior: "smooth" });
       document.querySelector(".menu-item.active .mega-menu-item").style.overflow ="hidden";
     });
-  }
+  };
+  document.querySelectorAll(".order-info .back_pg-btn").forEach((el) => {
+    el.addEventListener("click", (event) => {
+      event.stopPropagation();
+      event.preventDefault();
+      el.closest(".active").classList.remove("active");
+      document.querySelector(".menu-item.active .mega-menu-item").style.overflow ="auto";
+    });
+  });
   });
 }
 
 addListenerOrderInfo();
-
-document.querySelectorAll(".order-info .back_pg-btn").forEach((el) => {
-  el.addEventListener("click", (event) => {
-    event.stopPropagation();
-    event.preventDefault();
-    el.closest(".active").classList.remove("active");
-    document.querySelector(".menu-item.active .mega-menu-item").style.overflow ="auto";
-  });
-});
 
 // login popup
 function openLoginPopup(){
@@ -497,13 +496,16 @@ if (document.querySelector(".filters-row-item") !== null) {
     });
   });
 
-  document.querySelector(".filters-heder .close").addEventListener("click", function (e) {
+  if (document.querySelector(".filters-row-item") !== null){
+    document.querySelector(".filters-heder .close").addEventListener("click", function (e) {
       e.preventDefault();
       document.body.style.overflow = "auto";
       document.querySelectorAll(".filters-row-item").forEach((item) => {
         item.classList.remove("open");
       });
   });
+  }
+  
 }
 
 // checkout page beautic-cupon active
