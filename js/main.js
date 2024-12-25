@@ -33,6 +33,25 @@ function loading() {
 //     });
 // }
 
+// When the user scrolls down 250px from the top of the document, show the button
+if (document.querySelector(".add-fixed-btn") !== null) {
+  let addBtnFixed = document.querySelector(".add-fixed-btn");
+  window.onscroll = function () {
+    scrollFunction();
+  };
+
+  function scrollFunction() {
+    if (
+      document.body.scrollTop > 250 ||
+      document.documentElement.scrollTop > 250
+    ) {
+      addBtnFixed.style.display = "flex";
+    } else {
+      addBtnFixed.style.display = "none";
+    }
+  }
+}
+
 // open catalog
 
 document.querySelectorAll(".fixed-menu-item.catalog").forEach((el) => {
@@ -496,7 +515,7 @@ if (document.querySelector(".filters-row-item") !== null) {
     });
   });
 
-  if (document.querySelector(".filters-row-item") !== null){
+  if (document.querySelector(".filters-heder") !== null){
     document.querySelector(".filters-heder .close").addEventListener("click", function (e) {
       e.preventDefault();
       document.body.style.overflow = "auto";

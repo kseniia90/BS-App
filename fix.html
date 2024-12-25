@@ -9,142 +9,21 @@ openChoicePopup() - якщо помилка вводу коду з SMS пока�
 showEmailVerify() -вікно паролю з email
 openLanguagePopup() - показати попап вибору мови
 
-<div class="language-popup">
-    <div class="layout"></div>
-    <div class="language-popup-body">
-        <div>
-            <p class="light">Мова інтерфейсу</p>
-            <p><a href="#">Русский</a></p>
-            <p><a href="#">Українська</a></p>                    
-        </div>
-        <button class="language-popup-cancel">Скасувати</button>
-    </div>
+<div class="btn btn-big add-fixed-btn add">
+    <span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M11.9999 2.25C9.10041 2.25 6.74991 4.60051 6.74991 7.5V7.59215C5.43581 7.77176 4.47437 8.21589 3.84263 8.94142C2.99435 9.91563 2.91817 11.1955 3.05269 12.3698C3.05368 12.3785 3.05482 12.3871 3.05611 12.3957L3.76109 17.096C3.86689 18.0377 4.11645 19.0807 4.995 19.8561C5.86519 20.624 7.2047 21 9.17161 21H14.8282C16.7951 21 18.1346 20.624 19.0048 19.8561C19.8834 19.0807 20.1329 18.0377 20.2387 17.096L20.9437 12.3957C20.945 12.3871 20.9462 12.3785 20.9471 12.3698C21.0817 11.1955 21.0055 9.91563 20.1572 8.94142C19.5255 8.21588 18.564 7.77176 17.2499 7.59214V7.5C17.2499 4.60051 14.8994 2.25 11.9999 2.25ZM15.7499 9V10.5C15.7499 10.9142 16.0857 11.25 16.4999 11.25C16.9141 11.25 17.2499 10.9142 17.2499 10.5V9.10875C18.2009 9.26883 18.7295 9.58597 19.0259 9.92644C19.4487 10.412 19.5759 11.1453 19.4583 12.1864L18.7532 16.8875C18.7518 16.897 18.7506 16.9065 18.7495 16.9161C18.6564 17.7556 18.4656 18.3314 18.0123 18.7314C17.5461 19.1428 16.6513 19.5 14.8282 19.5H9.17161C7.34857 19.5 6.45371 19.1428 5.98753 18.7314C5.53424 18.3314 5.34344 17.7556 5.25032 16.9161C5.24926 16.9065 5.24802 16.897 5.2466 16.8875L4.5415 12.1864C4.42394 11.1453 4.55113 10.412 4.97389 9.92644C5.27034 9.58597 5.79893 9.26884 6.74991 9.10876V10.5C6.74991 10.9142 7.08569 11.25 7.49991 11.25C7.91412 11.25 8.24991 10.9142 8.24991 10.5V9H15.7499ZM15.7499 7.5C15.7499 5.42893 14.071 3.75 11.9999 3.75C9.92884 3.75 8.24991 5.42893 8.24991 7.5L15.7499 7.5Z" fill="white"/>
+        </svg>
+        Додати до кошика</span>
+    <span>3 199 ₴</span>
 </div>
-
-
-
-
-
-
-<div class="authorization-popup">
-    <img src="img/logo_full.svg" alt="logo" class="popup-logo">
-    <div class="authorization-popup-body">
-
-            <!-- Tab links -->
-        <div class="tab">
-            <button class="tablinks active" onclick="openOption(event, 'sign-in')">Вхід</button>
-            <button class="tablinks" onclick="openOption(event, 'sign-up')">Реєстрація</button>
-        </div>
-
-        <!-- Tab content -->
-        <div id="sign-in" class="tabcontent" style="display: block;">
-            <div class="sign-in__content">
-                <form action="" class="sign-in__form">
-                    <div class="contacts-input-block phone-block open">
-                        <p class="contacts-lable">Номер телефону</p>
-                        <input type="phone" name="user-phone" maxlength="13" value="+380">
-                    </div>
-                    
-                    <div class="contacts-input-block email-block">
-                        <div class="email-block-row email">
-                            <p class="contacts-lable">E-mail</p>
-                            <input type="email" name="user-email" placeholder="Введіть E-mail">
-                        </div>
-                        <div class="email-block-row pass">
-                            <p class="contacts-lable">Пароль</p>
-                            <input type="password" name="user-pass" placeholder="Введіть пароль">
-                        </div>
-                    </div>
-
-                    <p class="sign-in-text">Відправляючи форму для авторизації/реєстрації ви приймаєте умови <a href="#">Угоди користувача</a></p>
-                    <p class="sign-in-btn phone-block open">Увiйти через E-mail</p>  
-                    <p class="sign-in-btn email-block">Увiйти по номеру телефону</p>                               
-                    <button class="btn btn-big btn-grd not-active">Далі</button>
-                </form>
-                
-                <div class="sign-in__phone-code">
-                    <p class="popup-title">+38 063 123 45 67</p>
-                    <p class="light">Будь ласка, введіть 4-значний код, надісланий на ваш номер.</p>
-                    <!-- add to form class error -->
-                    <form action="" name="verify-SMS">
-                        <div class="inputs">
-                            <input type="text" maxlength="1">
-                            <input type="text" maxlength="1">
-                            <input type="text" maxlength="1">
-                            <input type="text" maxlength="1">
-                        </div>
-                        <p class="error-text">Код не підходить, спробуйте ще раз</p>
-                    </form>
-                    <div class="row-bottom">
-                        <p>Код повинен бути в бізнес чаті Viber або SMS</p>
-                        <div class="timer-block">
-                            <span class="timer">
-                                <span id="timer-counter"></span>
-                              </span>
-                            <button class="repeat-code-btn">Не отримали код?</button>
-                        </div>
-                        <button class="btn btn-big btn-grd not-active">Далі</button>
-                    </div>
-                    <div class="sign-in__choice">
-                        <div class="layout"></div>
-                        <div class="sign-in__choice-body">
-                            <div>
-                                <button class="sign-in__choice-email">Ввійти за допомогою E-mail</button>
-                                <button class="sign-in__choice-repeat">Відправити код ще раз</button>
-                                <button class="sign-in__choice-phone">Ввести інший номер</button>
-                            </div>
-                            <button class="sign-in__choice-cancel">Скасувати</button>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-                <!-- Відновлення паролю -->
-            <div class="remind-password__content">
-                <h3>Відновлення паролю</h3>
-                <form action="">
-                    <div class="contacts-input-block">
-                        <p class="contacts-lable">E-mail</p>
-                        <input type="email" name="user-email" placeholder="example@gmail.com">
-                    </div>
-                    <button class="btn btn-big btn-grd not-active">Далі</button>
-                </form>
-            </div>
-        </div>
-
-        <div id="sign-up" class="tabcontent">
-            <form action="">
-                <div class="contacts-input-block">
-                    <p class="contacts-lable">Ім’я</p>
-                    <input type="text" name="user-name" placeholder="Введіть Ім’я">
-                </div>
-                <div class="contacts-input-block">
-                    <p class="contacts-lable">Номер телефону</p>
-                    <input type="phone" name="user-phone" maxlength="13" placeholder="Введіть номер телефону">
-                </div>
-                <div class="contacts-input-block">
-                    <p class="contacts-lable">E-mail</p>
-                    <input type="email" name="user-email" placeholder="Введіть E-mail">
-                </div>
-                <div class="contacts-input-block">
-                    <p class="contacts-lable">Дата рародження</p>
-                    <input type="date" name="user-date" placeholder=" Оберіть дату">
-                </div>
-                <div class="contacts-input-block">
-                    <p class="contacts-lable">Пароль</p>
-                    <input type="password" name="user-pass" placeholder="Введіть пароль">
-                </div>
-                <div class="contacts-input-block">
-                    <p class="contacts-lable">Пароль</p>
-                    <input type="password" name="user-pass-repeat" placeholder="Повторіть пароль">
-                </div>
-                <label class="contacts__form__checkbox">
-                    <input id="polise_checkbox" type="checkbox">
-                    <p>Натискаючи Ви погоджуєтесь з правилами нашої <a href="#" target="_blank">політики конфіденційності</a></p>
-                </label>
-               
-                <button class="btn btn-big btn-grd not-active">Далі</button>
-            </form>
-        </div>
-    </div>
+<div class="btn btn-big add-fixed-btn added">
+    <span>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M12 2.25C9.10054 2.25 6.75003 4.60051 6.75003 7.5V7.59215C5.43593 7.77176 4.47449 8.21589 3.84275 8.94142C2.99448 9.91563 2.91829 11.1955 3.05281 12.3698C3.0538 12.3785 3.05494 12.3871 3.05623 12.3957L3.76121 17.096C3.86701 18.0377 4.11657 19.0807 4.99512 19.8561C5.86531 20.624 7.20482 21 9.17173 21H10.125C10.5393 21 10.875 20.6642 10.875 20.25C10.875 19.8358 10.5393 19.5 10.125 19.5H9.17173C7.34869 19.5 6.45384 19.1428 5.98766 18.7314C5.53437 18.3314 5.34356 17.7556 5.25044 16.9161C5.24938 16.9065 5.24814 16.897 5.24672 16.8875L4.54162 12.1864C4.42406 11.1453 4.55126 10.412 4.97401 9.92644C5.27046 9.58597 5.79905 9.26884 6.75003 9.10876V10.5C6.75003 10.9142 7.08582 11.25 7.50003 11.25C7.91424 11.25 8.25003 10.9142 8.25003 10.5V9H15.7711C18.2444 9 19.0342 9.70654 19.3187 10.4071C19.4745 10.7909 19.9119 10.9757 20.2957 10.8199C20.6795 10.6641 20.8643 10.2266 20.7085 9.84286C20.2036 8.59938 19.0723 7.84375 17.25 7.59308V7.5C17.25 4.60051 14.8995 2.25 12 2.25ZM15.75 7.5C15.75 5.42893 14.0711 3.75 12 3.75C9.92896 3.75 8.25003 5.42893 8.25003 7.5H15.75Z" fill="white"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.5 16.1248C10.5002 13.4414 12.3959 11.1319 15.0278 10.6086C17.6596 10.0852 20.2947 11.4939 21.3214 13.9731C22.3481 16.4523 21.4806 19.3115 19.2494 20.8022C17.0181 22.2928 14.0446 21.9998 12.1472 20.1023C11.0924 19.0474 10.4999 17.6166 10.5 16.1248Z" fill="#57AE00"/>
+        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.9994 14.0009C19.2923 14.2938 19.2923 14.7687 18.9994 15.0616L15.7181 18.3429C15.4252 18.6358 14.9503 18.6358 14.6574 18.343L13.1261 16.8117C12.8332 16.5188 12.8331 16.0439 13.126 15.751C13.4189 15.4581 13.8938 15.4581 14.1867 15.751L15.1877 16.752L17.9388 14.0009C18.2317 13.708 18.7065 13.708 18.9994 14.0009Z" fill="white"/>
+        </svg>
+        Додано до кошику</span>
+    <span>3 199 ₴</span>
 </div>

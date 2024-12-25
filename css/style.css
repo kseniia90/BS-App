@@ -1544,6 +1544,30 @@ footer {
 	color: var(--light);
 }
 
+.add-fixed-btn {
+	width: calc(100% - 16px);
+    position: fixed;
+    bottom: 115px;
+    left: 8px;
+    z-index: 20;
+	justify-content: space-between;
+	gap: 20px;
+	font-family: 'Montserrat';
+	font-size: 17px;
+	font-weight: 600;
+	line-height: 23.8px;
+	color: #fff;
+	background-color: var(--accent);
+	display: none;
+}
+
+.add-fixed-btn span:first-of-type {
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 8px;
+}
+
 .product-card.main .product__card__info__variants {
     padding: 4px 12px;
    text-align: left;
