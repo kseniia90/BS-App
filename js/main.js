@@ -205,7 +205,7 @@ function addListenerOrderInfo() {
     el.addEventListener("click", (event) => {
       event.stopPropagation();
       event.preventDefault();
-      el.closest(".active").classList.remove("active");
+      el.closest(".vertical-list-item-info").classList.remove("active");
       document.querySelector(".menu-item.active .mega-menu-item").style.overflow ="auto";
     });
   });
