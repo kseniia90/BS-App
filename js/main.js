@@ -181,9 +181,19 @@ document.querySelector(".fixed-menu-item.home").addEventListener("click", functi
   document.querySelectorAll(".fixed-menu-item").forEach((el) => {
     el.classList.remove("active");
   });
-  document.querySelector(".cart-page").classList.remove("open");
-  document.querySelector(".catalog-nav").classList.remove("open");
-  document.querySelector(".authorization-popup").classList.remove("open");
+  
+  if (document.querySelector(".cart-page") !== null) {
+    document.querySelector(".cart-page").classList.remove("open");
+  }
+
+  if (document.querySelector(".catalog-nav") !== null) {
+    document.querySelector(".catalog-nav").classList.remove("open");
+  }
+
+  if (document.querySelector(".authorization-popup") !== null) {
+    document.querySelector(".authorization-popup").classList.remove("open");
+  }
+  
   document.querySelector("body").classList.remove("lock");
   document.querySelector(".fixed-menu-item.home").classList.add("active");
 });
