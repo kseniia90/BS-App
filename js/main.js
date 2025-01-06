@@ -515,13 +515,18 @@ if (document.querySelector(".coutndown") !== null) {
 // filters open
 
 if (document.querySelector(".filters-row-item") !== null) {
+  
   document.querySelectorAll(".filters-row-item>span").forEach((el) => {
     el.addEventListener("click", (event) => {
       document.querySelectorAll(".filters-row-item").forEach((item) => {
         item.classList.remove("open");
       });
-      document.body.style.overflow = "hidden";
+
+      if (el.parentElement.querySelector(".widget-area")!== null) {
+        document.body.style.overflow = "hidden";
       el.closest(".filters-row-item").classList.add("open");
+    } 
+      
     });
   });
 
@@ -535,6 +540,24 @@ if (document.querySelector(".filters-row-item") !== null) {
   });
   }
   
+  document.querySelectorAll(".filter__header").forEach((el) => {
+    el.addEventListener("click", (event) => {
+      event.preventDefault();
+      el.parentElement.classList.toggle("active");
+      document.querySelector(".filters-row-item>.widget-area").scrollTo({ top: 0 });
+      el.closest(".filters-row-item>.widget-area").style.overflow = "hidden";
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+  document.querySelectorAll(".filter-heder .close").forEach((el) => {
+  el.addEventListener("click", (event) => {
+    el.closest(".active").classList.remove("active");
+    el.closest(".filters-row-item>.widget-area").style.overflow = "auto";
+    document.body.style.overflow = "auto";
+  });
+  });
+
 }
 
 // checkout page beautic-cupon active
