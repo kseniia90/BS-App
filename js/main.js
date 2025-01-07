@@ -546,7 +546,6 @@ if (document.querySelector(".filters-row-item") !== null) {
       el.parentElement.classList.toggle("active");
       document.querySelector(".filters-row-item>.widget-area").scrollTo({ top: 0 });
       el.closest(".filters-row-item>.widget-area").style.overflow = "hidden";
-      document.body.style.overflow = "hidden";
     });
   });
 
@@ -554,7 +553,6 @@ if (document.querySelector(".filters-row-item") !== null) {
   el.addEventListener("click", (event) => {
     el.closest(".active").classList.remove("active");
     el.closest(".filters-row-item>.widget-area").style.overflow = "auto";
-    document.body.style.overflow = "auto";
   });
   });
 
