@@ -545,14 +545,14 @@ if (document.querySelector(".filters-row-item") !== null) {
       event.preventDefault();
       el.parentElement.classList.toggle("active");
       document.querySelector(".filters-row-item>.widget-area").scrollTo({ top: 0 });
-      el.closest(".filters-row-item>.widget-area").style.overflow = "hidden";
+      el.closest(".filters-row-item>.widget-area").style.overflowY = "hidden";
     });
   });
 
   document.querySelectorAll(".filter-heder .close").forEach((el) => {
   el.addEventListener("click", (event) => {
     el.closest(".active").classList.remove("active");
-    el.closest(".filters-row-item>.widget-area").style.overflow = "auto";
+    el.closest(".filters-row-item>.widget-area").style.overflowY= "auto";
   });
   });
 
