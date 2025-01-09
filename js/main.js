@@ -559,16 +559,16 @@ if (document.querySelector(".filters-row-item") !== null) {
 }
 
 // checkout page beautic-cupon active
-if (document.querySelector(".beautic-cupon") !== null) {
+// if (document.querySelector(".beautic-cupon") !== null) {
  
-  document.getElementById('cupon-toggle').addEventListener('change', function() {
-      if (this.checked) {
-        document.querySelector(".beautic-cupon").classList.add('beautic-cupon-active');
-      } else {
-        document.querySelector(".beautic-cupon").classList.remove('beautic-cupon-active');
-      }
-  });
-}
+//   document.getElementById('cupon-toggle').addEventListener('change', function() {
+//       if (this.checked) {
+//         document.querySelector(".beautic-cupon").classList.add('beautic-cupon-active');
+//       } else {
+//         document.querySelector(".beautic-cupon").classList.remove('beautic-cupon-active');
+//       }
+//   });
+// }
 
 // tab START
 
