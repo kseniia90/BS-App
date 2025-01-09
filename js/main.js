@@ -700,4 +700,20 @@ $(function () {
   $(".account-data input").on("click", function (e) {
     $(".account-data .btn").removeClass("not-active");
   });
+
+  // let valueIn = parseInt($(".loyalty__progress-value").text());
+  // let valueEx = 0;
+
+  // if (valueIn <= 3000) {
+  //   valueEx = (0 * 100) / 3 + (valueIn * (100 / 3)) / (3000 - 0);
+  // } else if (valueIn <= 5000) {
+  //   valueEx = (1 * 100) / 3 + ((valueIn - 3000) * (100 / 3)) / (5000 - 3000);
+  // } else if (valueIn <= 17000) {
+  //   valueEx = (2 * 100) / 3 + ((valueIn - 5000) * (100 / 3)) / (17000 - 5000) -5;
+  // } else {
+  //   valueEx = 95;
+  // }
+  // $(".loyalty__progress-thumb, .loyalty__progress-value").css( "left", valueEx + "%"
+  // );
 });
+
