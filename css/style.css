@@ -3459,6 +3459,10 @@ form.error .error-text {
 	text-align: left;
 }
 
+.account-item:first-of-type .mega-menu-item.account-item-list {
+	background: var(--bg-light);
+}
+
 .account-item>span {
 	color: var(--accent-light);
 	display: block;
