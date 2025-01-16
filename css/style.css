@@ -4369,12 +4369,6 @@ a.order-info-title {
     transform: translateX(0);
 }
 
-.filter__item--type-checkbox:not(:nth-child(2)) .filter__properties-list {
-	background-color: pink;
-	
-}
-
-
 /* filters end */
 
 /* checkout  */
