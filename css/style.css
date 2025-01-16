@@ -4355,7 +4355,7 @@ a.order-info-title {
     overflow-y: auto;
     overflow-x: hidden;
     background: #fff;
-    min-height: 100vh;
+    min-height: calc(100vh - 40px);
     width: 100%;
 	padding: 0 16px 50px;
     flex-direction: column;
