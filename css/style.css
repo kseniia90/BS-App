@@ -2104,6 +2104,23 @@ footer {
     text-overflow: ellipsis;
 }
 
+.filters-row-item .select2-container {
+	color: #000 !important;
+}
+
+.filters-row-item .select2-container--default .select2-selection--single .select2-selection__arrow {
+	display: none !important;
+}
+
+.sorting-select2.select2-dropdown {
+	width: 100% !important;
+	text-align: start;
+	color: #000 !important;
+	font-size: 17px;
+}
+
+
+
 .category-result {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
@@ -4077,6 +4094,28 @@ a.order-info-title {
 .quick-buy-popup .select2-results {
 	background: #F8F8F8;
 	border-radius: 12px;
+}
+
+.select2-container--open .select2-dropdown.popup-select2 {
+	text-align: start;
+	color: #000;
+	font-size: 17px;
+	border-radius: 12px !important;
+	background: #F8F8F8 !important;
+}
+
+.select2-dropdown.popup-select2 .select2-results__options {
+	border-radius: 12px !important;
+	background: #F8F8F8 !important;
+}
+
+.popup-select2  .select2-results__option {
+	padding: 12px;
+	border-bottom: 0.5px solid #0506110F
+}
+
+.select2-container--open .select2-dropdown.popup-select2 .select2-results__option--disabled {
+	display: none !important;
 }
 /* sale page */
 

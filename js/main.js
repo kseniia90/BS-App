@@ -633,6 +633,11 @@ $(function () {
     minimumResultsForSearch: Infinity,
     dropdownCssClass: 'sorting-select2',
   });
+
+  $('.quick-buy-popup .js-example-basic-single').select2({
+    minimumResultsForSearch: Infinity,
+    dropdownCssClass: 'popup-select2',
+  });
   
   // slider banner
   $(".banner-carousel").owlCarousel({
