@@ -364,6 +364,33 @@ if (document.querySelector(".select-lang") !== null) {
   });
 }
 
+// quick-buy-popup
+
+function openQuickBuyPopup(){
+       
+  if (document.querySelector(".quick-buy-popup") !== null) {
+
+    document.body.style.overflow = "hidden";
+    document.querySelector(".quick-buy-popup").classList.add("open");
+
+    window.addEventListener("click", function (e) {
+  
+      if (e.target.closest(".quick-buy-popup .close-popup") || e.target.closest(".layout")) {
+        e.preventDefault();
+        document.querySelector(".quick-buy-popup").classList.remove("open");
+        document.body.style.overflow = "auto";
+      }
+    });
+  }
+}
+
+if (document.querySelector(".quick-buy-btn") !== null) {
+  document.querySelector(".quick-buy-btn").addEventListener("click", function (e) {
+    e.preventDefault();
+    openQuickBuyPopup();
+  });
+}
+
 
 // show email verify 
 function showEmailVerify(){
