@@ -1,5 +1,42 @@
  
- 
+ додати на сторінку категорій після попапів (наприклад language-popup):
  <div id="sorting-popup"></div>
+ 
+ додати на сторінку product-page.html після попапів:
+ 
+ 	<div class="quick-buy-popup">
+            <div class="layout"></div>
+            <div class="quick-buy-popup-body">
+                <div class="close-popup"><span class="close-btn"></span></div>
+                <div>
+                    <h3>Оформити замовлення</h3>
+                    <p class="light">Ми обов'язково зв'яжемось з Вами <span>з 9:00 до 19:00</span></p>
+                    <p class="light">*Мінімальна сума замовлення: <span>600 ₴</span></p>
+                    <form action="">
+                        <div class="contacts-input-block">
+                            <p class="contacts-lable">Прізвище</p>
+                            <input type="text" name="user-name" placeholder="Ваше Прізвище">
+                        </div>
+                        <div class="contacts-input-block">
+                            <p class="contacts-lable">Ім’я</p>
+                            <input type="text" name="user-name" placeholder="Ваше Ім’я">
+                        </div>
+                        <div class="contacts-input-block">
+                            <p class="contacts-lable">Номер телефону</p>
+                            <input type="phone" name="user-phone" maxlength="13" placeholder="Введіть номер телефону">
+                        </div>   
+                        <select name="" id="" class="js-example-basic-single">
+                            <option value="placeholder" selected disabled>Зв’язок через?</option>
+                            <option value="telegram">Telegram</option>
+                            <option value="viber">Viber</option>
+                            <option value="phone">Телефон</option>
+                        </select>                                   
+                        <button class="btn btn-big btn-grd not-active"> Відправити</button>
+                    </form>
+                </div>
+    
+            </div>
+        </div>
+
 
  

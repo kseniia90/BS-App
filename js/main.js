@@ -25,6 +25,15 @@ function loading() {
   });
 }
 
+if (document.querySelector(".filters-heder button.light") !== null) {
+  document.querySelector(".filters-heder button.light").addEventListener("click", function (e) {
+    let url = location.href;
+    const shortenedUrl = url.split('/filter')[0] + '/';
+
+    location.href = shortenedUrl;
+  });
+}
+
 //   back to page
 // if (document.querySelector(".back_pg-btn") !== null) {
 //   document.querySelector(".back_pg-btn").addEventListener("click", function (e) {
@@ -118,8 +127,6 @@ if (document.querySelector(".empty-cart .btn") !== null) {
     document.querySelector("body").classList.remove("lock");
   });
 }
-
-
 
 // open authorization-popup
 
