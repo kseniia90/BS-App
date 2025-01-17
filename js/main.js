@@ -626,7 +626,12 @@ function openOption(evt, optionName) {
 $(function () {
   //select2
   $('.js-example-basic-single').select2({
-    minimumResultsForSearch: Infinity 
+    minimumResultsForSearch: Infinity,
+  });
+
+  $('.sorting').select2({
+    minimumResultsForSearch: Infinity,
+    dropdownCssClass: 'sorting-select2',
   });
   
   // slider banner
