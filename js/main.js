@@ -632,6 +632,7 @@ $(function () {
   $('.sorting').select2({
     minimumResultsForSearch: Infinity,
     dropdownCssClass: 'sorting-select2',
+    dropdownParent: $('#sorting-popup')
   });
 
   $('.quick-buy-popup .js-example-basic-single').select2({
