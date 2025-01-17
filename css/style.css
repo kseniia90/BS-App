@@ -2105,10 +2105,6 @@ footer {
     text-overflow: ellipsis;
 }
 
-#sorting-popup {
-
-}
-
 #sorting-popup .select2-container {
 	left: 16px !important;
 	width: calc(100% - 32px);
@@ -2129,7 +2125,7 @@ footer {
 #sorting-popup .select2-container--default .select2-selection--single .select2-selection__rendered {
 	line-height: 40px;
 	padding-left: 0;
-	background: var(--bg-light);
+	background: #F8F8F8 !important;
 }
 
 #sorting-popup  .select2-container--default .select2-selection--single .select2-selection__arrow {
@@ -2182,11 +2178,14 @@ footer {
 .sorting-select2.select2-dropdown {
 	width: 100% !important;
 	text-align: start;
+	background-color: #F8F8F8 !important;
 	color: #000 !important;
 	font-size: 17px;
 }
 
-
+.sorting-select2.select2-dropdown .select2-results>.select2-results__options {
+	max-height: none !important;
+}
 
 .category-result {
 	display: grid;
