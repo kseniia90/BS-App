@@ -390,6 +390,13 @@ form .btn {
 	background: var(--bg-light);
 }
 
+.buttons-block .btn>a {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 8px;
+}
+
 .btn-grd {
 	justify-content: space-between;
 	color: #fff;
@@ -1016,8 +1023,6 @@ footer {
 	background: #65a0db;
 	color: white;
 }
-
-
 
 .product-card .icon-heart {
 	position: absolute;
