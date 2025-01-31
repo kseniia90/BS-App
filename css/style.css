@@ -2462,7 +2462,7 @@ footer {
 	color: var(--text-color);
   }
 
-  .page-row .head-row-left>span.icon-ic_share {
+  .page-row .head-row-left .icon-ic_share {
 	width: auto;
 	font-size: 24px;
 	font-weight: normal;
