@@ -2462,10 +2462,24 @@ footer {
 	color: var(--text-color);
   }
 
+  .page-row .head-row-left>span.icon-ic_share {
+	width: auto;
+	font-size: 24px;
+	font-weight: normal;
+	line-height: 18.2px;
+	color: var(--accent);
+  }
+
   .wishlist-page .product-card .icon-heart {
 	width: 22px;
 	height: 22px;
 	font-size: 18px;
+}
+
+.info_wishlist {
+	display: block;
+	padding: 30px 16px;
+	font-size: 14px;
 }
 
 .vertical-list {
