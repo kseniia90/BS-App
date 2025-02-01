@@ -514,34 +514,32 @@ if (document.querySelector(".coutndown") !== null) {
     hour = minute * 60,
     day = hour * 24;
 
-  let timeleft = JSON.parse(
-    countDownElement.getAttribute("data-timeleft")
-    ),
+  let timeleft = JSON.parse(countDownElement.getAttribute("data-timeleft")),
     distance =
       timeleft.days * day +
       timeleft.hours * hour +
       timeleft.minutes * minute +
-      timeleft.seconds * second,
-    x = setInterval(function () {
-      let days,
-      hours,
-      minutes,
-      seconds;
-      days = Math.floor(distance / day);
-      days = days < 10 ? "0" + days : days;
-      (countDownElement.querySelector(".days").innerText = days),
-        (hours = Math.floor((distance % day) / hour));
-      hours = hours < 10 ? "0" + hours : hours;
-      (countDownElement.querySelector(".hours").innerText = hours),
-        (minutes = Math.floor((distance % hour) / minute)),
-        (minutes = minutes < 10 ? "0" + minutes : minutes);
-      (countDownElement.querySelector(".minutes").innerText = minutes),
-        (seconds = Math.floor((distance % minute) / second)),
-        (seconds = seconds < 10 ? "0" + seconds : seconds);
-        countDownElement.querySelector(".seconds").innerText = seconds;
-      var sec = Math.floor((distance % minute) / second);
-      distance = distance - second;
-    }, second);
+      timeleft.seconds * second;
+  setInterval(function () {
+    if (distance < 0) {
+      return;
+    }
+    let days, hours, minutes, seconds;
+    days = Math.floor(distance / day);
+    days = days < 10 ? "0" + days : days;
+    (countDownElement.querySelector(".days").innerText = days),
+      (hours = Math.floor((distance % day) / hour));
+    hours = hours < 10 ? "0" + hours : hours;
+    (countDownElement.querySelector(".hours").innerText = hours),
+      (minutes = Math.floor((distance % hour) / minute)),
+      (minutes = minutes < 10 ? "0" + minutes : minutes);
+    (countDownElement.querySelector(".minutes").innerText = minutes),
+      (seconds = Math.floor((distance % minute) / second)),
+      (seconds = seconds < 10 ? "0" + seconds : seconds);
+    countDownElement.querySelector(".seconds").innerText = seconds;
+    var sec = Math.floor((distance % minute) / second);
+    distance = distance - second;
+  }, second);
 
   })
 }
