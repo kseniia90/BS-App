@@ -2895,6 +2895,11 @@ footer {
 	line-height: 23.76px;
 }
 
+.text-page-content.thanks-page {
+	min-height: calc(100vh - 80px);
+	margin-bottom: -110px;
+}
+
 .text-page-content p {
 	margin-bottom: 25px;
 }
