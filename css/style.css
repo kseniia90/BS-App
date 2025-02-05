@@ -2450,6 +2450,7 @@ footer {
 
   .page-row .head-row {
 	gap: 6px;
+	height: 80px;
   }
 
   .page-row .head-row-left {
@@ -2883,7 +2884,7 @@ footer {
 .text-page-content {
 	background: #fff;
 	padding-top: 12px;
-	padding-bottom: 12px; /*45px*/
+	padding-bottom: 18px; /*45px*/
 	font-size: 18px;
 	font-weight: 400;
 	line-height: 23.76px;
