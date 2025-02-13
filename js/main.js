@@ -705,6 +705,15 @@ $(function () {
     nav: true,
     loop: true,
     items: 1,
+    margin: 8,
+  });
+
+  $(".gift2-carousel").owlCarousel({
+    dots: true,
+    nav: true,
+    loop: true,
+    autoWidth: true,
+    margin: 8,
   });
 
   // accordion BEGIN
