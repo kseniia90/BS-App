@@ -699,6 +699,14 @@ $(function () {
     margin: 5,
   });
 
+  //  gifts carousel
+  $(".gift-carousel").owlCarousel({
+    dots: false,
+    nav: true,
+    loop: true,
+    items: 1,
+  });
+
   // accordion BEGIN
   $(".accordion__title").on("click", function (e) {
     e.preventDefault();
