@@ -1850,8 +1850,34 @@ footer {
 	top: 0;
 	bottom: auto;
 	z-index: 2;
+	padding: 3px 10px;
+    -webkit-box-orient: vertical !important;
+	-webkit-line-clamp: 1;
+	white-space: nowrap;
+	overflow: hidden;
+    text-overflow: ellipsis;
 	border-radius: 12px 12px 0 0;
 }
+
+.gift-block-3 .gift2-carousel .owl-nav {
+	margin-top: -20px !important;
+}
+
+.gift-block-3 .gift2-carousel .owl-dots {
+    text-align: center !important;
+}
+
+.gift-block-3 .gift2-carousel .owl-nav .owl-prev span,
+.gift-block-3 .gift2-carousel .owl-nav .owl-next span {
+	width: 100%;
+	font-size: 40px;
+	color: var(--light) !important;
+	background: transparent;
+ }
+
+ .gift-block-3 .gift2-carousel .owl-stage-outer {
+	box-shadow: 0px 10px 24px 0px #00135114;
+ }
 
 .gift-block-3 .gift-grid-row.row1 .product-card {
 	max-width: 148px;

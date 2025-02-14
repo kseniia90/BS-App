@@ -1,41 +1,237 @@
  
- додати на сторінку категорій після попапів (наприклад language-popup):
- <div id="sorting-popup"></div>
+ додати на сторінку товару в блок .buttons-block перед .consultant-div:
+
  
- додати на сторінку product-page.html після попапів:
- 
- 	<div class="quick-buy-popup">
-            <div class="layout"></div>
-            <div class="quick-buy-popup-body">
-                <div class="close-popup"><span class="close-btn"></span></div>
-                <div>
-                    <h3>Оформити замовлення</h3>
-                    <p class="light">Ми обов'язково зв'яжемось з Вами <span>з 9:00 до 19:00</span></p>
-                    <p class="light">*Мінімальна сума замовлення: <span>600 ₴</span></p>
-                    <form action="">
-                        <div class="contacts-input-block">
-                            <p class="contacts-lable">Прізвище</p>
-                            <input type="text" name="user-name" placeholder="Ваше Прізвище">
+<div class="gift-block gift-block-1">
+    <h2 class="title">Отримуй подарунок</h2>
+    <div class="gift-grid">
+        <div class="gift-grid-row row1">
+            <div class="product-card">
+                <a class="product-card__img" href="product-page.html">
+                    <img src="./img/prod_1.jpg" alt="img">
+                </a>
+                <div class="product-card__info">
+                    <div class="product-card__info__content">
+                        <a href="product-page.html" class="product-card__info__name">Протизапальна
+                            освітлювальна сироватка з бурштиновою освітлювальна сироватка з
+                            бурштиновою</a>
+                    </div>
+                    <div class="row">
+                        <div class="product-card__info__price">
+                            <p class="price">1300 ₴</p>
                         </div>
-                        <div class="contacts-input-block">
-                            <p class="contacts-lable">Ім’я</p>
-                            <input type="text" name="user-name" placeholder="Ваше Ім’я">
-                        </div>
-                        <div class="contacts-input-block">
-                            <p class="contacts-lable">Номер телефону</p>
-                            <input type="phone" name="user-phone" maxlength="13" placeholder="Введіть номер телефону">
-                        </div>   
-                        <select name="" id="" class="js-example-basic-single">
-                            <option value="placeholder" selected disabled>Зв’язок через?</option>
-                            <option value="telegram">Telegram</option>
-                            <option value="viber">Viber</option>
-                            <option value="phone">Телефон</option>
-                        </select>                                   
-                        <button class="btn btn-big btn-grd not-active"> Відправити</button>
-                    </form>
+                    </div>
                 </div>
-    
+                <p class="gift-label">Основний товар</p>
+            </div>
+            <span class="symbol">+</span>
+            <div class="gift-carousel owl-carousel owl-theme">
+                <div class="product-card">
+                    <a class="product-card__img" href="product-page.html">
+                        <img src="./img/prod_1.jpg" alt="img">
+                    </a>
+                    <div class="product-card__info">
+                        <div class="product-card__info__content">
+                            <a href="product-page.html" class="product-card__info__name">Протизапальна
+                                освітлювальна сироватка з бурштиновою освітлювальна сироватка з
+                                бурштиновою</a>
+                        </div>
+                        <div class="row">
+                            <div class="product-card__info__price">
+                                <p class="price">1300 ₴</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <a class="product-card__img" href="product-page.html">
+                        <img src="./img/prod_1.jpg" alt="img">
+                    </a>
+                    <div class="product-card__info">
+                        <div class="product-card__info__content">
+                            <a href="product-page.html" class="product-card__info__name">Протизапальна
+                                освітлювальна сироватка з бурштиновою освітлювальна сироватка з
+                                бурштиновою</a>
+                        </div>
+                        <div class="row">
+                            <div class="product-card__info__price">
+                                <p class="price">1300 ₴</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+
+
+        </div>
+        <div class="gift-grid-row row2 symbol">=</div>
+        <div class="gift-grid-row row3">
+            <div class="product-card">
+                <a class="product-card__img" href="product-page.html">
+                    <img src="./img/prod_1.jpg" alt="img">
+                </a>
+                <div class="product-card__info">
+                    <div class="product-card__info__content">
+                        <a href="product-page.html" class="product-card__info__name">Протизапальна
+                            освітлювальна сироватка з бурштиновою освітлювальна сироватка з
+                            бурштиновою</a>
+                    </div>
+                    <div class="row">
+                        <div class="product-card__info__price">
+                            <p class="old-price" style="color: #FF0D00;">1300 ₴</p>
+                        </div>
+                    </div>
+                </div>
+                <p class="gift-label">Подарунок</p>
             </div>
         </div>
+    </div>
+    <div class="btn btn-big btn-grd">
+        <p>
+            <span class="icon-ic_cart icon"></span>
+            <span>Купити разом</span>
+        </p>
+        <span>3 199 ₴</span>
+    </div>
+</div>
+
+<div class="gift-block gift-block-2">
+    <h2 class="title">Отримуй подарунок</h2>
+    <div class="gift-grid">
+        <div class="gift-grid-row row3">
+            <div class="product-card">
+                <a class="product-card__img" href="product-page.html">
+                    <img src="./img/prod_1.jpg" alt="img">
+                </a>
+                <div class="product-card__info">
+                    <div class="product-card__info__content">
+                        <a href="product-page.html" class="product-card__info__name">Протизапальна
+                            освітлювальна сироватка з бурштиновою освітлювальна сироватка з
+                            бурштиновою</a>
+                    </div>
+                    <div class="row">
+                        <div class="product-card__info__price">
+                            <p class="old-price">1300 ₴</p>
+                            <p class="new-price" style="color: #FF0D00;">1 ₴</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="btn btn-big btn-grd">
+        <p>
+            <span class="icon-ic_cart icon"></span>
+            <span>Купити разом</span>
+        </p>
+        <span>3 199 ₴</span>
+    </div>
+</div>
+
+<div class="gift-block gift-block-3">
+    <h2 class="title">Товар по акції 3 за ціною 2</h2>
+    <div class="gift-grid">
+        <div class="gift-grid-row row1">
+            <p class="gift-label">При купівлі 3 товарів з акції, найдешевший за одну гривню</p>
+
+            <div class="gift2-carousel owl-carousel owl-theme">
+                <div class="product-card">
+                    <a class="product-card__img" href="product-page.html">
+                        <img src="./img/prod_1.jpg" alt="img">
+                    </a>
+                    <div class="product-card__info">
+                        <div class="product-card__info__content">
+                            <a href="product-page.html" class="product-card__info__name">Протизапальна
+                                освітлювальна сироватка з бурштиновою освітлювальна сироватка з
+                                бурштиновою</a>
+                        </div>
+                        <div class="row">
+                            <div class="product-card__info__price">
+                                <p class="price">1300 ₴</p>
+                            </div>
+                        </div>
+                        <div class="btn">
+                            <span>Додати в кошик</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <a class="product-card__img" href="product-page.html">
+                        <img src="./img/prod_1.jpg" alt="img">
+                    </a>
+                    <div class="product-card__info">
+                        <div class="product-card__info__content">
+                            <a href="product-page.html" class="product-card__info__name">Протизапальна
+                                освітлювальна сироватка з бурштиновою освітлювальна сироватка з
+                                бурштиновою</a>
+                        </div>
+                        <div class="row">
+                            <div class="product-card__info__price">
+                                <p class="price">1300 ₴</p>
+                            </div>
+                        </div>
+                        <div class="btn">
+                            <span>Додати в кошик</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <a class="product-card__img" href="product-page.html">
+                        <img src="./img/prod_1.jpg" alt="img">
+                    </a>
+                    <div class="product-card__info">
+                        <div class="product-card__info__content">
+                            <a href="product-page.html" class="product-card__info__name">Протизапальна
+                                освітлювальна сироватка з бурштиновою освітлювальна сироватка з
+                                бурштиновою</a>
+                        </div>
+                        <div class="row">
+                            <div class="product-card__info__price">
+                                <p class="price">1300 ₴</p>
+                            </div>
+                        </div>
+                        <div class="btn">
+                            <span>Додати в кошик</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <a class="product-card__img" href="product-page.html">
+                        <img src="./img/prod_1.jpg" alt="img">
+                    </a>
+                    <div class="product-card__info">
+                        <div class="product-card__info__content">
+                            <a href="product-page.html" class="product-card__info__name">Протизапальна
+                                освітлювальна сироватка з бурштиновою освітлювальна сироватка з
+                                бурштиновою</a>
+                        </div>
+                        <div class="row">
+                            <div class="product-card__info__price">
+                                <p class="price">1300 ₴</p>
+                            </div>
+                        </div>
+                        <div class="btn">
+                            <span>Додати в кошик</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="btn btn-big btn-grd">
+        <p>
+            <span class="icon-ic_cart icon"></span>
+            <span>Купити разом</span>
+        </p>
+        <span>3 199 ₴</span>
+    </div>
+</div>
 
 
