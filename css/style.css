@@ -1655,6 +1655,7 @@ footer {
 
 .gift-grid .product-card__info__content {
 	flex: 0 0 auto;
+	align-items: flex-start;
 }
 
 .product-card.main .gift-grid .product-card__info__name,
@@ -1737,6 +1738,7 @@ footer {
 
 .gift-grid .gift-grid-row.row3 .product-card__img {
 	width: 70px;
+	max-width: 70px;
 	height: 70px;
 }
 
