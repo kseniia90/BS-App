@@ -1730,6 +1730,11 @@ footer {
 	text-align: center;
 }
 
+.gift-grid .gift-grid-row.row3 .product-card__info {
+    text-align: left;
+    align-items: flex-start;
+}
+
 .gift-grid .gift-grid-row.row1 .product-card__img {
 	width: 50px;
 	height: 50px;
