@@ -2526,6 +2526,10 @@ footer {
     transform: translateY(0);
 }
 
+.menu-open .catalog-nav.open{
+	overflow: hidden;
+}
+
 .catalog-search {
 	padding-top: 10px;
 	padding-bottom: 10px;
@@ -2657,6 +2661,10 @@ footer {
   .main-menu .active>.mega-menu-item {
 	display: flex;
 	transform: translateX(0);
+  }
+
+  .sub-menu .active>.mega-menu-item {
+	bottom: 0;
   }
 
   .mega-menu-item .back-block {

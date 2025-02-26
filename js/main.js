@@ -427,11 +427,27 @@ document.querySelectorAll(".main-menu > ul > .menu-item-has-children > a").forEa
     });
   });
 
-document.querySelectorAll(".main-menu .btn-back").forEach((el) => {
+document.querySelectorAll(".main-menu > ul > .menu-item-has-children > .mega-menu-item > .back-block .btn-back").forEach((el) => {
   el.addEventListener("click", (event) => {
     el.closest(".active").classList.remove("active");
     document.body.classList.remove("menu-open");
   });
+});
+//submenu 
+document.querySelectorAll(".sub-menu .menu-item-has-children > a").forEach((el) => {
+  el.addEventListener("click", (event) => {
+    event.preventDefault();
+    el.parentElement.classList.toggle("active");
+    document.querySelector(".catalog-nav").scrollTo({ top: 0, behavior: "smooth" });
+    document.body.classList.add("menu-open");
+  });
+});
+
+document.querySelectorAll(".sub-menu .btn-back").forEach((el) => {
+el.addEventListener("click", (event) => {
+  el.closest(".active").classList.remove("active");
+  document.body.classList.remove("menu-open");
+});
 });
 
 function slideDown(el) {
