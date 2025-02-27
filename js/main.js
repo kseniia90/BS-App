@@ -398,6 +398,59 @@ if (document.querySelector(".quick-buy-btn") !== null) {
   });
 }
 
+//support_account-popup
+
+function openSupportAaccountPopup(){
+       
+  if (document.querySelector(".support_account-popup") !== null) {
+
+    document.body.style.overflow = "hidden";
+    document.querySelector(".support_account-popup").classList.add("open");
+
+    window.addEventListener("click", function (e) {
+  
+      if (e.target.closest(".support_account-popup .close-popup") || e.target.closest(".layout")) {
+        e.preventDefault();
+        document.querySelector(".support_account-popup").classList.remove("open");
+        document.body.style.overflow = "auto";
+      }
+    });
+  }
+}
+
+if (document.querySelector("#support_account") !== null) {
+  document.querySelector("#support_account").addEventListener("click", function (e) {
+    e.preventDefault();
+    openSupportAaccountPopup();
+  });
+}
+
+//delete_account-popup
+
+function openDeleteAaccountPopup(){
+       
+  if (document.querySelector(".delete_account-popup") !== null) {
+
+    document.body.style.overflow = "hidden";
+    document.querySelector(".delete_account-popup").classList.add("open");
+
+    window.addEventListener("click", function (e) {
+  
+      if (e.target.closest(".delete_account-popup .close-popup") || e.target.closest(".layout")) {
+        e.preventDefault();
+        document.querySelector(".delete_account-popup").classList.remove("open");
+        document.body.style.overflow = "auto";
+      }
+    });
+  }
+}
+
+if (document.querySelector("#delete_account") !== null) {
+  document.querySelector("#delete_account").addEventListener("click", function (e) {
+    e.preventDefault();
+    openDeleteAaccountPopup();
+  });
+}
 
 // show email verify 
 function showEmailVerify(){

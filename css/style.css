@@ -367,7 +367,8 @@ form .btn {
 	text-align: center;
 }
 
-.btn-big {
+.btn-big,
+.app_btn_account {
 	justify-content: center;
 	gap: 8px;
 	padding: 10px 20px;
@@ -399,10 +400,15 @@ form .btn {
 	gap: 8px;
 }
 
-.btn-grd {
+.btn-grd,
+.app_btn_account {
 	justify-content: space-between;
 	color: #fff;
 	background: var(--bg-gradient);
+}
+
+.app_btn_account {
+	margin: 10px 12px;
 }
 
 .btn-grd p {
@@ -3858,8 +3864,7 @@ form.error .error-text {
 	color: var(--dark);
 }
 
-#load_more_order,
-#exit_account {
+#load_more_order {
 	padding: 10px;
 	font-weight: 700;
 	color: var(--accent);
@@ -4067,7 +4072,7 @@ a.order-info-title {
 
 .account-data {
 	padding-top: 12px;
-	padding-bottom: 20px;
+	padding-bottom: 10px;
 }
 
 .mega-menu-item.account-item-list > .sub-menu {
@@ -4201,7 +4206,7 @@ a.order-info-title {
 	top: 0;
     left: 0;
     bottom: 0;
-    z-index: 105;
+    z-index: 150;
     overflow-y: auto;
     overflow-x: hidden;
     background: rgba(16, 16, 24, 0.2);
@@ -4215,7 +4220,8 @@ a.order-info-title {
 .sign-in__choice.open .layout,
 .language-popup.open .layout,
 .filters-row-item.open .layout,
-.quick-buy-popup.open .layout {
+.quick-buy-popup.open .layout,
+.account-actions-popup.open .layout {
 	display: block;
 }
 
@@ -4389,14 +4395,15 @@ a.order-info-title {
 	border-radius: 14px;
 }
 
-/* quick-buy-popup */
+/* quick-buy-popup  and account-actions-popup*/
  
-.quick-buy-popup-body {
+.quick-buy-popup-body,
+.account-actions-popup-body {
 	padding: 0 16px 45px;
 	position: fixed;
     left: 0;
     bottom: 0;
-    z-index: 110;
+    z-index: 150;
     overflow-y: auto;
     overflow-x: hidden;
     background: white;
@@ -4415,11 +4422,13 @@ a.order-info-title {
     transition: transform .3s;
 }
 
-.quick-buy-popup.open .quick-buy-popup-body {
+.quick-buy-popup.open .quick-buy-popup-body,
+.account-actions-popup.open .account-actions-popup-body {
 	transform: translate(0);
 }
 
-.quick-buy-popup-body h3 {
+.quick-buy-popup-body h3,
+.account-actions-popup-body h3 {
 	font-size: 22px;
 	line-height: normal;
 	margin-bottom: 12px;
@@ -4434,13 +4443,15 @@ a.order-info-title {
 	display: block;
 }
 
-.quick-buy-popup-body form {
+.quick-buy-popup-body form,
+.account-actions-popup-body form {
 	margin-top: 12px;
 	text-align: start;
 }
 
 .quick-buy-popup-body .select2-container,
-.quick-buy-popup-body form input {
+.quick-buy-popup-body form input,
+.account-actions-popup-body form input {
 	font-size: 17px;
 	line-height: normal;
 }
