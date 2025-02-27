@@ -4969,6 +4969,16 @@ a.order-info-title {
 	background: #B2B2B224;
 }
 
+.account-data-buttons {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.account-data-buttons .btn-big {
+	justify-content: center;
+}
+
 .add-promo-form {
 	position: relative;
 }
