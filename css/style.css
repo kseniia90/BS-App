@@ -2651,7 +2651,7 @@ footer {
 	left: 0;
 	top: 0;
 	bottom: -120px;
-	z-index: 120;
+	z-index: 105; /*120*/
 	overflow-y: auto;
 	overflow-x: hidden;
 	background: #fff;
@@ -4206,7 +4206,7 @@ a.order-info-title {
 	top: 0;
     left: 0;
     bottom: 0;
-    z-index: 150;
+    z-index: 105;
     overflow-y: auto;
     overflow-x: hidden;
     background: rgba(16, 16, 24, 0.2);
