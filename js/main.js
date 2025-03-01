@@ -646,7 +646,15 @@ if (document.querySelector(".filters-row-item") !== null) {
           item.classList.remove("open");
         });
       }
-  });
+    });
+
+    document.querySelectorAll(".filter__checkgroup-control").forEach((el) => {
+      el.addEventListener("change", function() {
+        document.querySelector(".widget-area").style.overflowY= "auto";      
+      });
+    });
+
+
   }
 
   window.addEventListener("click", function (e) {
