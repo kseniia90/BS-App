@@ -760,6 +760,7 @@ footer {
 .slider-banner .banner-carousel .item,
 .akcia-carousel .item {
 	height: 100%;
+	width: 100%;
 	display: flex;
 	justify-content: center;
 	align-items: stretch;
@@ -769,6 +770,7 @@ footer {
 .slider-banner .banner-carousel .item img,
 .akcia-carousel .item img {
 	width: 100%;
+	height: 100%;
 	object-fit: cover;
 }
 
@@ -933,6 +935,7 @@ footer {
 .popular-list li a {
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 	text-align: center;
 	gap: 6px;
 }
@@ -4718,6 +4721,12 @@ a.order-info-title {
 	padding-bottom: 15px;
 }
 
+@media (max-width:768px) {
+	.filter__icon-minus, .filter__icon-plus {
+		display: none;
+	}
+}
+
 .filter__properties-item {
 	padding: 13px 0;
 }
@@ -4885,6 +4894,7 @@ a.order-info-title {
 }
 
 .filter__item--type-checkbox:not(:nth-child(2)) .filter__inner {
+	display: none;
 	position: fixed;
     left: 0;
     top: 40px;
@@ -4892,7 +4902,7 @@ a.order-info-title {
     overflow-y: auto;
     overflow-x: hidden;
     background: #fff;
-    min-height: calc(100vh - 40px);
+    height: calc(100vh - 40px);
     width: 100%;
 	padding: 0 16px 50px;
     flex-direction: column;

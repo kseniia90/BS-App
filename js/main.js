@@ -635,7 +635,9 @@ if (document.querySelector(".filters-row-item") !== null) {
     document.querySelector(".filters-heder .close").addEventListener("click", function (e) {
       e.preventDefault();
       if(document.querySelector(".filter__item.active") !== null) {
-        document.querySelector(".filter__item.active").closest(".filters-row-item>.widget-area").style.overflowY= "auto";
+        // document.querySelector(".filter__item.active").closest(".filters-row-item>.widget-area").style.overflowY= "auto";
+          document.querySelector(".filter__item.active").closest(".widget-area").style.overflowY= "auto";
+          document.querySelector(".filter__item.active>.filter__inner").style.display= "none";
           document.querySelector(".filter__item.active").classList.remove("active");
           
       } else {
