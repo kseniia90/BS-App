@@ -748,7 +748,8 @@ footer {
 
 .slider-banner {
 	position: relative;
-	margin-top: 56px;
+	/* margin-top: 56px; */
+	margin-top: 102px;
 }
 
 .slider-banner .banner-carousel,
