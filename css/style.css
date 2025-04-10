@@ -1109,6 +1109,22 @@ footer {
 	word-break: break-word;
 }
 
+.product-card__info__name {
+    -webkit-line-clamp: 4;
+    height: 70px;
+}
+
+span.mini_product_name_one {
+    font-size: 12px;
+    color: gray;
+}
+
+span.mini_product_name_two {
+    font-size: 12px;
+    line-height: normal;
+}
+
+
 .product-card__info__reviews {
 	display: flex;
 	justify-content: center;
@@ -1597,6 +1613,12 @@ footer {
 	font-size: 17px;
 	font-weight: 500;
 	line-height: 23.8px;
+	color: #000000;
+}
+
+.product-card.main .product-card__info__description:first-of-type {
+	
+	text-transform: uppercase;
 }
 
 .product-card.main .product-card__info__name {
@@ -1604,7 +1626,17 @@ footer {
 	line-height: 24px;
 	letter-spacing: 0.4px;
 	height: auto;
+	-webkit-line-clamp: none;
+	color: gray;
 }
+
+.product-card.main .product-card__info__name>span {
+	display: block;
+	margin-bottom: 5px;
+	text-transform: uppercase;
+	color: #000000;
+}
+
 
 .product-card.main .product-card__info__description .akcia-name {
 	font-weight: 600;
