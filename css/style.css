@@ -2494,6 +2494,7 @@ span.mini_product_name_two {
 
 .filters-row-item .select2-container {
 	color: #000 !important;
+	width: 100% !important;
 }
 
 .filters-row-item .select2-container--default .select2-selection--single .select2-selection__arrow {
@@ -2501,7 +2502,7 @@ span.mini_product_name_two {
 }
 
 .filters-row .select2-container--default .select2-selection--single {
-	max-width: calc(100% - 50px);
+	max-width: 100%;
 	padding: 0;
 }
 
@@ -2509,6 +2510,12 @@ span.mini_product_name_two {
 	max-width: 100%;
     text-align: left;
 	padding: 0;
+}
+
+.filters-row .filters-row-item form {
+	max-width: calc(100% - 40px);
+    width: 100%;
+	overflow: hidden;
 }
 
 .sorting-select2.select2-dropdown {
