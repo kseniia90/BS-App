@@ -2500,6 +2500,17 @@ span.mini_product_name_two {
 	display: none !important;
 }
 
+.filters-row .select2-container--default .select2-selection--single {
+	max-width: calc(100% - 50px);
+	padding: 0;
+}
+
+.filters-row .select2-container--default .select2-selection--single .select2-selection__rendered {
+	max-width: 100%;
+    text-align: left;
+	padding: 0;
+}
+
 .sorting-select2.select2-dropdown {
 	width: 100% !important;
 	text-align: start;
