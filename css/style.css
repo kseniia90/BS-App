@@ -673,7 +673,7 @@ footer {
 }
 
 .fixed-menu {
-	padding: 6px 16px;
+	padding: 6px 12px;
 	border-radius: 40px;
 	color: var(--accent);
 	background: radial-gradient(116.92% 69.17% at 49.86% 50%, rgba(240, 242, 242, 0.64) 51%, rgba(198, 210, 211, 0.8) 75%, rgba(25, 37, 39, 0.8) 100%);
@@ -684,7 +684,7 @@ footer {
 	display: flex;
 	justify-content: space-between;
 	gap: 12px;
-	font-size: 32px;
+	font-size: 30px;
 }
 
 .fixed-menu-item {
@@ -727,6 +727,10 @@ footer {
 
 .fixed-menu-item .wishlist-count {
 	bottom: 12px;
+}
+
+.fixed-menu-item .icon-chat {
+	min-width: 24px;
 }
 
 .owl-stage {

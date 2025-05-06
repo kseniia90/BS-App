@@ -1,37 +1,10 @@
-
-<div class="account-actions-popup support_account-popup">
-    <div class="layout"></div>
-    <div class="account-actions-popup-body">
-        <div class="close-popup"><span class="close-btn"></span></div>
-        <div>
-            <h3>Техническая помощь</h3>
-            <p class="light">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora odit, obcaecati excepturi eaque corrupti, in, laudantium fuga et at vitae voluptas modi tempore saepe deserunt quisquam eius sunt consequatur possimus?</p>
-            <form action="">
-                <div class="contacts-input-block">
-                    <p class="contacts-lable">Lorem ipsum dolor sit</p>
-                    <input type="text" name="support_account_inut" placeholder="Lorem ipsum dolor sit">
-                </div>                                                      
-                <button class="btn btn-big btn-grd"> Відправити</button>
-            </form>
-        </div>
-    </div>
-</div>
-
-
-<div class="account-actions-popup delete_account-popup">
-    <div class="layout"></div>
-    <div class="account-actions-popup-body">
-        <div class="close-popup"><span class="close-btn"></span></div>
-        <div>
-            <h3>Видалити аккаунт</h3>
-            <p class="light">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora odit, obcaecati excepturi eaque corrupti, in, laudantium fuga et at vitae voluptas modi tempore saepe deserunt quisquam eius sunt consequatur possimus?</p>
-            <form action="">
-                <div class="contacts-input-block">
-                    <p class="contacts-lable">Lorem ipsum dolor sit</p>
-                    <input type="text" name="delete_account_inut" placeholder="Lorem ipsum dolor sit">
-                </div>                                                      
-                <button class="btn btn-big btn-grd"> Відправити</button>
-            </form>
-        </div>
-    </div>
+ <div class="fixed-menu">
+    <ul>
+        <li class="fixed-menu-item home active"><a href="index.html"><span class="icon-ic_home icon"></span></a></li>
+        <li class="fixed-menu-item catalog"><a href="#"><span class="icon-ic_catalog icon"></span></a></li>
+        <li class="fixed-menu-item cart"><a href="#"><span class="icon-ic_cart icon"></span><span class="count cart-count">3</span></a></li>
+        <li class="fixed-menu-item"><a href="#"><img src="./img/Chat.svg" alt="chat" width="24" height="24" class="icon icon-chat"></a></li>
+        <li class="fixed-menu-item"><a href="wishlist.html"><span class="icon-ic_heart icon"></span></a></li>
+        <li class="fixed-menu-item account"><a href="account.html"><span class="icon-ic_profile icon"></span></a></li>
+    </ul>
 </div>
