@@ -52,9 +52,10 @@ if (document.querySelector(".add-fixed-btn") !== null) {
   function scrollFunction() {
     if (
       document.body.scrollTop > 250 ||
-      document.documentElement.scrollTop > 250
+      document.documentElement.scrollTop > 250 &&   document.documentElement.scrollTop < 2100
     ) {
       addBtnFixed.style.display = "flex";
+      console.log(document.documentElement.scrollTop);
     } else {
       addBtnFixed.style.display = "none";
     }
