@@ -1249,6 +1249,16 @@ span.mini_product_name_two {
 	margin-top: 3px;
 }
 
+.block-list .select2-container--default .select2-selection--single .select2-selection__rendered,
+.product-list .select2-container--default .select2-selection--single .select2-selection__rendered {
+	line-height: inherit;
+}
+
+.block-list .select2-container--default .select2-selection--single,
+.product-list .select2-container--default .select2-selection--single {
+	border: 1px solid var(--accent-light);
+}
+
 /* product card end */
 
 /* countdown */
