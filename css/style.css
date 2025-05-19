@@ -1256,7 +1256,7 @@ span.mini_product_name_two {
 
 .block-list .select2-container--default .select2-selection--single,
 .product-list .select2-container--default .select2-selection--single {
-	border: 1px solid var(--accent-light);
+	border: 1px solid var(--accent-light) !important;
 }
 
 /* product card end */
@@ -1655,6 +1655,10 @@ span.mini_product_name_two {
 
 .single_product_name_two {
 	text-transform: none !important;
+}
+
+.product-card.main .product-card__info__name>span.single_product_name_one {
+	margin-bottom: 10px;
 }
 
 
