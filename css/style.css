@@ -687,6 +687,13 @@ footer {
 	font-size: 30px;
 }
 
+@media (max-width: 385px) {
+	.fixed-menu ul {
+		gap: 5px;
+		font-size: 26px;
+	}
+}
+
 .fixed-menu-item {
 	display: flex;
 	justify-content: center;
