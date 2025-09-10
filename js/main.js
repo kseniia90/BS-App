@@ -870,19 +870,254 @@ $(function () {
     $(".account-data .btn").removeClass("not-active");
   });
 
-  // let valueIn = parseInt($(".loyalty__progress-value").text());
-  // let valueEx = 0;
-
-  // if (valueIn <= 3000) {
-  //   valueEx = (0 * 100) / 3 + (valueIn * (100 / 3)) / (3000 - 0);
-  // } else if (valueIn <= 5000) {
-  //   valueEx = (1 * 100) / 3 + ((valueIn - 3000) * (100 / 3)) / (5000 - 3000);
-  // } else if (valueIn <= 17000) {
-  //   valueEx = (2 * 100) / 3 + ((valueIn - 5000) * (100 / 3)) / (17000 - 5000) -5;
-  // } else {
-  //   valueEx = 95;
-  // }
-  // $(".loyalty__progress-thumb, .loyalty__progress-value").css( "left", valueEx + "%"
-  // );
 });
+
+// wheel popup
+
+function openWhellPopup() {
+
+  document.body.style.overflow = "hidden";
+    document.querySelector(".wheel-popup").classList.add("active");
+
+    document.querySelector(".wheel-popup-content").addEventListener("click", function (e) {
+      e.stopPropagation();
+    });
+}
+
+
+if (document.querySelector(".wheel-popup") !== null) {
+
+  document.querySelector(".wheel-popup-close").addEventListener("click", function (e) {
+      document.body.style.overflow = "visible";
+      document.querySelector(".wheel-popup").classList.remove("active");
+    });
+
+  window.addEventListener("click", function (e) {
+    if (document.querySelector(".wheel-popup.active") && !e.target.closest(".wheel-popup-content")) {
+      document.querySelector(".wheel-popup").classList.remove("active");
+      document.body.style.overflow = "visible";
+    }
+  });
+
+  // wheel subpopup
+    document.querySelectorAll(".spin-btn").forEach(function (button) {
+    button.addEventListener("click", function (e) {
+      e.preventDefault();
+      document.querySelector(".whell-subpopup").classList.add("active");
+    });
+  });
+  document.querySelector(".whell-subpopup-content").addEventListener("click", function (e) {
+      e.stopPropagation();
+    });
+
+  document.querySelector(".whell-subpopup-close").addEventListener("click", function (e) {
+      document.querySelector(".whell-subpopup").classList.remove("active");
+    });
+
+    document.querySelector(".whell-subpopup .send-sms").addEventListener("click", function (e) {
+      document.querySelector(".whell-subpopup").classList.remove("phone");
+      document.querySelector(".whell-subpopup").classList.add("code");
+    });
+}
+
+// present popup
+function openPresentPopup() {
+  if (document.querySelector(".present-popup").classList.contains("present-received")) {
+    document.querySelector(".present-popup").classList.remove("present-received");
+  }
+    document.querySelector(".wheel-popup").classList.remove("active");
+    document.body.style.overflow = "hidden";
+    document.querySelector(".present-popup").classList.add("present", "active");
+
+    document.querySelector(".present-popup-content").addEventListener("click", function (e) {
+      e.stopPropagation();
+    });
+}
+
+
+// present alredy received popup
+function openPresentReceivedPopup() {
+  if (document.querySelector(".present-popup").classList.contains("present")) {
+    document.querySelector(".present-popup").classList.remove("present");
+  }
+    document.querySelector(".wheel-popup").classList.remove("active");
+    document.body.style.overflow = "hidden";
+    document.querySelector(".present-popup").classList.add("present-received", "active");
+
+    document.querySelector(".present-popup-content").addEventListener("click", function (e) {
+      e.stopPropagation();
+    });
+}
+
+if (document.querySelector(".present-popup") !== null) {
+
+  document.querySelector(".present-popup-close").addEventListener("click", function (e) {
+      document.body.style.overflow = "visible";
+      document.querySelector(".present-popup").classList.remove("active");
+    });
+
+  window.addEventListener("click", function (e) {
+    if (document.querySelector(".present-popup.active") && !e.target.closest(".present-popup-content")) {
+      document.querySelector(".present-popup").classList.remove("active");
+      document.body.style.overflow = "visible";
+    }
+  });
+};
+
+// wheel start
+
+ const prizes = [
+    {
+      icon: "./img/wheel_sec_icon.svg",
+      title: "Prize 1",
+      color: "#FBFBFB",
+    },
+     {
+      icon: "./img/wheel_sec_icon.svg",
+      title: "Prize 6",
+      color: "#E1F56F",
+    },
+     {
+      icon: "./img/wheel_sec_icon.svg",
+      title: "Prize 5",
+      color: "#FBFBFB",
+    },
+    {
+      icon: "./img/wheel_sec_icon.svg",
+      title: "Prize 4",
+      color: "#E1F56F",
+      select: true,
+    },
+    {
+      icon: "./img/wheel_sec_icon.svg",
+      title: "Prize 3",
+      color: "#FBFBFB",
+    },
+    {
+      icon: "./img/wheel_sec_icon.svg",
+      title: "Prize 2",
+      color: "#E1F56F",
+    },   
+  ];
+  
+  const wheel = document.querySelector(".deal-wheel");
+  const spinner = wheel.querySelector(".spinner");
+  const prizeSlice = 360 / prizes.length;
+  const prizeOffset = Math.floor(180 / prizes.length);
+  const spinClass = "is-spinning";
+  const selectedClass = "selected";
+  let prizeNodes;
+  let finalRotation = 0; // <- will store final angle
+  let spinning = false;
+  
+  function createPrizeNodes() {
+    prizes.forEach(({ icon, title }, i) => {
+      const rotation = ((prizeSlice * i) * -1) - prizeOffset;
+      spinner.insertAdjacentHTML(
+        "beforeend",
+        `<li class="prize" style="--rotate: ${rotation}deg">
+          <img class="icon" src="${icon}" alt="icon" width="32" height="32" title="${title}">
+        </li>`
+      );
+    });
+  };
+  
+  function createConicGradient() {
+    spinner.setAttribute(
+      "style",
+      `background: conic-gradient(from -90deg,${prizes.map(({ color }, i) => 
+        `${color} 0 ${(100 / prizes.length) * (prizes.length - i)}%`
+      ).reverse()});`
+    );
+  };
+    
+  function setupWheel() {
+    createConicGradient();
+    createPrizeNodes();
+    prizeNodes = wheel.querySelectorAll(".prize");
+  };
+
+  function startWheel() {    
+    prizeNodes.forEach(prize => prize.classList.remove(selectedClass));
+    spinner.style.transition = "none"; 
+    spinner.style.transform = "rotate(0deg)";
+    
+    spinner.classList.add("spinning");
+    wheel.classList.add(spinClass);
+    spinning = true;
+    document.querySelector(".whell-subpopup").classList.remove("active");
+    document.querySelector(".spin-btn").style.display = "none";
+    document.querySelector(".stop-spin-btn").style.display = "flex";
+  };
+
+  const spinertia = (min, max) => {
+      min = Math.ceil(min);
+      max = Math.floor(max);
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+  };
+
+   const getFixedRotation = () => {
+      // Ищем приз с select: true
+      const selectedPrizeIndex = prizes.findIndex(prize => prize.select === true);
+      
+      if (selectedPrizeIndex !== -1) {
+          // Добавляем несколько оборотов (например, 3) к углу для остановки на нужном призе
+          return 360 * 3 + selectedPrizeIndex * prizeSlice + prizeOffset;
+      } else {
+          // Если нет приза с select: true, генерируем случайное значение с несколькими оборотами
+          return Math.floor(Math.random() * 360 + spinertia(2000, 5000) + 360 * 3);
+      }
+  };
+
+  const selectPrize = () => {
+
+      const selectedPrizeIndex = prizes.findIndex(prize => prize.select === true);
+      const prizeTitle = prizes[selectedPrizeIndex].title;
+      document.getElementById("cupon").innerHTML = prizeTitle;
+      setTimeout(() => openPresentPopup(), 300);   
+  };
+
+
+if(document.querySelector(".deal-wheel") !== null) {   
+  // Сброс анимации и включение кнопки после завершения вращения
+    spinner.addEventListener("transitionend", () => {
+        selectPrize();
+    });
+
+  document.querySelector(".stop-spin-btn").addEventListener("click", () => {
+    if (!spinning) return;
+    spinning = false;
+    // get current angle from transform
+    const st = window.getComputedStyle(spinner, null);
+    const tr = st.getPropertyValue("transform");
+
+    let angle = 0;
+    if (tr !== "none") {
+      const values = tr.split("(")[1].split(")")[0].split(",");
+      const a = values[0];
+      const b = values[1];
+      angle = 360 * 3 + getFixedRotation();
+    }
+
+    spinner.classList.remove("spinning");
+    spinner.style.transform = `rotate(${angle}deg)`;
+
+    setTimeout(() => {
+      finalRotation = getFixedRotation();
+      spinner.style.transition = "transform 4s cubic-bezier(0.25, 1, 0.5, 1)";
+      spinner.style.transform = `rotate(${finalRotation}deg)`;
+    }, 50);
+
+    document.querySelector(".stop-spin-btn").style.display = "none";
+    document.querySelector(".spin-btn").style.display = "flex";
+  });
+
+  document.querySelector(".whell-subpopup .send-code").addEventListener("click", () => {    
+    startWheel();
+  });
+
+  setupWheel();
+}
+
+//wheel end
 
