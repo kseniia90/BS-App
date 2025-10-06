@@ -870,6 +870,14 @@ $(function () {
     $(".account-data .btn").removeClass("not-active");
   });
 
+  //account-info-delivery
+  $(".account-info-delivery__item__btn").on("click", function (e) {
+    e.preventDefault();
+    var $this = $(this);
+    $this.toggleClass("accordion-active");
+    $(".account-info-delivery__change").slideToggle();
+  });
+
 });
 
 // wheel popup
@@ -999,16 +1007,20 @@ if (document.querySelector(".present-popup") !== null) {
       color: "#E1F56F",
     },   
   ];
+
+  if (document.querySelector(".wheel-popup") !== null) {  
+    const wheel = document.querySelector(".deal-wheel");
+    const spinner = wheel.querySelector(".spinner");
+    const prizeSlice = 360 / prizes.length;
+    const prizeOffset = Math.floor(180 / prizes.length);
+    const spinClass = "is-spinning";
+    const selectedClass = "selected";
+    let prizeNodes;
+    let finalRotation = 0; // <- will store final angle
+    let spinning = false;
+  };
   
-  const wheel = document.querySelector(".deal-wheel");
-  const spinner = wheel.querySelector(".spinner");
-  const prizeSlice = 360 / prizes.length;
-  const prizeOffset = Math.floor(180 / prizes.length);
-  const spinClass = "is-spinning";
-  const selectedClass = "selected";
-  let prizeNodes;
-  let finalRotation = 0; // <- will store final angle
-  let spinning = false;
+  
   
   function createPrizeNodes() {
     prizes.forEach(({ icon, title }, i) => {
