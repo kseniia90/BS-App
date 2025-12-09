@@ -384,23 +384,27 @@
   content: "\e962";
   
 }
-.icon-Property-117:before {
+.icon-Property-117:before,
+.filter__icon.filter__icon-minus::before {
   content: "\e963";
   
 }
-.icon-Property-118:before {
-  content: "\e964";
+.icon-Property-118:before,
+.filter__icon.filter__icon-plus::before {
+  content: "\e964" !important;
   
 }
 .icon-Property-119:before {
   content: "\e965";
   
 }
-.icon-Property-120:before {
+.icon-Property-120:before,
+.close .icon-Property-142:before {
   content: "\e966";
   
 }
-.icon-Property-1-7:before {
+.icon-Property-1-7:before,
+.variant-dropdown-wrapper .icon-Property-1-8:before {
   content: "\e967";
   
 }
@@ -440,7 +444,8 @@
   content: "\e970";
   
 }
-.icon-Property-153:before {
+.icon-Property-153:before,
+.favorit_icon .icon-Property-148:before {
   content: "\e971";
   
 }
@@ -464,8 +469,9 @@
   content: "\e976";
   
 }
-.icon-Property-123:before {
-  content: "\e977";
+.icon-Property-123:before,
+.product__card__icons .icon-Property-151:before {
+  content: "\e977" !important;
   
 }
 .icon-Property-124:before {
@@ -476,8 +482,9 @@
   content: "\e979";
   
 }
-.icon-Property-112:before {
-  content: "\e97a";
+.icon-Property-112:before,
+.bs-buy-btn .icon-Property-154:before {
+  content: "\e97a" !important;
   
 }
 .icon-ic_schedule:before {
@@ -570,9 +577,9 @@
 .icon-icon_meduza:before {
   content: "\e92d";
 }
-.icon-favorite-col-new:before {
+.icon-favorite-col-new:before,
+.favorit_icon .icon-Property-130:before {
   content: "\e92e";
-  
 }
 .icon-present:before {
   content: "\e92f";

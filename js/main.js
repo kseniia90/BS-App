@@ -615,68 +615,68 @@ if (document.querySelector(".coutndown") !== null) {
 
 // filters open
 
-if (document.querySelector(".filters-row-item") !== null) {
+// if (document.querySelector(".filters-row-item") !== null) {
   
-  document.querySelectorAll(".filters-row-item>span").forEach((el) => {
-    el.addEventListener("click", (event) => {
-      document.querySelectorAll(".filters-row-item").forEach((item) => {
-        item.classList.remove("open");
-      });
+//   document.querySelectorAll(".filters-row-item>span").forEach((el) => {
+//     el.addEventListener("click", (event) => {
+//       document.querySelectorAll(".filters-row-item").forEach((item) => {
+//         item.classList.remove("open");
+//       });
 
-      if (el.parentElement.querySelector(".widget-area")!== null) {
-        document.body.style.overflow = "hidden";
-      el.closest(".filters-row-item").classList.add("open");
-    } 
+//       if (el.parentElement.querySelector(".widget-area")!== null) {
+//         document.body.style.overflow = "hidden";
+//       el.closest(".filters-row-item").classList.add("open");
+//     } 
       
-    });
-  });
+//     });
+//   });
 
-  if (document.querySelector(".filters-heder") !== null){
-    document.querySelector(".filters-heder .close").addEventListener("click", function (e) {
-      e.preventDefault();
-      if(document.querySelector(".filter__item.active") !== null) {
-        // document.querySelector(".filter__item.active").closest(".filters-row-item>.widget-area").style.overflowY= "auto";
-          document.querySelector(".filter__item.active").closest(".widget-area").style.overflowY= "auto";
-          document.querySelector(".filter__item.active>.filter__inner").style.display= "none";
-          document.querySelector(".filter__item.active").classList.remove("active");
+//   if (document.querySelector(".filters-heder") !== null){
+//     document.querySelector(".filters-heder .close").addEventListener("click", function (e) {
+//       e.preventDefault();
+//       if(document.querySelector(".filter__item.active") !== null) {
+//         // document.querySelector(".filter__item.active").closest(".filters-row-item>.widget-area").style.overflowY= "auto";
+//           document.querySelector(".filter__item.active").closest(".widget-area").style.overflowY= "auto";
+//           document.querySelector(".filter__item.active>.filter__inner").style.display= "none";
+//           document.querySelector(".filter__item.active").classList.remove("active");
           
-      } else {
-        document.body.style.overflow = "auto";
-        document.querySelectorAll(".filters-row-item").forEach((item) => {
-          item.classList.remove("open");
-        });
-      }
-    });
+//       } else {
+//         document.body.style.overflow = "auto";
+//         document.querySelectorAll(".filters-row-item").forEach((item) => {
+//           item.classList.remove("open");
+//         });
+//       }
+//     });
 
-    document.querySelectorAll(".filter__checkgroup-control").forEach((el) => {
-      el.addEventListener("change", function() {
-        document.querySelector(".widget-area").style.overflowY= "auto";      
-      });
-    });
+//     document.querySelectorAll(".filter__checkgroup-control").forEach((el) => {
+//       el.addEventListener("change", function() {
+//         document.querySelector(".widget-area").style.overflowY= "auto";      
+//       });
+//     });
 
 
-  }
+//   }
 
-  window.addEventListener("click", function (e) {
-    let filterHeader = e.target.closest(".filter__header");
-    if (filterHeader) {
-      filterHeader.parentElement.classList.toggle("active");
-      document.querySelector(".filters-row-item>.widget-area").scrollTo({ top: 0 });
-      filterHeader.closest(".filters-row-item>.widget-area").style.overflowY = "hidden";
-  }
+//   window.addEventListener("click", function (e) {
+//     let filterHeader = e.target.closest(".filter__header");
+//     if (filterHeader) {
+//       filterHeader.parentElement.classList.toggle("active");
+//       document.querySelector(".filters-row-item>.widget-area").scrollTo({ top: 0 });
+//       filterHeader.closest(".filters-row-item>.widget-area").style.overflowY = "hidden";
+//   }
 
-});
+// });
   
-  // document.querySelectorAll(".filter__header").forEach((el) => {
-  //   el.addEventListener("click", (event) => {
-  //     event.preventDefault();
-  //     el.parentElement.classList.toggle("active");
-  //     document.querySelector(".filters-row-item>.widget-area").scrollTo({ top: 0 });
-  //     el.closest(".filters-row-item>.widget-area").style.overflowY = "hidden";
-  //   });
-  // });
+//   // document.querySelectorAll(".filter__header").forEach((el) => {
+//   //   el.addEventListener("click", (event) => {
+//   //     event.preventDefault();
+//   //     el.parentElement.classList.toggle("active");
+//   //     document.querySelector(".filters-row-item>.widget-area").scrollTo({ top: 0 });
+//   //     el.closest(".filters-row-item>.widget-area").style.overflowY = "hidden";
+//   //   });
+//   // });
 
-}
+// }
 
 // checkout page beautic-cupon active
 // if (document.querySelector(".beautic-cupon") !== null) {
@@ -1132,4 +1132,261 @@ if(document.querySelector(".deal-wheel") !== null) {
 }
 
 //wheel end
+
+
+// filters start
+
+$(".filter-open-btn").on("click", function (e) {
+  e.preventDefault();
+  var $this = $(this);
+
+  $(".categories__content__left").toggleClass("open");
+  $("body").addClass("lock");
+});
+
+$(".filters__list-heder .close").on("click", function (e) {
+  $(".categories__content__left").removeClass("open");
+  $("body").removeClass("lock");
+});
+
+$(".filter__header").on("click", function (e) {
+  e.preventDefault();
+  var $this = $(this);
+
+  $this.toggleClass("open");
+  $this.next().slideToggle();
+});
+
+if(document.querySelector(".slider-range") !== null) {  
+  const rangeMinValue = document.querySelector("#range-min-value");
+  const rangeMaxValue = document.querySelector("#range-max-value");
+  const inputMinValue = document.querySelector("#input-min-value");
+  const inputMaxValue = document.querySelector("#input-max-value");
+  const rangeElement = document.querySelector(".slider-range");
+
+  const MIN_VALUE = 0;
+  const MAX_VALUE = 9000;
+
+  function valueToPercentage(value) {
+    return (value / MAX_VALUE) * 100;
+  }
+
+  function percentageToValue(percentage) {
+    return Math.round((percentage / 100) * MAX_VALUE);
+  }
+
+  function setThumbPosition(thumbType, percentage) {
+    const cssVar =
+      thumbType === "min" ? "--min-thumb-percent" : "--max-thumb-percent";
+    rangeElement.style.setProperty(cssVar, percentage);
+  }
+
+  function getThumbPosition(thumbType) {
+    const cssVar =
+      thumbType === "min" ? "--min-thumb-percent" : "--max-thumb-percent";
+    return rangeElement.style.getPropertyValue(cssVar);
+  }
+
+  function validateAndSetValue(input, value, minValue, maxValue) {
+    if (value < minValue) {
+      input.value = minValue;
+    } else if (value > maxValue) {
+      input.value = maxValue;
+    }
+    return parseInt(input.value);
+  }
+
+  function sanitizeInputValue(input) {
+    if (!/^\d+$/.test(input.value)) {
+      input.value = input.value.replace(/[^0-9]/g, "");
+    }
+  }
+
+  inputMinValue.addEventListener("input", function () {
+    sanitizeInputValue(this);
+
+    const maxValue = parseInt(inputMaxValue.value) || MAX_VALUE;
+    const value = validateAndSetValue(
+      this,
+      parseInt(this.value) || MIN_VALUE,
+      MIN_VALUE,
+      MAX_VALUE
+    );
+
+    if (value >= maxValue) {
+      this.value = maxValue - 1;
+    }
+
+    const percentage = valueToPercentage(parseInt(this.value));
+
+    if (!isNaN(value)) {
+      rangeMinValue.value = percentage;
+      setThumbPosition("min", percentage);
+    }
+  });
+
+  inputMaxValue.addEventListener("input", function () {
+    sanitizeInputValue(this);
+
+    const minValue = parseInt(inputMinValue.value) || MIN_VALUE;
+    const value = validateAndSetValue(
+      this,
+      parseInt(this.value),
+      minValue + 1,
+      MAX_VALUE
+    );
+    const percentage = valueToPercentage(parseInt(this.value));
+
+    if (!isNaN(value)) {
+      rangeMaxValue.value = percentage;
+      setThumbPosition("max", percentage);
+    }
+  });
+
+  rangeMinValue.addEventListener("input", function () {
+    const maxThumbPercent = getThumbPosition("max");
+
+    if (parseInt(this.value) >= parseInt(maxThumbPercent)) {
+      this.value = maxThumbPercent;
+    }
+
+    const percentage = parseInt(this.value);
+    const value = percentageToValue(percentage);
+
+    inputMinValue.value = value;
+    setThumbPosition("min", percentage);
+  });
+
+  rangeMaxValue.addEventListener("input", function () {
+    const minThumbPercent = getThumbPosition("min");
+
+    if (parseInt(this.value) <= parseInt(minThumbPercent)) {
+      this.value = minThumbPercent;
+    }
+
+    const percentage = parseInt(this.value);
+    const value = percentageToValue(percentage);
+
+    inputMaxValue.value = value;
+    setThumbPosition("max", percentage);
+  });
+
+  rangeMinValue.dispatchEvent(new Event("input"));
+  rangeMaxValue.dispatchEvent(new Event("input")); 
+  
+};
+
+
+// filters end
+
+// sliders start
+const swiperProducts = new Swiper(".products-slider", {
+  loop: true,
+  slidesPerView: "auto",
+  navigation: {
+    nextEl: ".products-slider .swiper-button-next",
+    prevEl: ".products-slider .swiper-button-prev",
+  },
+  pagination: {
+    el: ".products-slider .swiper-pagination",
+  },
+
+  breakpoints: {
+    0: {
+      spaceBetween: 8,
+    },
+    768: {
+      spaceBetween: 32,
+    },
+  },
+});
+
+// product variants dropdown
+
+if(document.querySelector(".variant-dropdown-wrapper") !== null) { 
+  
+  const selectedAll = document.querySelectorAll(".variant-dropdown-wrapper");
+
+  selectedAll.forEach((selected) => {
+    const optionsList = selected.querySelectorAll(".variant-dropdown-wrapper li");
+
+    selected.addEventListener("click", () => {
+      let arrow = selected.children[1];
+
+      if (selected.classList.contains("active")) {
+        handleDropdown(selected, arrow, false);
+      } else {
+        let currentActive = document.querySelector(
+          ".variant-dropdown-wrapper.active"
+        );
+
+        if (currentActive) {
+          let anotherArrow = currentActive.children[1];
+          handleDropdown(currentActive, anotherArrow, false);
+        }
+
+        handleDropdown(selected, arrow, true);
+      }
+    });
+
+    // update the display of the dropdown
+    if (optionsList.length > 0) {
+      optionsList[0].classList.add("selected");
+      selected.querySelector(".selected-display").innerHTML =
+        optionsList[0].innerHTML;
+    }
+
+    for (let o of optionsList) {
+      o.addEventListener("click", () => {
+        optionsList.forEach((el) => el.classList.remove("selected"));
+        o.classList.add("selected");
+        selected.querySelector(".selected-display").innerHTML = o.innerHTML;
+      });
+    }
+  });
+
+  // check if anything else ofther than the dropdown is clicked
+  document.addEventListener("mousemove", function (e) {
+    const activeWrapper = document.querySelector(".variant-dropdown-wrapper.active");
+
+    if (activeWrapper) {
+      if (
+        !e.target.closest(".variant-dropdown-wrapper.active") &&
+        !e.target.closest(".variant-dropdown")
+      ) {
+        closeAllDropdowns();
+      }
+    }
+  });
+
+  window.addEventListener("click", function (e) {
+    if (e.target.closest(".variant-dropdown-wrapper") === null) {
+      closeAllDropdowns();
+    }
+  });
+
+  // close all the dropdowns
+  function closeAllDropdowns() {
+    const selectedAll = document.querySelectorAll(".variant-dropdown-wrapper");
+    selectedAll.forEach((selected) => {
+      let arrow = selected.children[1];
+
+      handleDropdown(selected, arrow, false);
+    });
+  }
+
+  // open all the dropdowns
+  function handleDropdown(dropdown, arrow, open) {
+    if (open) {
+      arrow.classList.add("rotated");
+      dropdown.classList.add("active");
+    } else {
+      arrow.classList.remove("rotated");
+      dropdown.classList.remove("active");
+    }
+  } 
+
+}
+
+// product variants dropdown end
 
