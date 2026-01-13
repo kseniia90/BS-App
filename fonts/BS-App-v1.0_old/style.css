@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'BS-App';
-  src:  url('fonts/BS-App.eot?p54wvl');
-  src:  url('fonts/BS-App.eot?p54wvl#iefix') format('embedded-opentype'),
-    url('fonts/BS-App.ttf?p54wvl') format('truetype'),
-    url('fonts/BS-App.woff?p54wvl') format('woff'),
-    url('fonts/BS-App.svg?p54wvl#BS-App') format('svg');
+  src:  url('fonts/BS-App.eot?p8kz9c');
+  src:  url('fonts/BS-App.eot?p8kz9c#iefix') format('embedded-opentype'),
+    url('fonts/BS-App.ttf?p8kz9c') format('truetype'),
+    url('fonts/BS-App.woff?p8kz9c') format('woff'),
+    url('fonts/BS-App.svg?p8kz9c#BS-App') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,9 +25,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-new_present:before {
-  content: "\e90c";
-}
 .icon-Property-1Instagram:before {
   content: "\e914";
   color: #4b6d74;
