@@ -1988,6 +1988,10 @@ span.mini_product_name_two {
 	padding: 5px;
 }
 
+.product-card.main .gift-grid .product-card__img img {
+	aspect-ratio: 1/1;
+}
+
 .product-row-list .product-card__info,
 .gift-grid .product-card__info {
 	flex: auto;
@@ -2187,6 +2191,215 @@ span.mini_product_name_two {
 	font-size: 16px;
 	line-height: 18px;
 	color: #000;
+}
+
+.get_gift__block.gift-block .title {
+	font-weight: 400;
+}
+
+.get_gift__block .gift-grid {
+	margin-bottom: 0;
+}
+
+.get_gift__block .gift-grid .gift-grid-row {
+	width: 100%;
+    display: grid;
+    grid-template-columns: 29% 1fr 30% 1fr 29%;
+    gap:0;
+    align-items: center;
+    margin-bottom: 24px;
+	overflow: hidden;
+}
+
+.get_gift__block .gift-grid .product-card {
+	flex-direction: column;
+	height: auto;
+}
+
+.get_gift__block .gift-grid .gift-grid-row .symbol {
+	padding: 0 5px;
+	font-size: 14px;
+}
+
+.get_gift__block .gift-grid .product-card__img {
+	padding: 0 !important;
+	width: 100%;
+	height: auto;
+	aspect-ratio: 1/1;
+}
+
+.product-card.main .get_gift__block .product-card__info__description {
+	font-size: 10px;
+	line-height: 13px;
+	color: var(--light);
+	text-align: center;
+	margin: 0 auto;
+	 display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.product-card.main .get_gift__block .gift-grid .product-card__info__name {
+	font-weight: 400;
+	font-size: 11px;
+	line-height: 100%;
+	color: var(--text-color);
+	word-break: break-word;
+}
+
+.get_gift__block .product-card__info__content {
+	gap: 4px;
+}
+
+.get_gift__block .gift-grid .product-card__info {
+	gap: 6px;
+	padding: 3px 0 8px;
+}
+
+.product-card.main .get_gift__block .product-card__info__price {
+	font-weight: 600;
+	font-size: 12px;
+	line-height: 145%;
+	text-align: center;
+	gap: 4px;
+}
+
+.get_gift__block .row:has(.product-card__info__price) {
+	width: 100%;
+}
+
+.get_gift__block .gift-grid .gift-grid-row .product-card {
+	padding-bottom: 4px;
+}
+
+.get_gift__block .gift-grid .gift-grid-row .owl-item .product-card {
+	padding-bottom: 32px ;
+}
+
+.get_gift__block .gift-carousel .owl-nav {
+	top: auto;
+	bottom: 12px;
+	margin-top: auto;
+	transform: translateX(-50%);
+	gap: 1px;
+	max-width: calc(100% - 10px);
+}
+
+.get_gift__block .gift-carousel .owl-nav button.owl-next,
+.get_gift__block .gift-carousel .owl-nav button.owl-prev {
+	margin: 0;
+	display: block !important;
+    width: 20px !important;
+    height: 20px !important;
+    border-radius: 50% !important;
+	background-color: #FFF7D3 !important;
+}
+
+.get_gift__block .gift-carousel .owl-nav button.owl-next {
+	border-radius: 0 12px 12px 0;
+}
+
+.get_gift__block .gift-carousel .owl-nav button.owl-prev {
+	border-radius: 12px 0 0 12px;
+}
+
+.get_gift__block .gift-carousel .owl-nav .owl-prev span,
+.get_gift__block .gift-carousel .owl-nav .owl-next span {
+	width: 100%;
+	height: 16px;
+	font-size: 16px;
+	color: var(--light) !important;
+	background: transparent;
+}
+
+.get_gift__block .gift-carousel .owl-stage-outer::after {
+	content: "Обирай";
+	position: absolute;
+	left: 50%;
+	bottom: 14px;
+	transform: translateX(-50%);
+	text-align: center;
+	color: #000;
+	width: 100%;
+	height: 12px;
+	z-index: 1;
+	font-weight: 600;
+	font-size: 8px;
+	line-height: 120%;
+}
+
+.get_gift__total {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    font-size: 12px;
+    line-height: 120%;
+    letter-spacing: 0.4px;
+    margin-bottom: 8px;
+}
+
+.get_gift__block .btn-grd {
+	justify-content: center;
+	margin-bottom: 16px;
+}
+
+.get_gift-coutndown {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 16px;
+}
+
+.get_gift-coutndown .coutndown {
+	margin: 0 auto;
+}
+
+.get_gift-coutndown .coutndown ul {
+    gap: 5px;
+}
+
+.get_gift-coutndown .coutndown ul li {
+    width: 41px;
+    height: 43px;
+    padding: 5px;
+	gap: 3px;
+    border-radius: 6px;
+    font-size: 10px;
+	line-height: normal;
+	color: #1B1B1D;
+	background: var(--accent-yellow);
+}
+
+.get_gift-coutndown .coutndown ul li span:first-child {
+    font-size: 14px;
+    line-height: 100%;
+}
+
+.get_gift-coutndown .coutndown ul>span {
+    font-size: 12px;
+    line-height: 33px;
+}
+
+.get_gift-coutndown .coutndown ul>span {
+	font-size: 14px;
+	color: #1B1B1D;
+}
+
+.product-card-gift::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+	display: block;
+	width: 26px;
+	height: 22px;
+	border-radius: 10px 0 10px 0;
+	background: var(--accent-yellow) url('data:image/svg+xml,<svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><g clip-path="url(%23clip0_6164_117354)"><path d="M8.54167 2.91667H7.03625C7.79958 2.55042 8.33333 1.93542 8.33333 1.04167C8.33333 0.926667 8.24 0.833333 8.125 0.833333C8.01 0.833333 7.91667 0.926667 7.91667 1.04167C7.91667 2.31792 6.55375 2.78708 5.48375 2.8925C5.80833 2.49125 6.25 1.8375 6.25 1.25C6.25 0.560833 5.68917 0 5 0C4.31083 0 3.75 0.560833 3.75 1.25C3.75 1.8375 4.19125 2.49083 4.51625 2.8925C3.44625 2.7875 2.08333 2.31792 2.08333 1.04167C2.08333 0.926667 1.99 0.833333 1.875 0.833333C1.76 0.833333 1.66667 0.926667 1.66667 1.04167C1.66667 1.93542 2.20042 2.55042 2.96375 2.91667H1.45833C0.654167 2.91667 0 3.57083 0 4.375V4.79167C0 5.13625 0.280417 5.41667 0.625 5.41667H0.833333V8.125C0.833333 9.15875 1.67458 10 2.70833 10H7.29167C8.32542 10 9.16667 9.15875 9.16667 8.125V5.41667H9.375C9.71958 5.41667 10 5.13625 10 4.79167V4.375C10 3.57083 9.34583 2.91667 8.54167 2.91667ZM5 0.416667C5.45958 0.416667 5.83333 0.790417 5.83333 1.25C5.83333 1.77 5.32083 2.45792 5 2.82C4.67917 2.45792 4.16667 1.77 4.16667 1.25C4.16667 0.790417 4.54042 0.416667 5 0.416667ZM0.416667 4.79167V4.375C0.416667 3.80083 0.884167 3.33333 1.45833 3.33333H4.79167V5H0.625C0.51 5 0.416667 4.90667 0.416667 4.79167ZM1.25 8.125V5.41667H4.79167V9.58333H2.70833C1.90417 9.58333 1.25 8.92917 1.25 8.125ZM8.75 8.125C8.75 8.92917 8.09583 9.58333 7.29167 9.58333H5.20833V5.41667H8.75V8.125ZM9.58333 4.79167C9.58333 4.90667 9.49 5 9.375 5H5.20833V3.33333H8.54167C9.11583 3.33333 9.58333 3.80083 9.58333 4.375V4.79167Z" fill="%234B6D74"/></g><defs><clipPath id="clip0_6164_117354"><rect width="10" height="10" fill="white"/></clipPath></defs></svg>') no-repeat center;
+	background-size: cover contain;
 }
 
 .product-row-list .product-card__info__price {
