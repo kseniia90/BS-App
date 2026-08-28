@@ -409,7 +409,7 @@
 	outline: 0;
 	border-radius: 16px;
 	padding: 60px 24px 125px;
-	background: #ffffff url('../img/present-popup_bg.svg') no-repeat center bottom;
+	background: #ffffff url('../../img/present-popup_bg.svg') no-repeat center bottom;
 	background-size: 100% 99px;
 }
 
